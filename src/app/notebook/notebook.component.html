@@ -1,0 +1,27 @@
+<p>notebook works!</p>
+<!-- <form #testForm="ngForm">
+    <p contenteditable="true" name="myFormName" [(ngModule)]="templateDrivenForm"></p>
+</form>
+
+<pre>
+    {{testForm.value | json}}
+</pre> -->
+
+<hr>
+
+<!-- <md-editor name="Content" [preRender]="preRenderFunc" [(ngModel)]="content" [height]="'200px'">
+</md-editor> -->
+
+<!-- <textarea [formControl]="myControl"></textarea> -->
+<div #editor contenteditable="true" [formControl]="myControl">
+</div>
+
+
+<pre>
+    {{markdown.value | json}}
+</pre>
+<hr>
+
+<!-- <input (document:keydown.meta.k)="doSomething()"> -->
+<!-- <markdown [data]="markdown">
+</markdown> -->

@@ -1,0 +1,21 @@
+<mat-sidenav-container class="nav-container">
+    <mat-sidenav opened #sidenav mode="side">
+        Nav content
+    </mat-sidenav>
+    <!-- <mat-sidenav opened mode="side" position="end">End content</mat-sidenav> -->
+    <mat-toolbar>
+        <span>
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </span>
+        <span>
+            Title
+        </span>
+    </mat-toolbar>
+
+    <div class="content-container">
+        <router-outlet></router-outlet>
+    </div>
+
+</mat-sidenav-container>
