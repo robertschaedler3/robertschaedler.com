@@ -1,22 +1,16 @@
 <mat-drawer-container>
-    <!-- Side Navigation Menu -->
     <mat-drawer #drawer position="end">
         <div class="side-navigation-scroll-pane">
             <div class="side-navigation-inner">
                 <div class="side-navigation-header">
                     <div class="navigation-hide side-nav-hide">
-                        <!-- <button mat-flat-button [disableRipple]="true"> -->
                         <span>
                             <mat-icon (click)="drawer.toggle()">close</mat-icon>
                         </span>
-                        <!-- </button> -->
                     </div>
                 </div>
                 <nav class="side-navigation nav-block">
                     <ul>
-                        <!-- <li class="current">
-    							<a href="#home" data-offset="0" class="scroll-link">Home</a>
-    						</li> -->
                         <li>
                             <a href="https://drive.google.com/file/d/1gPX_28rEpFXoHsIUR83QADNJUTk5HcRD/view?usp=sharing"
                                 class="scroll-link">Resume</a>
@@ -53,7 +47,6 @@
                 </div>
             </div>
         </div>
-        <!-- Side Navigation Menu End -->
     </mat-drawer>
 
 
@@ -77,34 +70,24 @@
                                 <nav class="navigation nav-block secondary-navigation nav-right">
                                     <ul>
                                         <li class="aux-navigation hide">
-                                            <!-- Button -->
                                             <div class="v-align-middle color-charcoal">
                                                 <a mat-raised-button
                                                     href="https://drive.google.com/file/d/1gPX_28rEpFXoHsIUR83QADNJUTk5HcRD/view?usp=sharing"
                                                     target="_blank" download>
-                                                    <!-- <span class="icon-download left"></span>  -->
                                                     <mat-icon class="md-18">cloud_download</mat-icon>
                                                     <span> Resume</span>
                                                 </a>
                                             </div>
                                         </li>
                                         <li class="aux-navigation hide">
-                                            <!-- Aux Navigation -->
-                                            <!-- <button mat-flat-button [disableRipple]="true" -->
-                                            <!-- class="navigation-show side-nav-show nav-icon"> -->
                                             <span class="navigation-show side-nav-show nav-icon">
                                                 <mat-icon (click)="drawer.toggle()">menu</mat-icon>
                                             </span>
-
-                                            <!-- </button> -->
                                         </li>
                                     </ul>
                                 </nav>
                                 <nav class="navigation nav-block primary-navigation nav-right no-margin-right">
                                     <ul>
-                                        <!-- <li class="current">
-        										<a href="#home" data-offset="0" class="scroll-link">Home</a>
-        									</li> -->
                                         <li>
                                             <a href="#about" data-offset="-0" class="scroll-link">About</a>
                                         </li>
@@ -118,14 +101,12 @@
                                             <a href="#git" data-offset="-60" class="scroll-link">Github</a>
                                         </li>
                                         <li>
-                                            <!-- Button -->
                                             <div class="v-align-middle color-charcoal">
                                                 <a mat-raised-button
                                                     href="https://drive.google.com/file/d/1gPX_28rEpFXoHsIUR83QADNJUTk5HcRD/view?usp=sharing"
                                                     target="_blank"
                                                     class="button small pull-right no-margin-bottom no-page-fade"
                                                     download>
-                                                    <!-- <span class="icon-download left"></span>  -->
                                                     <mat-icon class="md-18">cloud_download</mat-icon>
 
                                                     <span><span class="hide-on-mobile"> Download</span> My Resume</span>
@@ -143,7 +124,6 @@
                 <!-- Content -->
                 <div class="content clearfix">
 
-                    <!-- Feature Section 3 -->
                     <section class="section-block feature-3 bkg-charcoal">
                         <div class="feature-content">
                             <div class="feature-content-inner left pt-80 pb-30">
@@ -156,7 +136,6 @@
                                         </div>
                                     </div>
                                     <div class="column width-8 center-on-mobile">
-                                        <!-- <h1 class="title-large mb-20 color-white">Robert Schaedler III</h1> -->
                                         <h1 class="color-white weight-light mb-0"
                                             data-animate-in="preset:fadeIn;duration:1000ms;delay:100ms;" data-no-scale>
                                             Robert Schaedler III
@@ -170,7 +149,6 @@
                                             data-no-scale>
                                             Software Engineering Student: Stevens Institute of Technology
                                         </h3>
-
                                         <p class="mb-20">
                                             <a class="color-hover-grey color-white" href="mailto:rschaedl@stevens.edu">
                                                 <mat-icon class="md-18">email</mat-icon> rschaedl@stevens.edu
@@ -182,35 +160,26 @@
                                             <br>
                                         </p>
                                         <mat-divider></mat-divider>
-                                        
-
-                                        <!-- <div class="hide-on-mobile">
+                                        <div class="hide-on-mobile">
                                             <mat-chip-list aria="social list">
                                                 <mat-chip *ngFor="let item of socialList">
                                                     <a class="color-hover-charcoal"
                                                         href="{{item.url}}">{{item.name}}</a>
                                                 </mat-chip>
                                             </mat-chip-list>
-                                        </div> -->
-                                        <div class="hide-on-mobile">
-                                            <app-git-stats></app-git-stats>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <!-- Feature Section 3 -->
 
                     <!-- About Section -->
                     <section id="about" class="section-block">
 
                         <div class="row">
                             <div class="column width-4">
-                                <h4 class="mb-60 text-uppercase">
-                                    <span class="color-grey-light">
-                                        <!-- <span class="icon-news"></span> -->
+                                <h4 class="mb-60 text-uppercase"><span class="color-grey-light">
                                         <mat-icon>portrait</mat-icon>
                                     </span> Background.</h4>
                             </div>
@@ -227,7 +196,6 @@
                                     head over to my <a class="color-theme scroll-link" href="#projects">projects
                                         page</a>
                                     where I discuss each project in more detail. </p>
-                                <!-- <p class="mb-80">You can also download the most up-to-date version of my resume above</p> -->
                                 <app-coursework></app-coursework>
 
                             </div>
@@ -235,21 +203,12 @@
 
                         <hr>
 
-
-                        <!-- </div>
-        				</section>
-        				<section class="section-block ">
-        					<div class="row"> -->
-
-
                         <div id="skills" class="row">
                             <div class="column width-4">
                                 <h4 class="mb-60 text-uppercase"><span class="color-grey-light">
-                                        <!-- <span class="icon-code"></span> -->
                                         <mat-icon>code</mat-icon>
                                     </span> Skills.</h4>
                             </div>
-
                             <div class="column width-8">
                                 <mat-accordion class="align-headers">
                                     <mat-expansion-panel *ngFor="let panel of panels">
@@ -365,12 +324,18 @@
                                                 <div>
                                                     <h5 class="mb-10 color-white">Freelance Web Developer</h5>
                                                     <p class="mb-70 color-grey-light">Work to maintain and optimize
-                                                        existing
-                                                        and
-                                                        new website using Firebase and Angular. Implemented analytics to
-                                                        increase site traffic.
+                                                        existing and new website using Firebase and Angular. Implemented
+                                                        analytics to increase site traffic.
                                                         Added site payment systems for online purchases. </p>
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="timeline-description column width-8 offset-4">
+                                                <a href="https://www.linkedin.com/in/robert-schaedler-iii/"
+                                                    class="button medium bkg-theme bkg-hover-theme color-white color-hover-white">
+                                                    Connect on LinkedIn
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -380,306 +345,7 @@
                     </section>
                     <!-- Timeline End -->
 
-                    <!-- Portfolio Grid -->
-                    <!-- <div id="folio" class="section-block portfolio-5 no-margins no-padding-top">
-                        <div class="row">
-                            <div class="column width-12">
-                                <hr class="mb-110">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="column width-4">
-                                <h4 class="mb-20"><span class="color-grey-light"><span class="icon-box"></span></span>
-                                    Portfolio</h4>
-                                <div class="row">
-                                    <div class="column width-9">
-                                        <div class="grid-filter-menu list-vertical no-padding left mb-mobile-50">
-                                            <ul>
-                                                <li><a class="active inline" href="#" data-filter="*">All</a></li>
-                                                <li><a href="#" class="inline" data-filter=".web">Web Dev</a></li>
-                                                <li><a href="#" class="inline" data-filter=".database">Database </a></li>
-                                                <li><a href="#" class="inline" data-filter=".auth">Authentication</a></li>
-                                                <li><a href="#" class="inline" data-filter=".iot">Iot</a></li>
-                                                <li><a href="#" class="inline" data-filter=".client">Clients</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="column width-8">
-                                <div class="grid-container fade-in-progressively small-margins" data-layout-mode="masonry"
-                                    data-grid-ratio="1" data-animate-filter-duration="700" data-animate-resize
-                                    data-animate-resize-duration="0.8">
-                                    <div class="row">
-                                        <div class="column width-12">
-                                            <div class="row grid content-grid-3">
-                                                <div class="grid-item grid-sizer design web client">
-                                                    <div class="thumbnail overlay-fade-img-scale-out"
-                                                        data-hover-easing="easeInOut" data-hover-speed="500"
-                                                        data-hover-bkg-color="#232323" data-hover-bkg-opacity="0.55">
-                                                        <a class="overlay-link" data-group="folio-1"
-                                                            href="https://schaedlerart.com/shop.html"
-                                                            data-lightbox-animation="slideInRight">
-                                                            <img src="images/s-art.png" alt="" />
-                                                            <span class="overlay-info center">
-                                                                <span>
-                                                                    <span>
-                                                                        <span>
-                                                                            <span class="project-title">S.Art</span>
-                                                                            <span class="project-description">Web
-                                                                                Development</span>
-                                                                        </span>
-                                                                    </span>
-                                                                </span>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item iot database">
-                                                    <div class="thumbnail overlay-fade-img-scale-out"
-                                                        data-hover-easing="easeInOut" data-hover-speed="500"
-                                                        data-hover-bkg-color="#232323" data-hover-bkg-opacity="0.55">
-                                                        <a class="overlay-link" data-group="folio-1"
-                                                            href="https://drive.google.com/drive/folders/13Uf_82RTmUkmDRSaPst2koWhJvr2UbKC?usp=sharing">
-                                                            <img src="images/annemom.png" alt="" />
-                                                            <span class="overlay-info">
-                                                                <span>
-                                                                    <span>
-                                                                        <span>
-                                                                            <span class="project-title">Annemom</span>
-                                                                            <span class="project-description">IoT Weather
-                                                                                Station</span>
-                                                                        </span>
-                                                                    </span>
-                                                                </span>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="grid-item client web database">
-                                                    <div class="thumbnail overlay-fade-img-scale-out"
-                                                        data-hover-easing="easeInOut" data-hover-speed="500"
-                                                        data-hover-bkg-color="#232323" data-hover-bkg-opacity="0.55">
-                                                        <a class="overlay-link" data-group="folio-1"
-                                                            href="https://shop.veavillarba.com">
-                                                            <img src="images/herchronicle.png" alt="" />
-                                                            <span class="overlay-info">
-                                                                <span>
-                                                                    <span>
-                                                                        <span>
-                                                                            <span class="project-title">HERCHRONICLE</span>
-                                                                            <span class="project-description">Photography</span>
-                                                                        </span>
-                                                                    </span>
-                                                                </span>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item web database auth">
-                                                    <div class="thumbnail overlay-fade-img-scale-out"
-                                                        data-hover-easing="easeInOut" data-hover-speed="500"
-                                                        data-hover-bkg-color="#232323" data-hover-bkg-opacity="0.55">
-                                                        <a class="overlay-link lightbox-link" data-group="folio-1"
-                                                            href="https://ssw215.robertschaedler.com/">
-                                                            <img src="images/guess-game.png" alt="" />
-                                                            <span class="overlay-info">
-                                                                <span>
-                                                                    <span>
-                                                                        <span>
-                                                                            <span class="project-title">#Guess</span>
-                                                                            <span class="project-description">Game</span>
-                                                                        </span>
-                                                                    </span>
-                                                                </span>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item web iot">
-                                                    <div class="thumbnail overlay-fade-img-scale-out"
-                                                        data-hover-easing="easeInOut" data-hover-speed="500"
-                                                        data-hover-bkg-color="#232323" data-hover-bkg-opacity="0.55">
-                                                        <a class="overlay-link lightbox-link" data-group="folio-1"
-                                                            data-caption="Music app"
-                                                            href="https://devpost.com/software/parkme-jo1i8f"
-                                                            data-lightbox-animation="slideInRight">
-                                                            <img src="images/venturehacks.png" alt="" />
-                                                            <span class="overlay-info">
-                                                                <span>
-                                                                    <span>
-                                                                        <span>
-                                                                            <span class="project-title">VentureHacks:
-                                                                                Purple</span>
-                                                                            <span class="project-description">Hackathon</span>
-                                                                        </span>
-                                                                    </span>
-                                                                </span>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item python">
-                                                    <div class="thumbnail overlay-fade-img-scale-out"
-                                                        data-hover-easing="easeInOut" data-hover-speed="500"
-                                                        data-hover-bkg-color="#232323" data-hover-bkg-opacity="0.55">
-                                                        <a class="overlay-link lightbox-link" data-group="folio-1"
-                                                            data-caption="Music app"
-                                                            href="https://github.com/robertschaedler3/Shut-the-Box"
-                                                            data-lightbox-animation="slideInRight">
-                                                            <img src="images/shut-the-box.png" alt="" />
-                                                            <span class="overlay-info">
-                                                                <span>
-                                                                    <span>
-                                                                        <span>
-                                                                            <span class="project-title">Shut the Box</span>
-                                                                            <span class="project-description">Python
-                                                                                Game</span>
-                                                                        </span>
-                                                                    </span>
-                                                                </span>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="grid-item web">
-                                                    <div class="thumbnail overlay-fade-img-scale-out"
-                                                        data-hover-easing="easeInOut" data-hover-speed="500"
-                                                        data-hover-bkg-color="#232323" data-hover-bkg-opacity="0.55">
-                                                        <a class="overlay-link lightbox-link" data-group="folio-1"
-                                                            data-caption="Music app"
-                                                            href="https://devpost.com/software/piggy-bankers"
-                                                            data-lightbox-animation="slideInRight">
-                                                            <img src="images/venturehacks2.png" alt="" />
-                                                            <span class="overlay-info">
-                                                                <span>
-                                                                    <span>
-                                                                        <span>
-                                                                            <span class="project-title">VentureHacks:
-                                                                                Fintech</span>
-                                                                            <span class="project-description">Hackathon</span>
-                                                                        </span>
-                                                                    </span>
-                                                                </span>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                               
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-
-
-                    <!-- <div class="section-block bkg-charcoal color-white">
-                        <div class="row">
-                            <div class="column width-6 push-3">
-                                <div class="hero-content split-hero-content no-margin-top">
-                                    <div class="hero-content-inner left-on-mobile">
-                                        <blockquote class="border">
-                                            <p>Any sufficiently advanced technology is indistinguishable from magic.</p>
-                                            <cite>Arthur C. Clarke</cite>
-                                        </blockquote>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-
                     <app-github id="git"></app-github>
-
-                    <!-- <div class="section-block bkg-charcoal color-white">
-                        <div class="row">
-                            <div class="column width-4">
-                                <h4 class="mb-20"><span class="color-grey-light"><span class="icon-text"></span></span>
-                                    Looking for more?</h4>
-                            </div>
-                            <div class="column width-8">
-                                <p>Check out my complete portfolio page where I go into detail about the process,
-                                    motivation, and inspiration for some of my biggest accomplishments. </p>
-                                <a href="https://github.com/robertschaedler3"
-                                    class="button medium bkg-theme bkg-hover-theme color-white color-hover-white"><span
-                                        class="icon-folder left"></span> Detailed Folio </a>
-                            </div>
-                        </div>
-                    </div> -->
-
-
-                    <!-- <div class="section-block bkg-charcoal color-white">
-        						<div class="row">
-        							<div class="column width-4">
-        								<h4 class="mb-20"><span class="color-grey-light"><span class="icon-thumbs-up"></span></span> Like what you see?</h4>
-        							</div>
-        							<div class="column width-8">
-        								<p>Need a website? No problem! Sign up now to get the building process started or check out my options to get your site ready for business. </p>
-        								<a href="maintenance.html" class="button medium bkg-theme bkg-hover-theme color-white color-hover-white"><span class="icon-browser left"></span> Get your site </a>
-        							</div>
-        						</div>
-        					</div> -->
-
-                    <!-- Contact Form -->
-                    <!-- <section id="contact" class="section-block replicable-content contact-2">
-                        <div class="row">
-                            <div class="column width-4">
-                                <h4 class="mb-30"><span class="icon-newsletter"></span> Say Hello.</h4>
-                                <div class="row">
-                                    <div class="column width-10">
-                                        <p>Shoot me an email with any questions or bussiness inquires and I'll get back to
-                                            you as soon as I can.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="column width-8 left">
-                                <div class="contact-form-container">
-                                    <form id="say-hello-form" class="contact-form" method="post" novalidate>
-                                        <div class="row">
-                                            <div class="column width-6">
-                                                <input id="fname" type="text" name="fname" class="form-fname form-element large"
-                                                    placeholder="First Name*" tabindex="1" required>
-                                            </div>
-                                            <div class="column width-6">
-                                                <input id="lname" type="text" name="lname" class="form-lname form-element large"
-                                                    placeholder="Last Name" tabindex="2">
-                                            </div>
-                                            <div class="column width-6">
-                                                <input id="email" type="email" name="email"
-                                                    class="form-email form-element large" placeholder="Email address*"
-                                                    tabindex="3" required>
-                                            </div>
-                                            <div class="column width-6">
-                                                <input id="website" type="text" name="website"
-                                                    class="form-website form-element large" placeholder="Website" tabindex="4">
-                                            </div>
-        
-                                            <div class="column width-6">
-                                                <input type="text" name="honeypot" class="form-honeypot form-element large">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="column width-12">
-                                                <div class="field-wrapper">
-                                                    <textarea id="message" name="message"
-                                                        class="form-message form-element large" placeholder="Message*"
-                                                        tabindex="7" required></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="column width-12">
-                                                <input type="submit" value="Send Email"
-                                                    class="form-submit button medium bkg-theme bkg-hover-theme color-white color-hover-white">
-                                            </div>
-                                        </div>
-                                    </form>
-                                    <div class="form-response center"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </section> -->
-                    <!--Contact Form End -->
 
                 </div>
                 <!-- Content End -->
@@ -703,17 +369,6 @@
                                             <mat-icon class="md-18">local_phone</mat-icon> +1-862-201-1429
                                         </a>
 
-                                        <!-- <span class="icon-phone"></span><a class="color-hover-theme"
-                                            href="tel:+1-862-201-1429"> +1-862-201-1429</a></p>
-                                    <p><span class="icon-email"></span><a class="color-hover-theme"
-                                            href="mailto:rschaedl@stevens.edu"> rschaedl@stevens.edu</a></p> -->
-                                        <!-- <ul class="social-list list-horizontal">
-                                            <li><a href="#"><span class="icon-github-with-circle medium"></span></a></li>
-                                            <li><a href="#"><span class="icon-linkedin-with-circle medium"></span></a></li>
-                                            <li><a href="#"><span class="icon-instagram-with-circle medium"></span></a></li>
-                                            <li><a href="mailto:rschaedl@stevens.edu"><span
-                                                        class="icon-mail-with-circle medium"></span></a></li>
-                                        </ul> -->
                                         <div class="pb-10 pt-10 color-charcoal">
                                             <mat-chip-list aria="social list">
                                                 <mat-chip *ngFor="let item of socialList">
@@ -729,18 +384,7 @@
                                 </div>
                             </div>
                             <div class="column width-3">
-                                <!-- <div class="widget">
-                                    <h4 class="widget-title">Other Sites</h4>
-                                    <ul>
-                                        <li>
-                                            <a href="https://berniestudios.com">Photography</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://berniestudios.com/cinima">Cinematography</a>
-                                        </li>
-        
-                                    </ul>
-                                </div> -->
+
                             </div>
                             <div class="column width-3">
                                 <div class="widget">
@@ -753,7 +397,7 @@
                                         </li>
                                         <li>
                                             <span class="post-info"><span class="post-date"> Mar 2019-Present
-                                                    2019</span></span>
+                                                2019</span></span>
                                             <a href="#">Digital Cloak</a>
                                         </li>
                                         <li>
@@ -768,7 +412,6 @@
                     </div>
                 </footer>
                 <!-- Footer End -->
-
             </div>
         </div>
     </mat-drawer-content>
