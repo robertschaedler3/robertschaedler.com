@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from '../../http/http.service';
+import { GitService } from './git.service';
 
 @Component({
   selector: 'app-git-stats',
@@ -8,10 +8,7 @@ import { HttpService } from '../../http/http.service';
 })
 export class GitStatsComponent implements OnInit {
 
-  constructor(public contributions: HttpService, public events: HttpService) {
-    contributions.get('https://github-contributions-api.now.sh/v1/robertschaedler3');
-    events.get('https://api.github.com/users/robertschaedler3/events');
-  }
+  constructor(public git: GitService) { }
 
   ngOnInit() {
   }

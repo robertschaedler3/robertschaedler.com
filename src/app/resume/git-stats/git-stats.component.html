@@ -1,1 +1,6 @@
-<p>git-stats works!</p>
+<div *ngIf="git.contributions$ | async as contributions">
+    {{contributions[0][0].total}}
+</div>
+<div *ngIf="git.events$ | async as events">
+    {{events[0].created_at | date}}
+</div>
