@@ -172,54 +172,30 @@
                                         </h3>
 
                                         <p class="mb-20">
-
                                             <a class="color-hover-grey color-white" href="mailto:rschaedl@stevens.edu">
                                                 <mat-icon class="md-18">email</mat-icon> rschaedl@stevens.edu
                                             </a>
                                             <br>
-
                                             <a class="color-hover-grey color-white" href="tel:+1-862-201-1429">
                                                 <mat-icon class="md-18">local_phone</mat-icon> +1-862-201-1429
                                             </a>
                                             <br>
-                                            <!-- <mat-list>
-                                                    <mat-list-item>
-                                                        <mat-icon mat-list-icon>email</mat-icon>
-                                                        <a mat-line class="color-hover-grey color-white" href="mailto:rschaedl@stevens.edu" class="color-white">rschaedl@stevens.edu</a>
-                                                    </mat-list-item>
-                                                    <mat-list-item>
-                                                        <mat-icon mat-list-icon>local_phone</mat-icon>
-                                                        <a mat-line class="color-hover-grey color-white" href="tel:+1-862-201-1429">+1-862-201-1429</a>
-                                                    </mat-list-item>
-                                                    
-                                                </mat-list> -->
                                         </p>
                                         <mat-divider></mat-divider>
-                                        <!-- <ul class="social-list list-horizontal">
-                                            <li class="color-hover-white"><a href="https://github.com/robertschaedler3"
-                                                    class="color-grey-light "><span
-                                                        class="icon-github-with-circle medium"></span></a></li>
-                                            <li class="color-hover-white"><a
-                                                    href="https://linkedin.com/in/robert-schaedler-iii/"
-                                                    class="color-grey-light"><span
-                                                        class="icon-linkedin-with-circle medium"></span></a></li>
-                                            <li class="color-hover-white"><a
-                                                    href="https://www.instagram.com/robertschaedleriii/"
-                                                    class="color-grey-light"><span
-                                                        class="icon-instagram-with-circle medium"></span></a></li>
-                                            <li class="color-hover-white"><a href="mailto:rschaedl@stevens.edu"
-                                                    class="color-grey-light"><span
-                                                        class="icon-mail-with-circle medium"></span></a></li>
-                                            
-                                        </ul> -->
-                                        <div class="hide-on-mobile">
+                                        
+
+                                        <!-- <div class="hide-on-mobile">
                                             <mat-chip-list aria="social list">
                                                 <mat-chip *ngFor="let item of socialList">
                                                     <a class="color-hover-charcoal"
                                                         href="{{item.url}}">{{item.name}}</a>
                                                 </mat-chip>
                                             </mat-chip-list>
+                                        </div> -->
+                                        <div class="hide-on-mobile">
+                                            <app-git-stats></app-git-stats>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
