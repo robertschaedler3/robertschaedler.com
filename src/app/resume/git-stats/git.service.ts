@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { tap, map } from 'rxjs/operators';
 import * as _ from 'lodash';
 
-interface GitEvent {
+export interface GitEvent {
   id: string;
   type: string;
   actor: {
@@ -44,7 +44,7 @@ interface GitEvent {
   created_at: string;
 }
 
-interface Year {
+export interface Year {
   year: string;
   total: number;
   range: {
@@ -53,14 +53,14 @@ interface Year {
   }
 }
 
-interface Contribution {
+export interface Contribution {
   date: string;
   count: number;
   color: string;
   intensity: number;
 }
 
-interface Contributions {
+export interface Contributions {
   years: Year[];
   contributions: Contribution[];
 }
@@ -71,7 +71,7 @@ interface Contributions {
 export class GitService {
 
   private events$: Observable<GitEvent[]>;
-  private contributions$: Observable<Contributions>;
+  public contributions$: Observable<Contributions>;
 
   private eventsURL: string = 'https://api.github.com/users/robertschaedler3/events';
   private contributionsURL: string = 'https://github-contributions-api.now.sh/v1/robertschaedler3';
@@ -94,4 +94,5 @@ export class GitService {
       tap(console.log),
     );
   }
+
 }
