@@ -22,6 +22,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 import { NotesLayoutComponent } from './layouts/notes-layout/notes-layout.component';
+import { GitStatsComponent } from './resume/git-stats/git-stats.component';
 
 
 
@@ -32,7 +33,8 @@ import { NotesLayoutComponent } from './layouts/notes-layout/notes-layout.compon
     CourseworkComponent,
     DialogContent,
     GithubComponent,
-    NotesLayoutComponent],
+    NotesLayoutComponent,
+    GitStatsComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
