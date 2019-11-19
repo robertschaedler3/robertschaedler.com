@@ -30,6 +30,16 @@ export class ResumeComponent implements OnInit {
 
     panels: Panel[] = [
         {
+            title: 'Java',
+            level: 'Advanced',
+            description: '',
+            chips: [
+                { link: '', name: 'Data Structures' },
+                { link: '', name: 'OOP' },
+                { link: '', name: 'Obj. Oriented Software Engineering' },
+            ]
+        },
+        {
             title: 'Python',
             level: 'Advanced',
             description: 'I have used python for a wide variety of different projects. From data science and network security analysis to RESTful APIs I\'ve done it all',
@@ -39,16 +49,6 @@ export class ResumeComponent implements OnInit {
                 { link: '', name: 'pandas' },
                 { link: '', name: 'Flask' },
 
-            ]
-        },
-        {
-            title: 'Java',
-            level: 'Intermediate',
-            description: '',
-            chips: [
-                { link: '', name: 'Data Structures' },
-                { link: '', name: 'OOP' },
-                { link: '', name: 'Obj. Oriented Software Engineering' },
             ]
         },
         {
@@ -63,16 +63,17 @@ export class ResumeComponent implements OnInit {
         },
         {
             title: 'C++',
-            level: 'Advanced',
+            level: 'Proficient',
             description: 'My main used for C++ have been in the world of IoT. Writing firmware for IoT devices that connect and stream data to the cloud.',
             chips: [
                 { link: '', name: 'Particle' },
                 { link: '', name: 'Arduino' },
+                { link: '', name: 'Rapsberry PI'}
             ]
         },
         {
             title: 'NodeJS',
-            level: 'Advanced',
+            level: 'Intermediate',
             description: '',
             chips: [
                 { link: '', name: 'TypeScript' },
