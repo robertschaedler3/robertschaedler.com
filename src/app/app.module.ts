@@ -24,7 +24,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NotesLayoutComponent } from './layouts/notes-layout/notes-layout.component';
 import { GitStatsComponent } from './resume/git-stats/git-stats.component';
 
-
+import { HttpClientModule } from '@angular/common/http'; 
 
 @NgModule({
   declarations: [
@@ -48,6 +48,7 @@ import { GitStatsComponent } from './resume/git-stats/git-stats.component';
     MatDialogModule,
     MatSidenavModule,
     MatToolbarModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   entryComponents: [
