@@ -1,8 +1,48 @@
-<div *ngIf="git.contributions$ | async as contributions" style="color:white">
-    {{contributions[0][0].total + contributions[0][1].total}} commits
-    <!-- {{git.totalContributions()}} -->
+<div class="row">
+    <div class="column width-4">
+        <div *ngIf="git.contributions$ | async as contributions else loadingC" style="color:white">
+            <div class="statmb-mobile-20 no-margin-bottom">
+                <div class="stat-inner">
+                    <p class="counter no-margin-bottom title-medium weight-bold">
+                        <span class="stat-counter">{{contributions[0][0].total + contributions[0][1].total}}</span>
+                    </p>
+                    <p class="description text-uppercase mb-20"> git contributions</p>
+                </div>
+            </div>
+        </div>
+        <ng-template #loadingC>
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </ng-template>
+    </div>
+    <div class="column width-4">
+        <div *ngIf="git.events$ | async as events else loadingE" style="color:white">
+            <div class="statmb-mobile-20 no-margin-bottom">
+                <div class="stat-inner">
+                    <p class="counter no-margin-bottom title-medium weight-bold">
+                        <span class="stat-counter">{{events[0].created_at | date:'M/d/yy, h:mm'}}</span>
+                    </p>
+                    <p class="description text-uppercase mb-20"> last commit to <a style="color:#c2c2c2" href="{{events[0].repo.url}}">{{events[0].repo.name.split('/')[1]}}</a></p>
+                </div>
+            </div>
+        </div>
+        <ng-template #loadingE>
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </ng-template>
+    </div>
+    <div class="column width-4">
+        <div *ngIf="git.repos$ | async as repos else loadingR" style="color:white">
+            <div class="statmb-mobile-20 no-margin-bottom">
+                <div class="stat-inner">
+                    <p class="counter no-margin-bottom title-medium weight-bold">
+                        <span class="stat-counter">{{repos.length}}</span>
+                    </p>
+                    <p class="description text-uppercase mb-20"> Total Repos</p>
+                </div>
+            </div>
+        </div>
+        <ng-template #loadingR>
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </ng-template>
+    </div>
 </div>
-<div *ngIf="git.events$ | async as events" style="color:white">
-    {{events[0].created_at | date:'medium'}}
-    {{events[0].repo.name.split('/')[1]}}
-</div>
+
