@@ -19,6 +19,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 
 import { NotesLayoutComponent } from './layouts/notes-layout/notes-layout.component';
@@ -48,6 +49,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatDialogModule,
     MatSidenavModule,
     MatToolbarModule,
+    MatProgressBarModule,
     HttpClientModule,
     AppRoutingModule
   ],
