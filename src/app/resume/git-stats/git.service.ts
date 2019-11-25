@@ -72,13 +72,16 @@ export class GitService {
 
   private events$: Observable<GitEvent[]>;
   public contributions$: Observable<Contributions>;
+  public repos$: Observable<Contributions>;
 
   private eventsURL: string = 'https://api.github.com/users/robertschaedler3/events';
   private contributionsURL: string = 'https://github-contributions-api.now.sh/v1/robertschaedler3';
+  private reposURL: string = 'https://api.github.com/users/robertschaedler3/repos';
 
   constructor(private http: HttpClient) {
     this.getContributions();
     this.getEvents();
+    this.getRepos();
    }
 
   private getEvents() {
@@ -90,6 +93,13 @@ export class GitService {
 
   private getContributions() {
     return this.contributions$ = this.http.get(this.contributionsURL).pipe(
+      map(data => _.values(data)),
+      tap(console.log),
+    );
+  }
+
+  private getRepos() {
+    return this.repos$ = this.http.get(this.reposURL).pipe(
       map(data => _.values(data)),
       tap(console.log),
     );
