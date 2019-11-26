@@ -94,7 +94,8 @@ export class ResumeComponent implements OnInit {
 	socialList: SocialItem[] = [
 		{ name: "Github", url: "https://github.com/robertschaedler3" },
 		{ name: "LinkedIn", url: "https://linkedin.com/in/robert-schaedler-iii/" },
-		{ name: "Instagram", url: "https://www.instagram.com/robertschaedleriii/" }
+		{ name: "Instagram", url: "https://www.instagram.com/robertschaedleriii/" },
+		{ name: "Medium", url:"https://medium.com/@robertschaedler3"}
 	];
 
 	constructor() { }
