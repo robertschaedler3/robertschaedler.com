@@ -4,10 +4,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { ResumeComponent } from './resume/resume.component';
 import { CourseworkComponent } from './resume/coursework/coursework.component';
 import { DialogContent } from './resume/coursework/coursework.component';
 import { GithubComponent } from './resume/github/github.component';
+import { GitStatsComponent } from './resume/git-stats/git-stats.component';
+import { HttpClientModule } from '@angular/common/http'; 
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -22,11 +25,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 
-import { NotesLayoutComponent } from './layouts/notes-layout/notes-layout.component';
-import { GitStatsComponent } from './resume/git-stats/git-stats.component';
-
-import { HttpClientModule } from '@angular/common/http'; 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +32,6 @@ import { HttpClientModule } from '@angular/common/http';
     CourseworkComponent,
     DialogContent,
     GithubComponent,
-    NotesLayoutComponent,
     GitStatsComponent],
   imports: [
     BrowserModule,
