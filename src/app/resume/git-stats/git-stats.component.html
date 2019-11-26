@@ -19,9 +19,9 @@
             <div class="statmb-mobile-20 no-margin-bottom">
                 <div class="stat-inner">
                     <p class="counter no-margin-bottom title-medium weight-bold">
-                        <span class="stat-counter">{{events[0].created_at | date:'M/d/yy, h:mm'}}</span>
+                        <span class="stat-counter">{{events[0].created_at | date:'M/d/yy h:mm'}}</span>
                     </p>
-                    <p class="description text-uppercase mb-20"> last commit to <a style="color:#c2c2c2" href="{{events[0].repo.url}}">{{events[0].repo.name.split('/')[1]}}</a></p>
+                    <p class="description text-uppercase mb-20"> last commit to <br><a class="color-theme" href="https://github.com/{{events[0].repo.name}}">{{events[0].repo.name.split('/')[1]}}</a></p>
                 </div>
             </div>
         </div>
