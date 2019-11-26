@@ -1,12 +1,12 @@
 <div class="row">
     <div class="column width-4">
-        <div *ngIf="git.contributions$ | async as contributions else loadingC" style="color:white">
+        <div *ngIf="git.contributions$ | async as contributions else loadingC">
             <div class="statmb-mobile-20 no-margin-bottom">
                 <div class="stat-inner">
-                    <p class="counter no-margin-bottom title-medium weight-bold">
+                    <p class="counter no-margin-bottom title-medium weight-bold color-white">
                         <span class="stat-counter">{{contributions[0][0].total + contributions[0][1].total}}</span>
                     </p>
-                    <p class="description text-uppercase mb-20"> git contributions</p>
+                    <p class="description mb-20 color-grey-light weight-light text-uppercase">Git Contributions</p>
                 </div>
             </div>
         </div>
@@ -15,13 +15,14 @@
         </ng-template>
     </div>
     <div class="column width-4">
-        <div *ngIf="git.events$ | async as events else loadingE" style="color:white">
+        <div *ngIf="git.events$ | async as events else loadingE">
             <div class="statmb-mobile-20 no-margin-bottom">
                 <div class="stat-inner">
-                    <p class="counter no-margin-bottom title-medium weight-bold">
+                    <p class="counter no-margin-bottom title-medium weight-bold color-white">
                         <span class="stat-counter">{{events[0].created_at | date:'M/d/yy h:mm'}}</span>
                     </p>
-                    <p class="description text-uppercase mb-20"> last commit to <br><a class="color-theme" href="https://github.com/{{events[0].repo.name}}">{{events[0].repo.name.split('/')[1]}}</a></p>
+                    <p class="description mb-20"> 
+                        <span class="color-grey-light weight-light text-uppercase">Last contribution:</span> <br><a style="color:#2280e4" href="https://github.com/{{events[0].repo.name}}">{{events[0].repo.name.split('/')[1]}}</a></p>
                 </div>
             </div>
         </div>
@@ -30,13 +31,13 @@
         </ng-template>
     </div>
     <div class="column width-4">
-        <div *ngIf="git.repos$ | async as repos else loadingR" style="color:white">
+        <div *ngIf="git.repos$ | async as repos else loadingR">
             <div class="statmb-mobile-20 no-margin-bottom">
                 <div class="stat-inner">
                     <p class="counter no-margin-bottom title-medium weight-bold">
-                        <span class="stat-counter">{{repos.length}}</span>
+                        <span class="stat-counter color-white">{{repos.length}}</span>
                     </p>
-                    <p class="description text-uppercase mb-20"> Total Repos</p>
+                    <p class="description mb-20 color-grey-light weight-light text-uppercase"> Total Repos</p>
                 </div>
             </div>
         </div>
