@@ -3,6 +3,7 @@ version: '3.7'
 services: 
 
     website:
+        container_name: rs_website
         build:
             context: .
             dockerfile: Dockerfile
