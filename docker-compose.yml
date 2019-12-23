@@ -1,0 +1,13 @@
+version: '3.7'
+
+services: 
+
+    website:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes: 
+            - .:/app
+            - /app/node_modules
+        ports:
+            - 4201:4200
