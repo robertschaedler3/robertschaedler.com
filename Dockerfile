@@ -3,13 +3,13 @@ FROM node:12.13.0
 # Create app directory
 WORKDIR /usr/src/app
 
-# add `/app/node_modules/.bin` to $PATH
+# add `usr/src/app/node_modules/.bin` to $PATH
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
 # Install app dependencies
 COPY package*.json ./
 RUN npm install
-RUN npm install -g @angular/cli@7.3.9
+RUN npm install -g @angular/cli@8.0.6
 
 # Bundle app source
 COPY . .
