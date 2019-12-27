@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GitService } from './git.service';
 
-import { Contributions } from './git.service';
-
 @Component({
   selector: 'app-git-stats',
   templateUrl: './git-stats.component.html',
