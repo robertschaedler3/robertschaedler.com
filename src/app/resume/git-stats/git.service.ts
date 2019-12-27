@@ -70,7 +70,7 @@ export interface Contributions {
 })
 export class GitService {
 
-  private events$: Observable<GitEvent[]>;
+  public events$: Observable<GitEvent[]>;
   public contributions$: Observable<Contributions>;
   public repos$: Observable<Contributions>;
 
@@ -82,7 +82,7 @@ export class GitService {
     this.getContributions();
     this.getEvents();
     this.getRepos();
-   }
+  }
 
   private getEvents() {
     return this.events$ = this.http.get(this.eventsURL).pipe(
