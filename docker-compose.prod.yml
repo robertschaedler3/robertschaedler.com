@@ -3,7 +3,7 @@ version: '3.7'
 services:
 
     website:
-        container_name: rs_website
+        container_name: personal_website
         build:
             context: .
             dockerfile: Dockerfile-prod
@@ -11,4 +11,4 @@ services:
             - .:/app
             - /app/node_modules
         ports:
-            - 5000:80
+            - 10.136.4.28:80:80
