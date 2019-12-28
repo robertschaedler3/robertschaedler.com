@@ -1,0 +1,27 @@
+*                 text=auto
+
+# Source code
+*.css             text
+*.html            text diff=html
+*.scss            text diff=css
+
+*.js              text
+*.ts              text
+*.lock            text -diff
+package-lock.json text -diff
+
+# Docker
+*.dockerignore    text
+Dockerfile        text
+
+# Config
+*.conf            text
+*.config          text
+*.yml             text
+
+# Image assets
+*.ico             binary
+*.png             binary
+*.jpg             binary
+*.jpeg            binary
+*.gif             binary
