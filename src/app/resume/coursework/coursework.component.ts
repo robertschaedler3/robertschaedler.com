@@ -5,7 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-coursework',
   templateUrl: './coursework.component.html',
-  styleUrls: ['./coursework.component.scss']
+  styleUrls: []
 })
 export class CourseworkComponent {
 

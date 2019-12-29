@@ -4,7 +4,7 @@ import { GitService } from './git.service';
 @Component({
   selector: 'app-git-stats',
   templateUrl: './git-stats.component.html',
-  styleUrls: ['./git-stats.component.scss']
+  styleUrls: []
 })
 export class GitStatsComponent implements OnInit {
 
