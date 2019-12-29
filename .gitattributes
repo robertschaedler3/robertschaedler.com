@@ -25,3 +25,6 @@ Dockerfile        text
 *.jpg             binary
 *.jpeg            binary
 *.gif             binary
+
+# Template Files
+assets/css/* linguist-vendored
