@@ -345,8 +345,10 @@ body,
 /* grey ulatrlight */
 .bkg-grey-ultralight{
 	background-color: #fafafa;
-	border-color: #fafafa;
-	
+	border-color: #fafafa;	
+}
+.color-hover-grey-ultralight{
+	color: #cfcfcf;
 }
 .bkg-hover-grey-ultralight:hover{
 	background-color: #fafafa;
@@ -591,12 +593,12 @@ body,
 
 /* Header Initial Styling */
 .header .header-inner{
-	background-color: #fff;
+	background-color: #292929;
 	border-bottom: none;
 	border-bottom: 1px solid transparent;
 }
 .header .header-inner > .nav-bar{
-	border-bottom: 1px solid #eee;
+	border-bottom: 0.25px solid #eee;
 }
 
 /* Transparent Header Initial & Active Nav Colors */
@@ -613,7 +615,7 @@ body,
 
 /* Background Header - On Scroll! */
 .header-background .header-inner{
-	background-color: #fff;
+	background-color: #292929;
 	border-color: #eee;
 }
 .header-background .header-inner > .nav-bar{
@@ -629,7 +631,7 @@ body,
 
 /* Mobile Header Styles & Breakpoints */
 .mobile .header .header-inner{
-	background-color: #fff;
+	background-color: #292929;
 	border-top: none;
 }
 .mobile .header .header-inner{
@@ -642,10 +644,10 @@ body,
 	.header .header,
 	.header .header-inner,
 	.header.header-transparent .header-inner{
-		background-color: #fff;
+		background-color: #292929;
 	}
 	.header .header-inner{
-		border-bottom: 1px solid #eee;
+		border-bottom: 1px solid #292929;
 	}
 	.header .header-inner > .nav-bar{
 		padding: 0;
@@ -1107,8 +1109,8 @@ body,
 	}
 	.header .v-align-middle > .button:not(.nav-icon),
 	.header .dropdown > .button:not(.nav-icon){
-		background: #232323;
-		border-color: transparent;
+		background: #292929;
+		border-color: #fff;
 		color: #fff;
 	}
 	.header .v-align-middle > .button:not(.nav-icon):hover,
