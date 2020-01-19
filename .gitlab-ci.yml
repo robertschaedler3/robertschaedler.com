@@ -1,0 +1,31 @@
+image: node:latest
+
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - mkdir -p ~/.ssh
+  - echo -e "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+  - chmod 600 ~/.ssh/id_rsa
+  - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+build_site:
+  stage: build
+  script:
+    - npm install
+    - npm install -g @angular/cli@8.3.18
+    - ng build --output-path=dist
+  artifacts:
+    paths:
+      - node_modules/
+
+deploy_production:
+  stage: deploy
+  script:
+    - ssh deployer@68.183.17.186 "rm -r /var/www/robertschaedler.com/*"
+    - scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r ./dist deployer@68.183.17.186:/var/www/robertschaedler.com
