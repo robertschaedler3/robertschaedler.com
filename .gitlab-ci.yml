@@ -29,5 +29,5 @@ build_site:
 deploy_production:
   stage: deploy
   script:
-    - ssh deployer@68.183.17.186 "rm -r /var/www/robertschaedler.com/*"
+    - ssh deployer@68.183.17.186 "mkdir -p robertschaedler.com && rm -r /var/www/robertschaedler.com/* -f"
     - scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r ./dist deployer@68.183.17.186:/var/www/robertschaedler.com
