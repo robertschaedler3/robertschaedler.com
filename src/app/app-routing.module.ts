@@ -6,7 +6,8 @@ import { ResumeComponent } from './resume/resume.component'
 
 const routes: Routes = [
   { path: '', component: ResumeComponent },
-  ];
+  { path: '**', redirectTo: '/' },
+];
 
 
 @NgModule({
