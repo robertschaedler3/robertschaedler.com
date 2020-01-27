@@ -26,6 +26,16 @@ export class ResumeComponent implements OnInit {
 
 	panels: Panel[] = [
 		{
+			title: 'Docker',
+			level: 'Advanced',
+			description: '',
+			chips: [
+				{ link: '', name: 'docker-compose' },
+				{ link: '', name: 'Dockerfile' },
+				{ link: 'https://github.com/robertschaedler3/Docker-Cheatsheet', name: 'Docker Cheatsheet' },
+			]
+		},
+		{
 			title: 'Java',
 			level: 'Advanced',
 			description: '',
@@ -52,8 +62,8 @@ export class ResumeComponent implements OnInit {
 			level: 'Advanced',
 			description: '',
 			chips: [
-				{ link: '', name: 'Angular CLI' },
-				{ link: '', name: 'React' },
+				{ link: '', name: 'Angular' },
+				{ link: '', name: 'Graphql' },
 				{ link: '', name: 'Express' },
 			]
 		},
@@ -62,6 +72,18 @@ export class ResumeComponent implements OnInit {
 			level: 'Proficient',
 			description: 'My main used for C++ have been in the world of IoT. Writing firmware for IoT devices that connect and stream data to the cloud.',
 			chips: [
+				{ link: 'https://github.com/robertschaedler3/CS-385', name: 'Algorithms' },
+				{ link: '', name: 'Particle' },
+				{ link: '', name: 'Arduino' },
+				{ link: '', name: 'Rapsberry PI' }
+			]
+		},
+		{
+			title: 'C',
+			level: 'Proficient',
+			description: 'My main used for C++ have been in the world of IoT. Writing firmware for IoT devices that connect and stream data to the cloud.',
+			chips: [
+				{ link: 'https://github.com/robertschaedler3/CS-392', name: 'Systems Programming' },
 				{ link: '', name: 'Particle' },
 				{ link: '', name: 'Arduino' },
 				{ link: '', name: 'Rapsberry PI' }
@@ -76,6 +98,7 @@ export class ResumeComponent implements OnInit {
 				{ link: '', name: 'Express' },
 				{ link: '', name: 'RESTful' },
 				{ link: '', name: 'Parse Server' },
+				{ link: '', name: 'Graphql' },
 			]
 		},
 		{
@@ -84,7 +107,6 @@ export class ResumeComponent implements OnInit {
 			description: '',
 			chips: [
 				{ link: '', name: 'Angular' },
-				{ link: '', name: 'React' },
 				{ link: '', name: 'Webpack' },
 			]
 		},
@@ -95,7 +117,7 @@ export class ResumeComponent implements OnInit {
 		{ name: "Github", url: "https://github.com/robertschaedler3" },
 		{ name: "LinkedIn", url: "https://linkedin.com/in/robert-schaedler-iii/" },
 		{ name: "Instagram", url: "https://www.instagram.com/robertschaedleriii/" },
-		{ name: "Medium", url:"https://medium.com/@robertschaedler3"}
+		{ name: "Medium", url: "https://medium.com/@robertschaedler3" }
 	];
 
 	constructor() { }
