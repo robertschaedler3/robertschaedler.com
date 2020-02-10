@@ -134,5 +134,8 @@
       }
     }
   },
-  "defaultProject": "robertschaedler"
+  "defaultProject": "robertschaedler",
+  "cli": {
+    "analytics": "edfef51d-fc87-4064-b38f-1d794c5103b1"
+  }
 }
