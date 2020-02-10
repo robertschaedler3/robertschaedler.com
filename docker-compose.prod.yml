@@ -8,7 +8,5 @@ services:
             context: .
             dockerfile: Dockerfile-prod
         volumes: 
-            - .:/app
-            - /app/node_modules
-        ports:
-            - 10.136.4.28:80:80
+            - /usr/src/app/data/nginx/main/personal-site:/usr/src/app/dist
+ 
