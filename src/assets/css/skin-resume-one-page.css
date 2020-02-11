@@ -2827,9 +2827,7 @@ textarea.required-field {
   text-transform: uppercase;
   font-weight: 700;
 }
-.social-list li a {
-  /*color: #313854;*/
-}
+
 .social-list li.social-list-label {
   color: #333;
 }
@@ -2888,9 +2886,7 @@ textarea.required-field {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-.footer-top {
-  /*background-color: #333;*/
-}
+
 .footer-top .footer-logo {
   width: 9rem;
   margin-bottom: 3rem !important;
