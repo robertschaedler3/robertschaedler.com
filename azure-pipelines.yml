@@ -1,11 +1,4 @@
 # Node.js with Angular
-- task: AzureFileCopy@4
-  inputs:
-    SourcePath: 'dist/'
-    azureSubscription: 'Free(d4936015-1372-44c1-9a38-0b4d945cae89)'
-    Destination: 'AzureBlob'
-    storage: 'robertschaedlerstorage'
-    ContainerName: '$web'
 # Build a Node.js project that uses Angular.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
@@ -27,3 +20,11 @@ steps:
     npm install
     ng build --prod
   displayName: 'npm install and build'
+
+- task: AzureFileCopy@4
+  inputs:
+    SourcePath: 'dist/'
+    azureSubscription: 'Free(d4936015-1372-44c1-9a38-0b4d945cae89)'
+    Destination: 'AzureBlob'
+    storage: 'robertschaedlerstorage'
+    ContainerName: '$web'
