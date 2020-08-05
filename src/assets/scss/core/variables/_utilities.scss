@@ -1,0 +1,20 @@
+@function set_text_color($color) {
+    @if (lightness($color) > 50) {
+        @return $black;
+    } @else {
+        @return $white;
+    }
+}
+
+@each $color, $value in $branding-colors {
+    .bkg-#{$color} {
+        background-color: $value !important;
+        color: set-text-color($value) !important;
+        transition: ease all 300ms;
+    }
+
+    .color-#{$color} {
+        color: $value !important;
+        transition: ease all 300ms;
+    }
+}
