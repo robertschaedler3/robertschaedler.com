@@ -10,8 +10,9 @@ import { CourseworkComponent } from './resume/coursework/coursework.component';
 import { DialogContent } from './resume/coursework/coursework.component';
 import { GithubComponent } from './resume/github/github.component';
 import { GitStatsComponent } from './resume/git-stats/git-stats.component';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
 
+// TODO: refactor to shared material module
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/'
@@ -30,11 +31,13 @@ import { ResumeLayoutComponent } from './resume-layout/resume-layout.component';
   declarations: [
     AppComponent,
     ResumeComponent,
+    ResumeLayoutComponent,
+    // TODO: Refactor to submodules
     CourseworkComponent,
     DialogContent,
     GithubComponent,
     GitStatsComponent,
-    ResumeLayoutComponent],
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
