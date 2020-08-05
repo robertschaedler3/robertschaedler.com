@@ -23,6 +23,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { ResumeLayoutComponent } from './resume-layout/resume-layout.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     CourseworkComponent,
     DialogContent,
     GithubComponent,
-    GitStatsComponent],
+    GitStatsComponent,
+    ResumeLayoutComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
