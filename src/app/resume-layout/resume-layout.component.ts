@@ -12,4 +12,9 @@ export class ResumeLayoutComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // TODO: move to service
+  goToLink(url: string) {
+    window.open(url, "_blank");
+  }
+
 }
