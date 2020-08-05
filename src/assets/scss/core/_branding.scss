@@ -1,0 +1,22 @@
+mat-toolbar {
+    background-color: $dark-theme !important;
+    border-bottom: 1px solid $white;
+    .logo {
+        height: 4rem;
+        line-height: 4rem;
+
+        .logo-inner {
+            height: 100%;
+
+            a > img {
+                width: 7.5rem;
+            }
+        }
+    }
+
+    .special-button {
+        border: 2px solid $white !important;
+        text-transform: uppercase;
+        font-size: 11px;
+    }
+}
