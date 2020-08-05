@@ -1,0 +1,6 @@
+@mixin title() {
+    font-family: $title-font-family;
+    line-height: 1.2;
+    font-weight: 500;
+    text-transform: none;
+}
