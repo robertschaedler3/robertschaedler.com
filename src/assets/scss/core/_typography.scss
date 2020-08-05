@@ -1,0 +1,57 @@
+body {
+    font-family: $body-font-family;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-size: $body-font-size;
+    line-height: 1.8;
+}
+
+// Headings & titles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include title();
+}
+
+h1 {
+    font-size: 4.381rem;
+}
+h2 {
+    font-size: 3.294rem;
+}
+h3 {
+    font-size: 2.476rem;
+}
+h4 {
+    font-size: 1.862rem;
+}
+h5 {
+    font-size: 1.6rem;
+}
+h6 {
+    font-size: 1.053rem;
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 3.755rem;
+    }
+    h2 {
+        font-size: 2.823rem;
+    }
+    h3 {
+        font-size: 2.123rem;
+    }
+    h4 {
+        font-size: 1.596rem;
+    }
+    h5 {
+        font-size: 1.2rem;
+    }
+    h6 {
+        font-size: 1.053rem;
+    }
+}
