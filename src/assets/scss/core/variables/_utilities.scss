@@ -17,4 +17,9 @@
         color: $value !important;
         transition: ease all 300ms;
     }
+
+    .color-hover-#{$color}:hover {
+        color: $value !important;
+        transition: ease all 300ms;
+    }
 }

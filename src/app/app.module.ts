@@ -12,26 +12,14 @@ import { GithubComponent } from './resume/github/github.component';
 import { GitStatsComponent } from './resume/git-stats/git-stats.component';
 import { HttpClientModule } from '@angular/common/http';
 
-// TODO: refactor to shared material module
-import { MatButtonModule } from '@angular/material/button';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatIconModule } from '@angular/material/'
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatChipsModule } from '@angular/material/chips';
-import { MatListModule } from '@angular/material/list';
-import { MatCardModule } from '@angular/material/card';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { ResumeLayoutComponent } from './resume-layout/resume-layout.component';
+import { ResumeLayoutModule } from './resume-layout/resume-layout.module';
+import { MaterialModule } from './shared/material.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ResumeComponent,
-    ResumeLayoutComponent,
     // TODO: Refactor to submodules
     CourseworkComponent,
     DialogContent,
@@ -41,17 +29,8 @@ import { ResumeLayoutComponent } from './resume-layout/resume-layout.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MatIconModule,
-    MatExpansionModule,
-    MatChipsModule,
-    MatCardModule,
-    MatListModule,
-    MatDialogModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatProgressBarModule,
+    MaterialModule,
+    ResumeLayoutModule,
     HttpClientModule,
     AppRoutingModule
   ],

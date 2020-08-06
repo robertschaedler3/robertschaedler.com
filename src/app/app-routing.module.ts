@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ResumeComponent } from './resume/resume.component'
-import { ResumeLayoutComponent } from './resume-layout/resume-layout.component';
+import { ResumeComponent } from './resume/resume.component';
 
 
 const routes: Routes = [
   { path: '', component: ResumeComponent },
-  { path: 'resume', component: ResumeLayoutComponent },
+  { path: 'resume', loadChildren: () => import('./resume-layout/resume-layout.module').then(m => m.ResumeLayoutModule) },
   { path: '**', redirectTo: '/' },
 ];
 

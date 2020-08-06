@@ -17,41 +17,36 @@ h6 {
 }
 
 h1 {
-    font-size: 4.381rem;
+    font-size: 2.75rem;
 }
 h2 {
-    font-size: 3.294rem;
+    font-size: 2rem;
 }
 h3 {
-    font-size: 2.476rem;
+    font-size: 1.55rem;
 }
 h4 {
-    font-size: 1.862rem;
+    font-size: 1.15rem;
 }
 h5 {
-    font-size: 1.6rem;
+    font-size: 1rem;
 }
 h6 {
-    font-size: 1.053rem;
+    font-size: 0.9rem;
 }
 
-@media only screen and (max-width: 768px) {
-    h1 {
-        font-size: 3.755rem;
-    }
-    h2 {
-        font-size: 2.823rem;
-    }
-    h3 {
-        font-size: 2.123rem;
-    }
-    h4 {
-        font-size: 1.596rem;
-    }
-    h5 {
-        font-size: 1.2rem;
-    }
-    h6 {
-        font-size: 1.053rem;
+p {
+    font-size: $base-font-size;
+    font-weight: 400;
+}
+
+a {
+    font-weight: 00;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        text-decoration: none;
+        color: $grey !important;
     }
 }

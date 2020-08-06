@@ -1,0 +1,23 @@
+<app-section>
+    <div class="row">
+        <div class="col-md-4">
+            <app-image [src]="'assets/img/portrait.jpg'" [alt]="'Robert Schaedler Portrait'" [size]="'medium'"
+                [rounded]="true" [link]="'https://www.instagram.com/robertschaedleriii/'">
+            </app-image>
+        </div>
+        <div class="col-md-8">
+            <h1>Robert Schaedler III</h1>
+            <h4 class="caption color-light-grey">Software Engineering Student: Stevens Institute of Technology</h4>
+            <p class="contact-info">
+                <a class="color-hover-light-grey" href="mailto:rschaedl@stevens.edu">
+                    <mat-icon inline="true">email</mat-icon> rschaedl@stevens.edu
+                </a>
+                <br>
+                <a class="color-hover-light-grey" href="tel:+1-862-201-1429">
+                    <mat-icon inline="true">local_phone</mat-icon> +1-862-201-1429
+                </a>
+            </p>
+            <app-chip-list [chips]="chips"></app-chip-list>
+        </div>
+    </div>
+</app-section>
