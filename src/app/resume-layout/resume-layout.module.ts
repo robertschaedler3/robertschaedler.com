@@ -5,10 +5,15 @@ import { ResumeLayoutRoutingModule } from './resume-layout-routing.module';
 
 import { ResumeLayoutComponent } from './resume-layout.component';
 import { HeaderComponent } from './header/header.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
-  declarations: [ResumeLayoutComponent, HeaderComponent],
+  declarations: [
+    ResumeLayoutComponent,
+    HeaderComponent,
+    ProfileComponent
+  ],
   imports: [
     CommonModule,
     MaterialModule,
