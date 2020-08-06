@@ -1,19 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-section',
   template: `
-    <p>
-      section works!
-    </p>
-  `,
-  styles: []
+  <div class="section">
+    <div class="container">
+        <ng-content></ng-content>
+    </div>
+  </div>`,
+  styles: [
+    `.section {
+      width: 100%;
+      background-color: inherit;
+      padding: 7rem 0rem;
+    }
+    .container {
+      padding: 0rem 2rem;
+    }`
+  ]
 })
-export class SectionComponent implements OnInit {
+export class SectionComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
