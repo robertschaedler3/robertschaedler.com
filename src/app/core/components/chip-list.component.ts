@@ -1,19 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+export interface Chip {
+  name: string;
+  url: string;
+}
 
 @Component({
   selector: 'app-chip-list',
   template: `
-    <p>
-      chip-list works!
-    </p>
+    <mat-chip-list>
+      <mat-chip *ngFor="let chip of chips">
+          <a class="color-hover-dark-grey" href="{{chip.url}}">{{chip.name}}</a>
+      </mat-chip>
+    </mat-chip-list>
   `,
   styles: []
 })
-export class ChipListComponent implements OnInit {
+export class ChipListComponent {
+
+  @Input() chips: Chip[];
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

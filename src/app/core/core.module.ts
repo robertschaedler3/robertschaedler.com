@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ImageComponent } from './components/image.component';
 import { SectionComponent } from './components/section.component';
 import { ChipListComponent } from './components/chip-list.component';
+import { MaterialModule } from '../shared/material.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ChipListComponent } from './components/chip-list.component';
     SectionComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MaterialModule
   ],
   exports: [
     ChipListComponent,
