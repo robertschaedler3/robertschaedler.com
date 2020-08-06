@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
     `.section {
       width: 100%;
       background-color: inherit;
-      padding: 7rem 0rem;
+      padding: 8rem 0rem;
     }
     .container {
       padding: 0rem 2rem;

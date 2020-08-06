@@ -1,11 +1,11 @@
 // Theme
 $light-theme: #2280e4;
-$theme: #034a97;
+$theme: #0067d4;
 $dark-theme: #001127;
 
 // Greys
 $ultralight-grey: #dadada;
-$light-grey: #696969;
+$light-grey: #969696;
 $grey: #333;
 $dark-grey: #242424;
 
@@ -14,9 +14,9 @@ $white: #eee;
 $black: #111;
 
 $branding-colors: (
-    "light-theme": $light-grey,
-    "theme": $grey,
-    "dark-theme": $dark-grey,
+    "light-theme": $light-theme,
+    "theme": $theme,
+    "dark-theme": $dark-theme,
     "ultralight-grey": $ultralight-grey,
     "light-grey": $light-grey,
     "grey": $grey,
