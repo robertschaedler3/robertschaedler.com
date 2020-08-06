@@ -1,1 +1,12 @@
-<p>resume-section works!</p>
+<app-section [paddTop]="paddTop" [paddBottom]="paddBottom" class="bkg-white">
+    <div class="row">
+        <div class="col-md-4">
+            <h5 class="title">
+                <mat-icon inline="true">{{icon}}</mat-icon> {{title}}
+            </h5>
+        </div>
+        <div class="col-md-8">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</app-section>
