@@ -35,27 +35,6 @@ h6 {
     font-size: 0.9rem;
 }
 
-@media only screen and (max-width: 768px) {
-    h1 {
-        font-size: 1.755rem;
-    }
-    h2 {
-        font-size: 1.823rem;
-    }
-    h3 {
-        font-size: 1.123rem;
-    }
-    h4 {
-        font-size: 0.596rem;
-    }
-    h5 {
-        font-size: 0.2rem;
-    }
-    h6 {
-        font-size: 0.053rem;
-    }
-}
-
 p {
     font-size: $base-font-size;
     font-weight: 400;
