@@ -6,4 +6,8 @@ import { Injectable } from '@angular/core';
 export class ExternalRedirectService {
 
   constructor() { }
+
+  open(url: string) {
+    window.open(url);
+  }
 }
