@@ -1,3 +1,19 @@
 .spacer {
     flex: 1 1 auto;
 }
+
+.section {
+    width: 100%;
+    background-color: inherit;
+    padding: 0rem;
+
+    .container {
+        padding: 0rem 2rem;
+    }
+
+    .title {
+        text-transform: uppercase !important;
+        font-weight: 300;
+        margin-bottom: 2rem;
+    }
+}

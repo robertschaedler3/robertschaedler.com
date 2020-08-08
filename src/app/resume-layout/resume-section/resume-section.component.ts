@@ -10,6 +10,7 @@ export class ResumeSectionComponent {
   @Input() title: string;
   @Input() icon: string;
 
+  @Input() color: string = 'bkg-white';
   @Input() paddTop: boolean = true;
   @Input() paddBottom: boolean = true;
 
