@@ -1,19 +1,16 @@
+<!-- TODO: Move header and profile contents back to layout -->
 <app-header></app-header>
 <app-profile></app-profile>
 
-<app-resume-section [title]="'Background'" [icon]="'portrait'" [paddBottom]="false">
-    <p>I'm Robert, a student at <strong>Stevens Institute of Technology</strong>, pursuing a
-        degree in <strong>Software Engineering</strong> with a minor in <strong>Computer Science</strong>. I have a wide
-        variety of experience using several programming languages in professional, academic, and personal projects and I
-        am highly motivated to learn more.
+<app-resume-section [title]="'Background'" [icon]="'portrait'" [paddBottom]="false" class="bkg-white">
+    <p>I'm Robert, a student at <span class="bold">Stevens Institute of Technology</span>, pursuing a
+        degree in <span class="bold">Software Engineering</span> with a minor in <span class="bold">Computer
+            Science</span>. I have full-stack experience in cloud security and IoT personally, academically and
+        professionally. Check out some of my projects
+        to see what I'm working on.
     </p>
-    <p>For more information, check out my
-        <a class="color-theme" href="https://github.com/robertschaedler3">GitHub</a>
-        to see what I'm working on or head over to my
-        <a class="color-theme" href="#projects">projects page</a> where I discuss each project in more
-        detail.
-    </p>
-    <button mat-flat-button (click)="showCoursework()">Check out my coursework</button>
+    <button mat-flat-button class="bkg-theme bkg-hover-light-theme" [routerLink]="['projects']">Check out my
+        projects</button>
 </app-resume-section>
 
 <div class="divider bkg-white">
@@ -25,21 +22,64 @@
         <mat-expansion-panel *ngFor="let skill of skills">
             <mat-expansion-panel-header>
                 <mat-panel-title>
-                    <span class="progress-bar-label text-uppercase"><span
-                            class="weight-bold">{{skill.title}}</span></span>
+                    <span class="bold uppercase"><span class="">{{skill.title}}</span></span>
                 </mat-panel-title>
                 <mat-panel-description>
-                    <span class="progress-bar-label text-uppercase"><span
-                            class="pull-right">{{skill.level}}</span></span>
+                    <span class="uppercase">{{skill.level}}</span>
                 </mat-panel-description>
             </mat-expansion-panel-header>
-
             <app-chip-list [chips]="skill.chips"></app-chip-list>
-
             <div class="panel-description">
                 {{skill.description}}
             </div>
-
         </mat-expansion-panel>
     </mat-accordion>
 </app-resume-section>
+
+<div class="section timeline">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="title">
+                    <mat-icon inline="true">work_outline</mat-icon> Work Experience
+                </h5>
+            </div>
+            <div class="col-md-8">
+                <div class="row work-experience" *ngFor="let experience of experiences">
+                    <div class="col-md-3">
+                        <h5>{{experience.name}}</h5>
+                        <p class="time">{{experience.time}}</p>
+                    </div>
+                    <div class="col-md-8 offset-md-1">
+                        <h5>{{experience.position}}</h5>
+                        <p class="description">{{experience.description}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 offset-md-4">
+                        <button mat-stroked-button class="special-button color-white color-hover-light-grey"
+                            (click)="redirect.open('https://www.linkedin.com/in/robert-schaedler-iii/')">
+                            Connect on LinkedIn
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-resume-section [title]="'Looking for more?'" [icon]="'help_outline'">
+    <p>
+        Head over to my Github where you can see some of the things I am working on. Check out my personal, academic,
+        and some professional repos.
+    </p>
+    <button mat-flat-button class="bkg-theme bkg-hover-light-theme"
+        (click)="redirect.open('https://github.com/robertschaedler3')">
+        Check me out on Github
+    </button>
+</app-resume-section>
+
+<app-section [paddTop]="false" [paddBottom]="false">
+    <!-- TODO: Footer content -->
+</app-section>

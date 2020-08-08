@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Chip } from '../core/components/chip-list.component';
+import { ExternalRedirectService } from '../core/services/external-redirect.service';
 
 // TODO: move types to single location in module
 export interface Skill {
@@ -7,6 +8,13 @@ export interface Skill {
   level: string;
   description: string;
   chips: Chip[];
+}
+
+export interface WorkExperience {
+  name: string;
+  time: string;
+  position: string;
+  description: string;
 }
 
 // TODO: move to data file
@@ -98,6 +106,27 @@ export const SKILLS: Skill[] = [
   }
 ];
 
+export const EXPERIENCES: WorkExperience[] = [
+  {
+    name: 'Stevens Cysec Research',
+    time: 'Summer 2019',
+    position: 'Full Stack Engineer/Security Analyst',
+    description: 'Researched the security of IoT networks by recording and analyzing WiFi, Bluetooth, and Zigbee protocols to identify trends and anomalies in device activity. Created a front-end interface using Angular to facilitate uploads and downloads to a database (using Parse Server, Mongo, Express). Researched trends in phishing site attacks by comparing the structure, raw HTML, and other heuristics to gather data with the intent to create and implement an efficient means of phishing detection.'
+  },
+  {
+    name: 'TrendEase',
+    time: 'February 2019 - Present',
+    position: 'Data Analytics & Security Start-Up',
+    description: 'Designed and created scaleable data aquisition systems for improving location based recommender systems using 802.11 network traffic. Used the raw network data to profile certain activity while clustering devices based on trends and similarities. Implemented a fully functional interface to display and interact with findings on a map based system.'
+  },
+  {
+    name: 'Web Design',
+    time: 'May 2017–Present',
+    position: 'Freelance Web Developer',
+    description: 'Work to maintain and optimize existing and new website using Firebase and Angular. Implemented analytics to increase site traffic. Added site payment systems for online purchases.'
+  }
+]
+
 @Component({
   selector: 'app-resume-layout',
   templateUrl: './resume-layout.component.html',
@@ -106,8 +135,9 @@ export const SKILLS: Skill[] = [
 export class ResumeLayoutComponent implements OnInit {
 
   skills: Skill[] = SKILLS;
+  experiences: WorkExperience[] = EXPERIENCES;
 
-  constructor() { }
+  constructor(public redirect: ExternalRedirectService) { }
 
   ngOnInit(): void {
   }

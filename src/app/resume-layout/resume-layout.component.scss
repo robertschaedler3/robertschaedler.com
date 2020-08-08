@@ -1,9 +1,21 @@
-.divider {
-    padding: 3rem;
+mat-expansion-panel span {
+    font-size: 0.75rem;
+}
+
+button {
+    padding: 0.425rem 1.813rem !important;
+}
+
+p {
+    margin-bottom: 1.875rem;
 }
 
 .panel-description {
     padding-top: 2rem;
+}
+
+.divider {
+    padding: 3rem;
 }
 
 .align-headers .mat-expansion-panel-header-title,
@@ -14,4 +26,48 @@
 .align-headers .mat-expansion-panel-header-description {
     justify-content: space-between;
     align-items: center;
+}
+
+.timeline {
+    position: relative;
+
+    .overlay {
+        height: 100%;
+        width: 50vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(../../assets/img/bkg-1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        filter: brightness(65%);
+
+        @media only screen and (max-width: 769px) {
+            height: 25rem;
+            width: 100vw;
+            position: relative;
+        }
+    }
+
+    .container {
+        padding: 8rem 0rem;
+    }
+}
+
+.work-experience {
+    .time {
+        font-weight: 200;
+    }
+
+    .description {
+        margin-bottom: 4.375rem;
+        color: #999;
+    }
+
+    .section-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 }
