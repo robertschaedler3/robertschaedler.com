@@ -37,10 +37,8 @@ p {
         position: absolute;
         top: 0;
         left: 0;
-        background-image: url(../../assets/img/bkg-1.jpg);
+        background: url(../../assets/img/bkg-1.jpg) center center no-repeat;
         background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
         filter: brightness(65%);
 
         @media only screen and (max-width: 769px) {
