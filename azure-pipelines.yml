@@ -25,5 +25,5 @@ steps:
   inputs:
     sourceGitRepositoryUri: '$(Build.Repository.Uri)'
     sourceGitRepositoryPersonalAccessToken: '$(git-repo-access-token)'
-    destinationGitRepositoryUri: https://dev.azure.com/robertschaedler/robertschaedler.com
+    destinationGitRepositoryUri: 'https://dev.azure.com/robertschaedler/_git/robertschaedler.com'
     destinationGitRepositoryPersonalAccessToken: '$(azure-repo-access-token)'
