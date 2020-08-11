@@ -31,7 +31,8 @@
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "./node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss",
-              "src/assets/scss/core.scss"
+              "src/assets/scss/core.scss",
+              "src/assets/scss/app-loading.scss"
             ],
             "scripts": []
           },

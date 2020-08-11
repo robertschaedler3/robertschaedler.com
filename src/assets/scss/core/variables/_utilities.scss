@@ -13,6 +13,12 @@
         transition: ease all 300ms;
     }
 
+    .bkg-hover-#{$color}:hover {
+        background-color: $value !important;
+        color: set-text-color($value) !important;
+        transition: ease all 300ms;
+    }
+
     .color-#{$color} {
         color: $value !important;
         transition: ease all 300ms;

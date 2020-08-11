@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-image',
   template: `
-    <div class="thumbnail">
+    <div class="image-container">
       <a [href]="link">
         <img [ngClass]="{
           'large': size === 'large', 
@@ -14,8 +14,8 @@ import { Component, Input } from '@angular/core';
       </a>
   </div>`,
   styles: [
-    `.image-conainer {
-      min-height: 5rem;
+    `.image-container {
+      margin-bottom: 2rem;
     },
     .small {
       width: 8rem;

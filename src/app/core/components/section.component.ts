@@ -9,15 +9,7 @@ import { Component, Input } from '@angular/core';
     </div>
   </div>`,
   styles: [
-    `.section {
-      width: 100%;
-      background-color: inherit;
-      padding: 0rem;
-    }
-    .container {
-      padding: 0rem 2rem;
-    }
-    .padd-top {
+    `.padd-top {
       padding-top: 8rem !important;
     }
     .padd-bottom {
