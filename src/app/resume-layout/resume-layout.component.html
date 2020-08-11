@@ -81,5 +81,25 @@
 </app-resume-section>
 
 <app-section [paddTop]="false" [paddBottom]="false">
-    <!-- TODO: Footer content -->
+    <div class="row footer-content">
+        <div class="col-md-6">
+            <h4>Contact Info</h4>
+            <p class="contact-info">
+                <a class="color-hover-light-grey" href="mailto:rschaedl@stevens.edu">
+                    <mat-icon inline>email</mat-icon> rschaedl@stevens.edu
+                </a>
+                <br>
+                <a class="color-hover-light-grey" href="tel:+1-862-201-1429">
+                    <mat-icon inline>local_phone</mat-icon> +1-862-201-1429
+                </a>
+            </p>
+            <app-chip-list [chips]="chips"></app-chip-list>
+            <p class="copyright">
+                &copy; Schaedler III. All Rights Reserved.
+            </p>
+        </div>
+        <div class="col-md-3 offset-md-3">
+            <!-- TODO: populate with git projects -->
+        </div>
+    </div>
 </app-section>

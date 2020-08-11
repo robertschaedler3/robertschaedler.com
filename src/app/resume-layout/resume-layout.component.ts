@@ -18,6 +18,13 @@ export interface WorkExperience {
 }
 
 // TODO: move to data file
+export const SOCIAL_CHIPS: Chip[] = [
+  { name: "Github", url: "https://github.com/robertschaedler3" },
+  { name: "LinkedIn", url: "https://linkedin.com/in/robert-schaedler-iii/" },
+  { name: "Instagram", url: "https://www.instagram.com/robertschaedleriii/" },
+  { name: "Medium", url: "https://medium.com/@robertschaedler3" }
+];
+
 export const SKILLS: Skill[] = [
   {
     title: 'Docker',
@@ -116,6 +123,7 @@ export class ResumeLayoutComponent {
 
   skills: Skill[] = SKILLS;
   experiences: WorkExperience[] = EXPERIENCES;
+  chips: Chip[] = SOCIAL_CHIPS;
 
   constructor(public redirect: ExternalRedirectService) { }
 
