@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Chip } from '../core/components/chip-list.component';
 import { ExternalRedirectService } from '../core/services/external-redirect.service';
 
@@ -42,7 +42,7 @@ export const SKILLS: Skill[] = [
   {
     title: 'Python',
     level: 'Advanced',
-    description: 'I have used python for a wide variety of different projects. From data science and network security analysis to RESTful APIs I\'ve done it all',
+    description: 'I have used python for a wide variety of different projects: data science, network security analysis, machine learning...',
     chips: [
       { url: '', name: 'numpy' },
       { url: '', name: 'pyshark' },
@@ -62,22 +62,11 @@ export const SKILLS: Skill[] = [
     ]
   },
   {
-    title: 'C++',
+    title: 'C/C++',
     level: 'Proficient',
-    description: 'My main used for C++ have been in the world of IoT. Writing firmware for IoT devices that connect and stream data to the cloud.',
+    description: 'I have primarily used C/C++ in the world of IoT. I have written firmware for IoT devices that connect and stream data to the cloud and interract with the host OS.',
     chips: [
       { url: 'https://github.com/robertschaedler3/CS-385', name: 'Algorithms' },
-      { url: '', name: 'Particle' },
-      { url: '', name: 'Arduino' },
-      { url: '', name: 'Rapsberry PI' }
-    ]
-  },
-  {
-    title: 'C',
-    level: 'Proficient',
-    description: 'My main used for C++ have been in the world of IoT. Writing firmware for IoT devices that connect and stream data to the cloud.',
-    chips: [
-      { url: 'https://github.com/robertschaedler3/CS-392', name: 'Systems Programming' },
       { url: '', name: 'Particle' },
       { url: '', name: 'Arduino' },
       { url: '', name: 'Rapsberry PI' }
@@ -93,15 +82,6 @@ export const SKILLS: Skill[] = [
       { url: '', name: 'RESTful' },
       { url: '', name: 'Parse Server' },
       { url: '', name: 'Graphql' }
-    ]
-  },
-  {
-    title: 'HTML/CSS/Javascript',
-    level: 'Advanced',
-    description: '',
-    chips: [
-      { url: '', name: 'Angular' },
-      { url: '', name: 'Webpack' }
     ]
   }
 ];
@@ -132,18 +112,11 @@ export const EXPERIENCES: WorkExperience[] = [
   templateUrl: './resume-layout.component.html',
   styleUrls: ['./resume-layout.component.scss']
 })
-export class ResumeLayoutComponent implements OnInit {
+export class ResumeLayoutComponent {
 
   skills: Skill[] = SKILLS;
   experiences: WorkExperience[] = EXPERIENCES;
 
   constructor(public redirect: ExternalRedirectService) { }
-
-  ngOnInit(): void {
-  }
-
-  showCoursework() {
-    console.log('TODO: open dialog')
-  }
 
 }
