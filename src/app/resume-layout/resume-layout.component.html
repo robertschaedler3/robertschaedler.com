@@ -33,11 +33,11 @@
 <app-resume-section [title]="'Background'" [icon]="'portrait'" [paddBottom]="false" class="bkg-white">
     <p>I'm Robert, a student at <span class="bold">Stevens Institute of Technology</span>, pursuing a
         degree in <span class="bold">Software Engineering</span> with a minor in <span class="bold">Computer
-            Science</span>. I have full-stack experience in cloud security and IoT personally, academically and
-        professionally. Check out some of my projects
+            Science</span>. I have full-stack experience in cloud security and IoT through many different personal,
+        academic, and professional projects. Check out some of my repos
         to see what I'm working on.
     </p>
-    <button mat-flat-button class="bkg-theme bkg-hover-light-theme" [routerLink]="['projects']">Check out my
+    <button mat-raised-button class="bkg-theme bkg-hover-light-theme" [routerLink]="['']">Check out my
         projects</button>
 </app-resume-section>
 
@@ -84,7 +84,7 @@
                         <p class="description">{{experience.description}}</p>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row timeline-action">
                     <div class="col-md-8 offset-md-4">
                         <button mat-stroked-button class="special-button color-white color-hover-light-grey"
                             (click)="redirect.open('https://www.linkedin.com/in/robert-schaedler-iii/')">
@@ -102,7 +102,7 @@
         Head over to my Github where you can see some of the things I am working on and check out my personal, academic,
         and professional repos.
     </p>
-    <button mat-flat-button class="bkg-theme bkg-hover-light-theme"
+    <button mat-raised-button class="bkg-theme bkg-hover-light-theme"
         (click)="redirect.open('https://github.com/robertschaedler3')">
         Check me out on Github
     </button>
@@ -110,21 +110,22 @@
 
 <app-section [paddTop]="false" [paddBottom]="false">
     <div class="row footer-content">
-        <div class="col-md-6">
-            <h4>Contact Info</h4>
-            <p class="contact-info">
-                <a class="color-hover-light-grey" href="mailto:rschaedl@stevens.edu">
-                    <mat-icon inline>email</mat-icon> rschaedl@stevens.edu
-                </a>
-                <br>
-                <a class="color-hover-light-grey" href="tel:+1-862-201-1429">
-                    <mat-icon inline>local_phone</mat-icon> +1-862-201-1429
-                </a>
-            </p>
-            <app-chip-list [chips]="chips"></app-chip-list>
-            <p class="copyright">
-                &copy; Schaedler III. All Rights Reserved.
-            </p>
+        <div class="col-md-6 offset-md-3">
+            <div class="footer-inner">
+                <h4>Contact Me</h4>
+                <p class="contact-info">
+                    <a class="color-hover-light-grey" href="mailto:rschaedl@stevens.edu">
+                        <mat-icon inline>email</mat-icon> rschaedl@stevens.edu
+                    </a>
+                    <a class="color-hover-light-grey" href="tel:+1-862-201-1429">
+                        <mat-icon inline>local_phone</mat-icon> +1-862-201-1429
+                    </a>
+                </p>
+                <app-chip-list [chips]="chips"></app-chip-list>
+                <p class="copyright">
+                    &copy; Schaedler III. All Rights Reserved.
+                </p>
+            </div>
         </div>
         <div class="col-md-3 offset-md-3">
             <!-- TODO: populate with git projects -->

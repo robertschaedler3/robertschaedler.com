@@ -68,6 +68,10 @@ p {
     .container {
         padding: 8rem 2rem;
     }
+
+    .timeline-action {
+        font-size: 14px !important;
+    }
 }
 
 .work-experience {
@@ -96,5 +100,14 @@ p {
 
     .copyright {
         margin-top: 1rem;
+    }
+
+    .footer-inner,
+    .contact-info,
+    .copyright {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
