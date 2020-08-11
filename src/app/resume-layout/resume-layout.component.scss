@@ -43,13 +43,13 @@ p {
 
         @media only screen and (max-width: 769px) {
             height: 25rem;
-            width: 100vw;
+            width: 100%;
             position: relative;
         }
     }
 
     .container {
-        padding: 8rem 0rem;
+        padding: 8rem 2rem;
     }
 }
 
