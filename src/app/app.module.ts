@@ -1,41 +1,28 @@
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-
-import { ResumeComponent } from './resume/resume.component';
-import { CourseworkComponent } from './resume/coursework/coursework.component';
-import { DialogContent } from './resume/coursework/coursework.component';
-import { GithubComponent } from './resume/github/github.component';
-import { GitStatsComponent } from './resume/git-stats/git-stats.component';
 import { HttpClientModule } from '@angular/common/http';
 
-import { ResumeLayoutModule } from './resume-layout/resume-layout.module';
+// App imports
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+
+// Sub-modules imports
 import { MaterialModule } from './shared/material.module';
+import { ResumeLayoutModule } from './resume-layout/resume-layout.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ResumeComponent,
-    // TODO: Refactor to submodules
-    CourseworkComponent,
-    DialogContent,
-    GithubComponent,
-    GitStatsComponent,
+    AppComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule,
-    ResumeLayoutModule,
     HttpClientModule,
-    AppRoutingModule
-  ],
-  entryComponents: [
-    DialogContent
+    MaterialModule,
+    ResumeLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,6 +2,7 @@ mat-toolbar {
     background-color: $dark-theme !important;
     border-bottom: 0.5px solid $white;
     height: $header-height !important;
+    font-size: 11px !important;
 
     .logo {
         height: $header-height;
