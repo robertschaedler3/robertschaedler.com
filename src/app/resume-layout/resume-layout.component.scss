@@ -3,11 +3,28 @@ mat-expansion-panel span {
 }
 
 button {
-    padding: 0.425rem 1.813rem !important;
+    padding: 0.225rem 1.413rem !important;
 }
 
 p {
     margin-bottom: 1.875rem;
+}
+
+.profile-content {
+    h1 {
+        font-weight: 300 !important;
+        margin-bottom: 0;
+    }
+
+    .caption {
+        font-size: 1.15rem;
+        font-weight: 100 !important;
+        letter-spacing: 0;
+    }
+
+    .contact-info {
+        margin-bottom: 1rem;
+    }
 }
 
 .panel-description {

@@ -1,6 +1,34 @@
-<!-- TODO: Move header and profile contents back to layout -->
-<app-header></app-header>
-<app-profile></app-profile>
+<app-header [image]="'./assets/img/logo.png'">
+    <button mat-stroked-button class="special-button color-white color-hover-light-grey uppercase"
+        (click)="redirect.open('https://drive.google.com/file/d/1gPX_28rEpFXoHsIUR83QADNJUTk5HcRD/view?usp=sharing')">
+        <span class="hide-on-mobile">Download</span>
+        My Resume
+    </button>
+</app-header>
+
+<app-section class="profile-content">
+    <div class="row">
+        <div class="col-md-4">
+            <app-image [src]="'assets/img/portrait.jpg'" [alt]="'Robert Schaedler Portrait'" [size]="'medium'"
+                [rounded]="true" [link]="'https://www.instagram.com/robertschaedleriii/'">
+            </app-image>
+        </div>
+        <div class="col-md-8">
+            <h1>Robert Schaedler III</h1>
+            <h4 class="caption color-light-grey">Software Engineering Student: Stevens Institute of Technology</h4>
+            <p class="contact-info">
+                <a class="color-hover-light-grey" href="mailto:rschaedl@stevens.edu">
+                    <mat-icon inline="true">email</mat-icon> rschaedl@stevens.edu
+                </a>
+                <br>
+                <a class="color-hover-light-grey" href="tel:+1-862-201-1429">
+                    <mat-icon inline="true">local_phone</mat-icon> +1-862-201-1429
+                </a>
+            </p>
+            <app-chip-list [chips]="chips"></app-chip-list>
+        </div>
+    </div>
+</app-section>
 
 <app-resume-section [title]="'Background'" [icon]="'portrait'" [paddBottom]="false" class="bkg-white">
     <p>I'm Robert, a student at <span class="bold">Stevens Institute of Technology</span>, pursuing a
