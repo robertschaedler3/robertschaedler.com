@@ -21,10 +21,9 @@ steps:
     ng build --prod
   displayName: 'npm install and build'
 
-- task: AzureFileCopy@4
+- task: mirror-git-repository-vsts-task@1
   inputs:
-    SourcePath: 'dist/'
-    azureSubscription: 'Free(d4936015-1372-44c1-9a38-0b4d945cae89)'
-    Destination: 'AzureBlob'
-    storage: 'robertschaedlerstorage'
-    ContainerName: '$web'
+    sourceGitRepositoryUri: '$(Build.Repository.Uri)'
+    sourceGitRepositoryPersonalAccessToken: '$(git-repo-access-token)'
+    destinationGitRepositoryUri: 'https://dev.azure.com/robertschaedler/_git/robertschaedler.com'
+    destinationGitRepositoryPersonalAccessToken: '$(azure-repo-access-token)'
