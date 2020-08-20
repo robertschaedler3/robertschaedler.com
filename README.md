@@ -1,5 +1,7 @@
 # robertschaedler.com
 
+[![Build Status](https://dev.azure.com/robertschaedler/robertschaedler.com/_apis/build/status/robertschaedler%20-%201%20-%20CI?branchName=master)](https://dev.azure.com/robertschaedler/robertschaedler.com/_build/latest?definitionId=2&branchName=master)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
 
 ## Development server
