@@ -10,6 +10,17 @@ p {
     margin-bottom: 1.875rem;
 }
 
+.anchor-container {
+    display: flex;
+    align-items: space-around;
+
+    button {
+        text-transform: uppercase !important;
+        font-size: 11px;
+        padding: 0 !important;
+    }
+}
+
 .profile-content {
     h1 {
         font-weight: 300 !important;

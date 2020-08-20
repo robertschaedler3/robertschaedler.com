@@ -1,4 +1,11 @@
 <app-header [image]="'./assets/img/logo.png'">
+    <div class="anchor-container">
+        <button mat-button class="color-light-grey color-hover-white"
+            (click)="scrollToElement(background)">Background</button>
+        <button mat-button class="color-light-grey color-hover-white"
+            (click)="scrollToElement(experience)">Experience</button>
+        <button mat-button class="color-light-grey color-hover-white" (click)="scrollToElement(github)">Github</button>
+    </div>
     <button mat-stroked-button class="special-button color-white color-hover-light-grey uppercase"
         (click)="redirect.open('https://drive.google.com/file/d/1gPX_28rEpFXoHsIUR83QADNJUTk5HcRD/view?usp=sharing')">
         <span class="hide-on-mobile">Download</span>
@@ -30,7 +37,7 @@
     </div>
 </app-section>
 
-<app-resume-section [title]="'Background'" [icon]="'portrait'" [paddBottom]="false" class="bkg-white">
+<app-resume-section #background [title]="'Background'" [icon]="'portrait'" [paddBottom]="false" class="bkg-white">
     <p>I'm Robert, a student at <span class="bold">Stevens Institute of Technology</span>, pursuing a
         degree in <span class="bold">Software Engineering</span> with a minor in <span class="bold">Computer
             Science</span>. I have full-stack experience in cloud security and IoT through many different personal,
@@ -64,7 +71,7 @@
     </mat-accordion>
 </app-resume-section>
 
-<div class="section timeline">
+<div #experience class="section timeline">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -97,7 +104,7 @@
     </div>
 </div>
 
-<app-resume-section [title]="'Looking for more?'" [icon]="'help_outline'">
+<app-resume-section #github [title]="'Looking for more?'" [icon]="'help_outline'">
     <p>
         Head over to my Github where you can see some of the things I am working on and check out my personal, academic,
         and professional repos.

@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
+import { Chip } from '../core/components/chip-list.component';
 import { ExternalRedirectService } from '../core/services/external-redirect.service';
 
 import { Skill, WorkExperience } from './types/resume';
-import { Chip } from '../core/components/chip-list.component';
 import { EXPERIENCES, SKILLS, SOCIAL_CHIPS } from './types/data';
 
+import { fadeUp } from '../animations/fades';
 
 @Component({
   selector: 'app-resume-layout',
   templateUrl: './resume-layout.component.html',
-  styleUrls: ['./resume-layout.component.scss']
+  styleUrls: ['./resume-layout.component.scss'],
+  animations: [fadeUp]
 })
 export class ResumeLayoutComponent {
 
@@ -18,5 +20,9 @@ export class ResumeLayoutComponent {
   chips: Chip[] = SOCIAL_CHIPS;
 
   constructor(public redirect: ExternalRedirectService) { }
+
+  scrollToElement($element): void {
+    $element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  }
 
 }
