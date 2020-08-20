@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { chipListFader } from 'src/app/animations/fades';
 
 export interface Chip {
   name: string;
@@ -8,13 +9,14 @@ export interface Chip {
 @Component({
   selector: 'app-chip-list',
   template: `
-    <mat-chip-list>
+    <mat-chip-list [@chipListFader]="chips.length">
       <mat-chip *ngFor="let chip of chips">
           <a class="color-hover-dark-grey" href="{{chip.url}}">{{chip.name}}</a>
       </mat-chip>
     </mat-chip-list>
   `,
-  styles: []
+  styles: [],
+  animations: [chipListFader]
 })
 export class ChipListComponent {
 
