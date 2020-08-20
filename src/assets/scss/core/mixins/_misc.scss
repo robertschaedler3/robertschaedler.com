@@ -1,5 +1,8 @@
 @mixin hide-on-mobile() {
     // TODO
+    @media only screen and (max-width: 769px) {
+        display: none;
+    }
 }
 
 @mixin center-on-mobile() {
