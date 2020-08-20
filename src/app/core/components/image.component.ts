@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { fadeUp } from 'src/app/animations/fades';
 
 @Component({
   selector: 'app-image',
   template: `
-    <div class="image-container">
+    <div @fadeUp class="image-container">
       <a [href]="link">
         <img [ngClass]="{
           'large': size === 'large', 
@@ -29,7 +30,8 @@ import { Component, Input } from '@angular/core';
     .round {
       border-radius: 0.675rem;
     }`
-  ]
+  ],
+  animations: [fadeUp]
 })
 export class ImageComponent {
 
