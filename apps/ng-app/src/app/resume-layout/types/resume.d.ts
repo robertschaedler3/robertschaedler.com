@@ -1,4 +1,4 @@
-import { Chip } from "src/app/core/components/chip-list.component";
+import { Chip } from '../../core/components/chip-list.component';
 
 export interface Skill {
     title: string;
