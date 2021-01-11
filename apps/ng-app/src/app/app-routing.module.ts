@@ -2,12 +2,16 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', loadChildren: () => import('./resume-layout/resume-layout.module').then(m => m.ResumeLayoutModule) },
-  { path: '**', redirectTo: '/' },
+  {
+    path: '',
+    loadChildren: () =>
+      import('./modules/resume/resume.module').then((m) => m.ResumeModule),
+  },
+  { path: '*', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
