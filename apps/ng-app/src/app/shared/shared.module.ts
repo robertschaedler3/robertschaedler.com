@@ -1,7 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
+// Components
+import { ChipListComponent } from '../shared/components/chip-list.component';
+import { HeaderComponent } from '../shared/components/header.component';
+import { ImageComponent } from '../shared/components/image.component';
+import { SectionComponent } from '../shared/components/section.component';
+
+// Material
 // TODO: remove unused imports
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -16,9 +24,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ChipListComponent,
+    HeaderComponent,
+    ImageComponent,
+    SectionComponent,
+  ],
   imports: [
     CommonModule,
+    RouterModule,
     HttpClientModule,
     MatButtonModule,
     MatCheckboxModule,
@@ -33,6 +47,11 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatProgressBarModule,
   ],
   exports: [
+    RouterModule,
+    ChipListComponent,
+    HeaderComponent,
+    ImageComponent,
+    SectionComponent,
     HttpClientModule,
     MatButtonModule,
     MatCheckboxModule,
