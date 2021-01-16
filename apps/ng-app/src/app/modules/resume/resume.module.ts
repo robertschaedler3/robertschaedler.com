@@ -7,9 +7,10 @@ import { SharedModule } from '../../shared/shared.module';
 
 // Components
 import { ResumeSectionComponent } from './components/resume-section/resume-section.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [ResumeComponent, ResumeSectionComponent],
+  declarations: [ResumeComponent, ResumeSectionComponent, FooterComponent],
   imports: [CommonModule, ResumeRoutingModule, SharedModule],
 })
 export class ResumeModule {}
