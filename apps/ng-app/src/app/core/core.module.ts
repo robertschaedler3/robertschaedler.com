@@ -1,31 +1,14 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-
-import { ChipListComponent } from './components/chip-list.component';
-import { HeaderComponent } from './components/header.component';
-import { ImageComponent } from './components/image.component';
-import { SectionComponent } from './components/section.component';
-import { MaterialModule } from '../shared/material.module';
-
+import { EnsureModuleLoadedOnceGuard } from './ensureModuleLoadedOnceGuard';
 
 @NgModule({
-  declarations: [
-    ChipListComponent,
-    HeaderComponent,
-    ImageComponent,
-    SectionComponent
-  ],
-  imports: [
-    CommonModule,
-    MaterialModule,
-    RouterModule
-  ],
-  exports: [
-    ChipListComponent,
-    HeaderComponent,
-    ImageComponent,
-    SectionComponent
-  ]
+  declarations: [],
+  imports: [CommonModule, RouterModule],
 })
-export class CoreModule { }
+export class CoreModule extends EnsureModuleLoadedOnceGuard {
+  constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
+    super(parentModule);
+  }
+}
