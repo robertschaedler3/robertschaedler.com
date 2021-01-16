@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 
 // Components
 import { ChipListComponent } from '../shared/components/chip-list.component';
-import { HeaderComponent } from '../shared/components/header.component';
 import { ImageComponent } from '../shared/components/image.component';
 import { SectionComponent } from '../shared/components/section.component';
 
@@ -26,7 +25,6 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 @NgModule({
   declarations: [
     ChipListComponent,
-    HeaderComponent,
     ImageComponent,
     SectionComponent,
   ],
@@ -49,7 +47,6 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
   exports: [
     RouterModule,
     ChipListComponent,
-    HeaderComponent,
     ImageComponent,
     SectionComponent,
     HttpClientModule,
