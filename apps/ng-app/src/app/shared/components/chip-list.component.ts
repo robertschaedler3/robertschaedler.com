@@ -10,16 +10,16 @@ export interface Chip {
   template: `
     <mat-chip-list>
       <mat-chip *ngFor="let chip of chips">
-          <a class="color-hover-dark-grey" href="{{chip.url}}">{{chip.name}}</a>
+        <a class="color-hover-dark-grey" href="{{ chip.url }}">
+          {{ chip.name }}
+        </a>
       </mat-chip>
     </mat-chip-list>
   `,
-  styles: []
+  styles: [],
 })
 export class ChipListComponent {
-
   @Input() chips: Chip[];
 
-  constructor() { }
-
+  constructor() {}
 }

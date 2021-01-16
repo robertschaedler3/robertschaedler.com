@@ -6,9 +6,9 @@ import { Component, Input } from '@angular/core';
     <div class="image-container">
       <a [href]="link">
         <img [ngClass]="{
-          'large': size === 'large', 
-          'medium': size === 'medium', 
-          'small': size === 'small', 
+          'large': size === 'large',
+          'medium': size === 'medium',
+          'small': size === 'small',
           'round': rounded
         }" [src]="src" [alt]="alt">
       </a>
@@ -34,7 +34,7 @@ import { Component, Input } from '@angular/core';
 export class ImageComponent {
 
   // Image attributes
-  @Input() link: string = '#';
+  @Input() link = '#';
   @Input() src: string;
   @Input() alt: string;
 
