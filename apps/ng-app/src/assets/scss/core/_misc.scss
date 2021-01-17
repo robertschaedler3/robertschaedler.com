@@ -1,19 +1,22 @@
-.spacer {
-    flex: 1 1 auto;
+// Prevent highlight on mobile
+* {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+  &:focus {
+    outline: 0;
+  }
 }
 
-.section {
-    width: 100%;
-    background-color: inherit;
-    padding: 0rem;
+a {
+  text-decoration: none;
+  color: $white;
 
-    .container {
-        padding: 0rem 2rem;
-    }
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
 
-    .title {
-        text-transform: uppercase !important;
-        font-weight: 300;
-        margin-bottom: 2rem;
-    }
+.spacer {
+  flex: 1 1 auto;
 }
