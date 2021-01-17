@@ -1,6 +1,21 @@
-$body-font-family: "Roboto", "Helvetica Neue", sans-serif;
-$body-font-size: 1.4rem;
-
-$title-font-family: "Comfortaa", "Helvetica Neue", sans-serif;
+$font-family-sans-serif: 'Montserrat', 'Helvetica', 'Arial', sans-serif !default;
+$font-family-serif: 'Roboto', 'Times New Roman', serif !default;
 
 $base-font-size: 0.875rem;
+
+// Font size
+$font-size-h1: 3.3125rem;
+$font-size-h2: 2.25rem !default;
+$font-size-h3: 1.5625rem;
+$font-size-h4: 1.125rem !default;
+$font-size-h5: 1.0625rem !default;
+$font-size-h6: 0.75rem !default;
+$font-size-paragraph: 14px !default;
+$font-size-small: 12px !default;
+
+// Font weight
+$font-weight-light: 300 !default;
+$font-weight-default: 400 !default;
+$font-weight-bold: 500 !default;
+$font-weight-extra-bold: 700 !default;
+$font-weight-ultra-bold: 900 !default;

@@ -1,60 +1,52 @@
-body {
-    font-family: $body-font-family;
-    letter-spacing: 0;
-    font-weight: 400;
-    font-size: $body-font-size;
-    line-height: 1.8;
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-// Headings & titles
+body,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    @include title();
+  font-family: $font-family-sans-serif;
+  font-weight: $font-weight-light;
+  line-height: 1.5em;
 }
 
 h1 {
-    font-size: 2.75rem;
+  font-size: $font-size-h1;
+  line-height: 1.15em;
 }
+
 h2 {
-    font-size: 2rem;
+  font-size: $font-size-h2;
 }
+
 h3 {
-    font-size: 1.55rem;
+  font-size: $font-size-h3;
+  line-height: 1.4em;
 }
+
 h4 {
-    font-size: 1.15rem;
+  font-size: $font-size-h4;
+  line-height: 1.4em;
+  font-weight: 300;
 }
+
 h5 {
-    font-size: 1rem;
+  font-size: $font-size-h5;
+  line-height: 1.4em;
 }
+
 h6 {
-    font-size: 0.9rem;
+  font-size: $font-size-h6;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
 }
 
 p {
-    font-size: $base-font-size;
-    font-weight: 400;
-}
-
-a {
-    font-weight: 00;
-    text-decoration: none;
-    color: inherit;
-
-    &:hover {
-        text-decoration: none;
-        color: $grey !important;
-    }
-}
-
-.uppercase {
-    text-transform: uppercase !important;
-}
-
-.bold {
-    font-weight: 600 !important;
+  font-family: $font-family-serif;
+  font-size: $font-size-paragraph;
 }

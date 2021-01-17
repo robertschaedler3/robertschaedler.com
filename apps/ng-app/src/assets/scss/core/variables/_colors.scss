@@ -1,26 +1,12 @@
-// Theme
-$light-theme: #156bc7;
-$theme: #014fa3;
-$dark-theme: #001127;
 
-// Greys
-$ultralight-grey: #dadada;
-$light-grey: #969696;
-$grey: #333;
-$dark-grey: #242424;
+// $brand-primary-contrast: #0078f0;
+// $brand-accent-contrast: #ab7fff;
 
-// Other
 $white: #eee;
 $black: #111;
+$link-color: #2896e9;
 
-$branding-colors: (
-    "light-theme": $light-theme,
-    "theme": $theme,
-    "dark-theme": $dark-theme,
-    "ultralight-grey": $ultralight-grey,
-    "light-grey": $light-grey,
-    "grey": $grey,
-    "dark-grey": $dark-grey,
-    "white": $white,
-    "black": $black,
-);
+$white-color: #eeeeee !default;
+$gray-color:  #999999 !default;
+$black-color: #3C4858 !default;
+

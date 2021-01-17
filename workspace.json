@@ -24,8 +24,6 @@
             "tsConfig": "apps/ng-app/tsconfig.app.json",
             "assets": ["apps/ng-app/src/favicon.ico", "apps/ng-app/src/assets"],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "./node_modules/bootstrap/dist/css/bootstrap.css",
               "apps/ng-app/src/styles.scss",
               "apps/ng-app/src/assets/scss/core.scss"
             ],

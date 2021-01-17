@@ -1,0 +1,15 @@
+.wrapper {
+  position: relative;
+  top: 0;
+  height: 100vh;
+}
+
+.main-panel {
+  position: relative;
+  float: right;
+
+  .main-content {
+    padding: 1.875rem $gutter-size;
+    min-height: calc(100vh - 300px);
+  }
+}
