@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 
 // Components
@@ -32,6 +33,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     CommonModule,
     RouterModule,
     HttpClientModule,
+    FlexLayoutModule,
     MatButtonModule,
     MatCheckboxModule,
     MatIconModule,
@@ -46,6 +48,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
   ],
   exports: [
     RouterModule,
+    FlexLayoutModule,
     ChipListComponent,
     ImageComponent,
     SectionComponent,
