@@ -21,8 +21,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
+// Scrollbar
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+
 @NgModule({
-  declarations: [  ],
+  declarations: [],
   imports: [
     CommonModule,
     RouterModule,
@@ -39,6 +42,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatSidenavModule,
     MatToolbarModule,
     MatProgressBarModule,
+    PerfectScrollbarModule,
   ],
   exports: [
     RouterModule,
@@ -55,6 +59,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatSidenavModule,
     MatToolbarModule,
     MatProgressBarModule,
+    PerfectScrollbarModule,
   ],
 })
 export class SharedModule {}
