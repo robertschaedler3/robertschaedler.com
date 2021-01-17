@@ -7,5 +7,13 @@ $main-panel-width: calc(100% - 20rem);
 }
 
 .main-panel {
-    width: $main-panel-width;
+  width: $main-panel-width;
+}
+
+.resume-button {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  border: 2px solid #eee;
+  overflow: hidden;
 }

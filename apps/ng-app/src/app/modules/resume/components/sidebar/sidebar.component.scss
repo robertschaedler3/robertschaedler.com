@@ -1,19 +1,24 @@
 $underline-dark-color: #686868;
 $underline-light-color: #eee;
 
-@mixin ease() {
-  -webkit-transition: all 300ms ease;
-  -moz-transition: all 300ms ease;
-  -o-transition: all 300ms ease;
-  -ms-transition: all 300ms ease;
-  transition: all 300ms ease;
-  transition: all 300ms ease;
+@mixin transition() {
+  -webkit-transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -moz-transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -o-transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -ms-transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 .content {
   height: 100%;
   margin: 1.25rem;
   padding-bottom: 2rem;
+
+  .special a {
+    font-size: 3rem;
+    font-weight: 800;
+  }
 
   .info {
     margin: 2rem 0;
@@ -45,12 +50,12 @@ $underline-light-color: #eee;
       }
 
       &.active .border-slider {
-          width: 100%;
-          background-color: $underline-light-color;
+        width: 100%;
+        background-color: $underline-light-color;
       }
 
       .border-slider {
-        @include ease();
+        @include transition();
 
         position: absolute;
         display: block;
@@ -78,7 +83,7 @@ $underline-light-color: #eee;
   font-size: 3rem;
 
   a {
-    @include ease();
+    @include transition();
 
     line-height: 5rem;
     text-decoration: underline;
