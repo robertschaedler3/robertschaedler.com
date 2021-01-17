@@ -33,6 +33,6 @@ export class HeaderComponent implements OnInit {
       }
     }
 
-    return 'About';
+    return '';
   }
 }
