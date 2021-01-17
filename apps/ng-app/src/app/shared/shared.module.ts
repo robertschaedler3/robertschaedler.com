@@ -5,9 +5,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 
 // Components
-import { ChipListComponent } from '../shared/components/chip-list.component';
-import { ImageComponent } from '../shared/components/image.component';
-import { SectionComponent } from '../shared/components/section.component';
+
 
 // Material
 // TODO: remove unused imports
@@ -24,11 +22,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
-  declarations: [
-    ChipListComponent,
-    ImageComponent,
-    SectionComponent,
-  ],
+  declarations: [  ],
   imports: [
     CommonModule,
     RouterModule,
@@ -49,9 +43,6 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
   exports: [
     RouterModule,
     FlexLayoutModule,
-    ChipListComponent,
-    ImageComponent,
-    SectionComponent,
     HttpClientModule,
     MatButtonModule,
     MatCheckboxModule,
