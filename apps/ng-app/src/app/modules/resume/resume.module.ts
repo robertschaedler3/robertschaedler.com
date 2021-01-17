@@ -10,9 +10,10 @@ import { ResumeSectionComponent } from './components/resume-section/resume-secti
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { SocialLinkComponent } from './components/social-link/social-link.component';
 
 @NgModule({
-  declarations: [ResumeComponent, ResumeSectionComponent, FooterComponent, HeaderComponent, SidebarComponent],
+  declarations: [ResumeComponent, ResumeSectionComponent, FooterComponent, HeaderComponent, SidebarComponent, SocialLinkComponent],
   imports: [CommonModule, ResumeRoutingModule, SharedModule],
 })
 export class ResumeModule {}
