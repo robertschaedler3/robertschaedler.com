@@ -11,9 +11,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SocialLinkComponent } from './components/social-link/social-link.component';
+import { ExperiencePageComponent } from './pages/experience-page/experience-page.component';
 
 @NgModule({
-  declarations: [ResumeComponent, ResumeSectionComponent, FooterComponent, HeaderComponent, SidebarComponent, SocialLinkComponent],
+  declarations: [ResumeComponent, ResumeSectionComponent, FooterComponent, HeaderComponent, SidebarComponent, SocialLinkComponent, ExperiencePageComponent],
   imports: [CommonModule, ResumeRoutingModule, SharedModule],
 })
 export class ResumeModule {}
