@@ -71,9 +71,14 @@ $underline-light-color: #eee;
 
   .social-links {
     margin: 2rem 0;
-
+    
     .link {
+      @include transition();
       margin-right: 0.85rem;
+
+      &:hover {
+        transform: translateY(-0.3rem);
+      }
     }
   }
 }
