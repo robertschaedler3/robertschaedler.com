@@ -7,4 +7,9 @@
 .main-panel {
   position: relative;
   float: right;
+
+  .main-content {
+    padding: 1.875rem 2.5rem;
+    min-height: calc(100vh - 240px);
+  }
 }
