@@ -2,7 +2,7 @@ $sidebar-width: 20rem;
 $main-panel-width: calc(100% - 20rem);
 
 .sidebar {
-  width: 20rem;
+  width: $sidebar-width;
   border-right: 1px solid #333;
 }
 

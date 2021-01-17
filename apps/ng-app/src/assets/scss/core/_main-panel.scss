@@ -9,7 +9,7 @@
   float: right;
 
   .main-content {
-    padding: 1.875rem 2.5rem;
-    min-height: calc(100vh - 240px);
+    padding: 1.875rem $gutter-size;
+    min-height: calc(100vh - 300px);
   }
 }
