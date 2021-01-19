@@ -1,6 +1,6 @@
 # robertschaedler.com
 
-[![Build status](https://dev.azure.com/robertschaedler/robertschaedler.com/_apis/build/status/build-and-deploy)](https://dev.azure.com/robertschaedler/robertschaedler.com/_build/latest?definitionId=2)
+[![Build Status](https://dev.azure.com/robertschaedler/robertschaedler.com/_apis/build/status/repo-mirror?branchName=master)](https://dev.azure.com/robertschaedler/robertschaedler.com/_build/latest?definitionId=1&branchName=master)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
 
