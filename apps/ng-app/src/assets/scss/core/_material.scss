@@ -5,10 +5,18 @@
 $theme-primary: mat-palette($palette-primary, 500, 200, 600);
 $theme-accent: mat-palette($palette-accent, 500, 200, 900);
 
-$dark-theme: mat-dark-theme($theme-primary, $theme-accent);
-@include angular-material-theme($dark-theme);
+$light-theme: mat-light-theme($theme-primary, $theme-accent);
+@include angular-material-theme($light-theme);
+
+.dark-theme {
+  $dark-theme: mat-dark-theme($theme-primary, $theme-accent);
+  @include angular-material-theme($dark-theme);
+
+  background-color: #202020;
+  color: $white;
+}
 
 body {
-    background-color: #202020;
-    color: $white;
+  background-color: $white;
+  color: $black;
 }
