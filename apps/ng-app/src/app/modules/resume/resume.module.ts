@@ -15,6 +15,7 @@ import { ProjectsPageComponent } from './pages/projects-page/projects-page.compo
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SocialLinkComponent } from './components/social-link/social-link.component';
 import { SkillsPageComponent } from './pages/skills-page/skills-page.component';
+import { TerminalPageComponent } from './pages/terminal-page/terminal-page.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { SkillsPageComponent } from './pages/skills-page/skills-page.component';
     SidebarComponent,
     SkillsPageComponent,
     SocialLinkComponent,
+    TerminalPageComponent,
   ],
   imports: [CommonModule, ResumeRoutingModule, SharedModule],
 })
