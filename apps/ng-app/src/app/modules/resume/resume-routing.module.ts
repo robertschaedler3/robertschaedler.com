@@ -8,6 +8,7 @@ import { ExperiencePageComponent } from './pages/experience-page/experience-page
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
 import { SkillsPageComponent } from './pages/skills-page/skills-page.component';
+import { TerminalPageComponent } from './pages/terminal-page/terminal-page.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
       { path: 'skills', component: SkillsPageComponent },
     ],
   },
+  { path: 'terminal', component: TerminalPageComponent },
 ];
 
 @NgModule({

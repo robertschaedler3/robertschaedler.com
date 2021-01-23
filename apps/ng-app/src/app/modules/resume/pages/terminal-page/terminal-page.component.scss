@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
+
+$frame-color: #eeeeee;
+$background-color: #333333;
+
+@mixin shadow($offset, $color) {
+  -moz-box-shadow:    $offset $color;
+  -webkit-box-shadow: $offset $color;
+  box-shadow:         $offset $color;
+}
+
+.content {
+  height: 100%;
+}
+
+.terminal {
+  @include shadow((0 0 400px 30px), rgba(40, 150, 233, 0.4));
+
+  height: 24rem;
+  background: $background-color;
+  border-radius: 5px;
+  overflow: hidden;
+
+  .toolbar {
+    height: 2.25rem;
+    background: $frame-color;
+    color: #8a8989;
+    padding: 0 1rem;
+
+    .icons {
+      width: 3.25rem;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.shell {
+  padding: 0.5rem;
+
+  .command {
+    font-family: 'Inconsolata', monospace;
+    font-size: 1rem;
+    width: fit-content;
+    margin: 0;
+    word-break: break-all;
+
+    > i {
+      font-size: 0.65rem;
+      vertical-align: middle;
+    }
+  }
+
+  .cursor {
+    display: inline-block;
+    background-color: #eee;
+    width: 0.45rem;
+    height: 1rem;
+    margin-bottom: 0.2rem;
+    animation: blink 600ms steps(2, start) infinite;
+    animation-direction: alternate;
+  }
+
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
+}
