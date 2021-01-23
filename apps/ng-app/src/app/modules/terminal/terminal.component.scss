@@ -21,7 +21,7 @@ $background-color: #333333;
 }
 
 .terminal {
-  @include shadow((0 0 400px 30px), rgba(40, 150, 233, 0.4));
+  @include shadow((0 10px 400px 30px), rgba(40, 150, 233, 0.4));
 
   height: 24rem;
   background: $background-color;
@@ -52,7 +52,7 @@ $background-color: #333333;
   right: 0;
 
   button {
-    @include shadow((0 5px 20px 5px), #202020);
+    @include shadow((0 10px 20px 5px), rgba(32, 32, 32, 0.3));
     @include transition(500ms);
 
     padding: 0.5rem 1rem;
