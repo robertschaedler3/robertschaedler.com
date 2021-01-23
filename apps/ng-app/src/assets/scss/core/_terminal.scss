@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
 
+.context {
+  padding-right: 5px;
+}
+
 .command {
   width: fit-content;
   word-break: break-all;
@@ -11,6 +15,7 @@
 }
 
 .command,
+.context,
 .result {
   margin: 0;
   font-family: 'Inconsolata', monospace;

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {  Command, CommandService} from '../../core/services/command.service';
+import { TerminalService } from '../../core/services/terminal.service';
 
 @Component({
   selector: 'app-terminal',
@@ -7,13 +7,7 @@ import {  Command, CommandService} from '../../core/services/command.service';
   styleUrls: ['./terminal.component.scss'],
 })
 export class TerminalComponent implements OnInit {
+  constructor(public terminal: TerminalService) {}
 
-  commands: Command[] = [];
-
-  constructor(private cli: CommandService) {
-    this.cli.$command.subscribe((command) => this.commands.push(command));
-  }
-
-  ngOnInit() { }
-
+  ngOnInit() {}
 }

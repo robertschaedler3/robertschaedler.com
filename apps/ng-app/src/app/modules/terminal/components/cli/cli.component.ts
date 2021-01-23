@@ -1,5 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { CommandService } from '../../../../core/services/command.service';
+import { TerminalService } from '../../../../core/services/terminal.service';
 
 export const SPECIAL_CHARS = [
   ' ',
@@ -55,8 +55,11 @@ export const SPECIAL_CHARS = [
 export class CliComponent implements OnInit {
 
   command = '';
+  context = '';
 
-  constructor(private cli: CommandService) {}
+  constructor(private terminal: TerminalService) {
+    this.terminal.$context.subscribe(context => this.context = context)
+  }
 
   ngOnInit(): void {}
 
@@ -68,7 +71,7 @@ export class CliComponent implements OnInit {
         this.command = this.command.slice(0, -1);
         break;
       case 'Enter':
-        this.cli.exec(this.command);
+        this.terminal.exec(this.command);
         this.command = '';
         break;
       default:
@@ -79,5 +82,4 @@ export class CliComponent implements OnInit {
         }
     }
   }
-
 }

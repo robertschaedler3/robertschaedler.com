@@ -9,7 +9,7 @@
         </div>
         <perfect-scrollbar>
             <div class="shell">
-                <div *ngFor="let command of commands; let last = last" class="line">
+                <div *ngFor="let command of terminal.$commands | async; let last = last" class="line">
                     <app-command [command]="command"></app-command>
                 </div>
                 <div class="line">
