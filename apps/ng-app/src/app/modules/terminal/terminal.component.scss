@@ -2,9 +2,18 @@ $frame-color: #eeeeee;
 $background-color: #333333;
 
 @mixin shadow($offset, $color) {
-  -moz-box-shadow:    $offset $color;
+  -moz-box-shadow: $offset $color;
   -webkit-box-shadow: $offset $color;
-  box-shadow:         $offset $color;
+  box-shadow: $offset $color;
+}
+
+@mixin transition($duration) {
+  -webkit-transition: $duration cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -moz-transition: $duration cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -o-transition: $duration cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -ms-transition: $duration cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: $duration cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: $duration cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 .content {
@@ -20,7 +29,7 @@ $background-color: #333333;
   overflow: hidden;
 
   .toolbar {
-    height: 2.25rem;
+    height: 2rem;
     background: $frame-color;
     color: #8a8989;
     padding: 0 1rem;
@@ -34,4 +43,42 @@ $background-color: #333333;
 
 .shell {
   padding: 0.5rem;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 3rem;
+  left: 0;
+  right: 0;
+
+  button {
+    @include shadow((0 5px 20px 5px), #202020);
+    @include transition(500ms);
+
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #2896e9;
+    color: #eee;
+    cursor: pointer;
+    animation: fade 10s ease-in-out;
+
+    &:hover {
+      margin-bottom: 0.2rem;
+    }
+    @keyframes fade {
+      0% {
+        opacity: 0;
+        transform: translateY(1rem);
+      }
+      80% {
+        opacity: 0;
+        transform: translateY(1rem);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
 }
