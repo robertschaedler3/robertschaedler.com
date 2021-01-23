@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
+
+.command {
+  width: fit-content;
+  word-break: break-all;
+
+  > i {
+    font-size: 0.65rem;
+    vertical-align: middle;
+  }
+}
+
+.command,
+.result {
+  margin: 0;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1rem;
+}
+
+.cursor {
+  display: inline-block;
+  background-color: #eee;
+  width: 0.45rem;
+  height: 1rem;
+  margin-bottom: 0.2rem;
+  animation: blink 600ms steps(2, start) infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
