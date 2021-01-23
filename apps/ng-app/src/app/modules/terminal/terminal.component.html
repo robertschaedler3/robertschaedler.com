@@ -1,1 +1,19 @@
-<p>terminal works!</p>
+<div class="content" fxLayout="row" fxLayoutAlign="center center">
+    <div class="terminal" fxFlex="50">
+        <div class="toolbar" fxLayout="row" fxLayoutAlign="end center">
+            <div class="icons" fxLayout="row" fxLayoutAlign="space-between center">
+                <i class="far fa-window-minimize"></i>
+                <i class="far fa-window-maximize"></i>
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="shell">
+            <div *ngFor="let command of commands; let last = last" class="line">
+                <app-command [command]="command"></app-command>
+            </div>
+            <div class="line">
+                <app-cli></app-cli>
+            </div>
+        </div>
+    </div>
+</div>

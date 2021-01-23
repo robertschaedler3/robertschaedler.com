@@ -15,9 +15,6 @@ import { ProjectsPageComponent } from './pages/projects-page/projects-page.compo
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SocialLinkComponent } from './components/social-link/social-link.component';
 import { SkillsPageComponent } from './pages/skills-page/skills-page.component';
-import { TerminalCommandComponent } from './components/terminal-command/terminal-command.component';
-import { TerminalPageComponent } from './pages/terminal-page/terminal-page.component';
-import { CliComponent } from './components/cli/cli.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +28,6 @@ import { CliComponent } from './components/cli/cli.component';
     SidebarComponent,
     SkillsPageComponent,
     SocialLinkComponent,
-    TerminalCommandComponent,
-    TerminalPageComponent,
-    CliComponent,
   ],
   imports: [CommonModule, ResumeRoutingModule, SharedModule],
 })
