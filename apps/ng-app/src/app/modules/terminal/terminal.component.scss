@@ -13,7 +13,6 @@ $background-color: #202020;
   -o-transition: $duration cubic-bezier(0.785, 0.135, 0.15, 0.86);
   -ms-transition: $duration cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition: $duration cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: $duration cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 .content {
@@ -68,6 +67,8 @@ $background-color: #202020;
     &:hover {
       margin-bottom: 0.2rem;
     }
+
+    // TODO: use custom Angular animations
     @keyframes fade {
       0% {
         opacity: 0;
