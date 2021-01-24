@@ -12,6 +12,7 @@ import { ExperiencePageComponent } from './pages/experience-page/experience-page
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
 import { ProjectTileComponent } from './components/project-tile/project-tile.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -25,6 +26,7 @@ import { SkillsPageComponent } from './pages/skills-page/skills-page.component';
     FooterComponent,
     HeaderComponent,
     LandingPageComponent,
+    ProjectsComponent,
     ProjectsPageComponent,
     ProjectTileComponent,
     ResumeComponent,
