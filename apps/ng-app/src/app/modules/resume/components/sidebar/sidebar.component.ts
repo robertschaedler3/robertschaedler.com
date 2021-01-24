@@ -14,7 +14,7 @@ export const ROUTES: RouteInfo[] = [
   { path: '/experience', title: 'Experience', class: '' },
   { path: '/projects', title: 'Projects', class: '' },
   { path: '/skills', title: 'Skills', class: '' },
-  { path: '/about', title: 'About', class: '' },
+  { path: '/archive', title: 'Archive', class: '' },
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [

@@ -1,0 +1,24 @@
+<div class="content" fxLayout="row" fxLayoutAlign="center center">
+    <div class="terminal" fxFlex="50" fxLayout="column" fxLayoutAlign=" stretch">
+        <div class="toolbar" fxLayout="row" fxLayoutAlign="end center">
+            <div class="icons" fxLayout="row" fxLayoutAlign="space-between center">
+                <i class="far fa-window-minimize"></i>
+                <i class="far fa-window-maximize"></i>
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <perfect-scrollbar>
+            <div class="shell">
+                <div *ngFor="let command of terminal.$commands | async" class="line">
+                    <app-command [command]="command"></app-command>
+                </div>
+                <div class="line">
+                    <app-cli></app-cli>
+                </div>
+            </div>
+        </perfect-scrollbar>
+    </div>
+</div>
+<div class="button-container" fxLayout="row" fxLayoutAlign="center center">
+    <button class="primary rounded" [routerLink]="['']">Non-terminal view</button>
+</div>

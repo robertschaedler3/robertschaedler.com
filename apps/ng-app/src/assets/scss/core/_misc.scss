@@ -5,18 +5,18 @@
   &:focus {
     outline: 0;
   }
-}
 
-a {
-  text-decoration: none;
-  color: $white;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
+  &::selection {
+    background: $white;
+    color: $black;
   }
 }
 
 .spacer {
   flex: 1 1 auto;
+}
+
+.ps__rail-x,
+.ps__rail-y {
+  background: transparent !important;
 }

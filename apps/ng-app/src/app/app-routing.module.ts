@@ -7,6 +7,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/resume/resume.module').then((m) => m.ResumeModule),
   },
+  {
+    path: 'terminal',
+    loadChildren: () =>
+      import('./modules/terminal/terminal.module').then(
+        (m) => m.TerminalModule
+      ),
+  },
   { path: '*', redirectTo: '', pathMatch: 'full' },
 ];
 

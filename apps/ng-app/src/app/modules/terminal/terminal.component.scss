@@ -1,0 +1,79 @@
+@mixin shadow($offset, $color) {
+  -moz-box-shadow: $offset $color;
+  -webkit-box-shadow: $offset $color;
+  box-shadow: $offset $color;
+}
+
+@mixin transition($duration) {
+  -webkit-transition: $duration cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -moz-transition: $duration cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -o-transition: $duration cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -ms-transition: $duration cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: $duration cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.content {
+  height: 100%;
+}
+
+.terminal {
+  @include shadow((0 20px 400px 30px), rgba(7, 74, 126, 0.4));
+
+  height: 24rem;
+  background: #202020;
+  border-radius: 5px;
+  overflow: hidden;
+
+  .toolbar {
+    @include shadow((0 8px 30px 5px), rgba(0, 0, 0, 0.8));
+
+    height: 2rem;
+    background: #e4e4e4;
+    color: #8a8989;
+    padding: 0 1rem;
+
+    .icons {
+      width: 3.25rem;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.shell {
+  margin: 0.5rem;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 3rem;
+  left: 0;
+  right: 0;
+
+  button {
+    @include transition(500ms);
+
+    animation: fade 5s ease-in-out;
+    color: #eee;
+    margin: 0;
+
+    &:hover {
+      margin-bottom: 0.2rem;
+    }
+
+    // TODO: use custom Angular animations
+    @keyframes fade {
+      0% {
+        opacity: 0;
+        transform: translateY(1rem);
+      }
+      80% {
+        opacity: 0;
+        transform: translateY(1rem);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}

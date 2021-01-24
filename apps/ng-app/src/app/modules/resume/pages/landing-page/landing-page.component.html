@@ -1,0 +1,59 @@
+<div class="section">
+    <div class="section-header">
+        <h6>00.</h6>
+        <h3>About Me</h3>
+        <div class="line" fxFlex="30"></div>
+    </div>
+    <div class="section-inner">
+        <p>Hi there! I'm Robert, a software engineer based out of Hoboken, NJ.</p>
+        <p>
+            I enjoy building things that involve the cloud. I have various experience with network security and IoT through many
+            different personal, academic, and professional projects. I also have a taste for pixel-perfect, performant design.
+        </p>
+        <p>
+            After graduating from
+            <a href="https://www.stevens.edu/">Stevens Institute of Technology</a>
+            in the spring, I will be joining the
+            <a href="https://azure.microsoft.com/en-us/resources/videos/intelligent-edge-overview-video/">Intelligent Edge</a>
+            Management (ItEM) Team at Microsoft as a Software Engineer.
+        </p>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-header">
+        <h6>01.</h6>
+        <h3>Experience</h3>
+        <div class="line" fxFlex="30"></div>
+    </div>
+    <div class="section-inner">
+        <input type="hidden" #selection>
+
+        <div class="button outline rounded" (click)="selection.value = 'default'">Default</div>
+        <div class="button" (click)="selection.value = 'other'">Other</div>
+        <button class="primary" (click)="selection.value = 'other'">Other</button>
+
+        <div [ngSwitch]="selection.value">
+            <div *ngSwitchDefault>Default</div>
+            <div *ngSwitchCase="'other'">Other</div>
+        </div>
+
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-header">
+        <h6>10.</h6>
+        <h3>Projects</h3>
+        <div class="line" fxFlex="30"></div>
+    </div>
+
+</div>
+
+<div class="section">
+    <div class="section-header">
+        <h6>11.</h6>
+        <h3>Skills</h3>
+        <div class="line" fxFlex="30"></div>
+    </div>
+</div>

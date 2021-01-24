@@ -3,50 +3,106 @@ html * {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body,
+body {
+  background-color: $background-color;
+  color: $white;
+  font-family: $font-family-body;
+  font-weight: $font-weight-default;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: $font-family-sans-serif;
-  font-weight: $font-weight-light;
+  font-family: $font-family-headline;
   line-height: 1.5em;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
 }
 
 h1 {
   font-size: $font-size-h1;
-  line-height: 1.15em;
+  font-weight: $font-weight-extra-bold;
 }
 
 h2 {
   font-size: $font-size-h2;
+  font-weight: $font-weight-bold;
 }
 
 h3 {
   font-size: $font-size-h3;
-  line-height: 1.4em;
+  font-weight: $font-weight-bold;
 }
 
 h4 {
   font-size: $font-size-h4;
-  line-height: 1.4em;
-  font-weight: 300;
+  font-weight: $font-weight-bold;
 }
 
 h5 {
+  font-weight: $font-weight-default;
   font-size: $font-size-h5;
-  line-height: 1.4em;
-}
-
-h6 {
-  font-size: $font-size-h6;
-  font-weight: $font-weight-bold;
   text-transform: uppercase;
 }
 
+h6 {
+  font-family: $font-family-monospace;
+  font-size: $font-size-h6;
+  font-weight: $font-weight-default;
+  color: $brand-accent;
+}
+
 p {
-  font-family: $font-family-serif;
+  color: $light-gray-color;
+  font-family: $font-family-monospace;
   font-size: $font-size-paragraph;
+  font-weight: $font-weight-default;
+  line-height: 24px;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+a {
+  @include transition($slow-transition-time, $transition-bezier);
+
+  color: $brand-primary;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+button,
+.button {
+  font-family: $font-family-monospace;
+  font-size: $font-size-paragraph;
+}
+
+.headline {
+  font-family: $font-family-headline;
+}
+
+.mono {
+  font-family: $font-family-monospace;
+  font-size: 14px;
+  margin: 0;
+}
+
+.link {
+  @include transition($general-transition-time, $transition-bezier);
+
+  color: $white;
+
+  &:hover {
+    transform: translateY(-0.3rem);
+  }
 }

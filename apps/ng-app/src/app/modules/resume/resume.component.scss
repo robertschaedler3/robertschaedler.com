@@ -3,9 +3,16 @@ $main-panel-width: calc(100% - 20rem);
 
 .sidebar {
   width: $sidebar-width;
-  border-right: 1px solid #333;
 }
 
 .main-panel {
-    width: $main-panel-width;
+  width: $main-panel-width;
+}
+
+.resume-button {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  border-radius: 1px;
+  overflow: hidden;
 }

@@ -1,0 +1,38 @@
+.context {
+  padding-right: 5px;
+}
+
+.command {
+  width: fit-content;
+  word-break: break-all;
+
+  > i {
+    font-size: 0.65rem;
+    vertical-align: middle;
+  }
+}
+
+.command,
+.context,
+.result {
+  margin: 0;
+  font-family: $font-family-monospace;
+  font-size: 1rem;
+  color: $white;
+}
+
+.cursor {
+  display: inline-block;
+  background-color: #eee;
+  width: 0.45rem;
+  height: 1rem;
+  margin-bottom: 0.2rem;
+  animation: blink 600ms steps(2, start) infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
