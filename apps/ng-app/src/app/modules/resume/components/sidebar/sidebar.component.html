@@ -1,23 +1,25 @@
 <div class="content" fxLayout="column" fxLayoutAlign="end left">
     <h1 class="special">
-        <a class="impact-text" [routerLink]="['']">Robert Schaedler III</a>
+        <a class="headline" [routerLink]="['']">Robert Schaedler III</a>
     </h1>
     <div class="info">
-        <p><i class="fas fa-briefcase fa-fw"></i> Microsoft Software Engineer</p>
-        <p><i class="fas fa-graduation-cap fa-fw"></i> Stevens Institute of Technology</p>
-        <p><i class="fas fa-map-marker fa-fw"></i> Hoboken, NJ</p>
+        <p class="mono"><i class="fas fa-briefcase fa-fw"></i> Microsoft Software Engineer</p>
+        <p class="mono"><i class="fas fa-graduation-cap fa-fw"></i> Stevens Institute of Technology</p>
+        <p class="mono"><i class="fas fa-map-marker fa-fw"></i> Hoboken, NJ</p>
     </div>
     <div class="nav-container">
         <a *ngFor="let routeItem of routeItems" class="{{routeItem.class}} nav-item" [routerLink]="[routeItem.path]">
-            <h6 class="nav-link" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">
+            <h5 class="nav-link" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">
                 <span>{{routeItem.title}}</span>
                 <span class="border-slider"></span>
-            </h6>
+            </h5>
         </a>
     </div>
     <div class="social-links" fxLayout="row" fxLayoutAlign="start center">
-        <div class="link" *ngFor="let link of socialLinks">
-            <app-social-link [link]="link.link" [icon]="link.icon"></app-social-link>
+        <div class="link" *ngFor="let social of socialLinks">
+            <a [href]="social.link">
+                <i class="fab fa-{{social.icon}}"></i>
+            </a>
         </div>
     </div>
 </div>
