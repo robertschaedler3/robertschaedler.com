@@ -14,10 +14,26 @@ $underline-light-color: #eee;
   padding: 1.25rem;
   background-color: #012e4e;
 
-  .special a {
-    color: #eee;
-    font-size: 2.75rem;
-    font-weight: 800;
+  .special {
+    margin: 0;
+    font-size: 3rem;
+
+    a {
+      @include transition();
+
+      color: #eee;
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 5rem;
+      text-decoration: underline;
+      text-decoration-color: $underline-dark-color;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 1rem;
+
+      &:hover {
+        text-decoration-color: $underline-light-color;
+      }
+    }
   }
 
   .info {
@@ -45,13 +61,13 @@ $underline-light-color: #eee;
       line-height: 2.25rem;
       color: #eee;
 
-      &:hover, 
+      &:hover,
       &:active {
         .border-slider {
           width: 100%;
           background-color: $underline-dark-color;
-        }  
-      } 
+        }
+      }
 
       .border-slider {
         @include transition();
@@ -73,30 +89,11 @@ $underline-light-color: #eee;
 
     .link {
       margin-right: 0.85rem;
-      
+
       i {
         color: #eee;
         font-size: 2.5rem;
       }
-    }
-  }
-}
-
-.special {
-  margin: 0;
-  font-size: 3rem;
-
-  a {
-    @include transition();
-
-    line-height: 5rem;
-    text-decoration: underline;
-    text-decoration-color: $underline-dark-color;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 1rem;
-
-    &:hover {
-      text-decoration-color: $underline-light-color;
     }
   }
 }
