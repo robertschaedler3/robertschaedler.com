@@ -5,11 +5,15 @@
   &:focus {
     outline: 0;
   }
+
+  &::selection {
+    background: $white;
+    color: $black;
+  }
 }
 
 a {
   text-decoration: none;
-  color: $white;
 
   &:hover,
   &:focus {
