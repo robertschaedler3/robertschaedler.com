@@ -13,7 +13,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
-import { ProjectSectionComponent } from './components/project-section/project-section.component';
 import { ProjectTileComponent } from './components/project-tile/project-tile.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SkillsPageComponent } from './pages/skills-page/skills-page.component';
@@ -27,7 +26,6 @@ import { SkillsPageComponent } from './pages/skills-page/skills-page.component';
     HeaderComponent,
     LandingPageComponent,
     ProjectsPageComponent,
-    ProjectSectionComponent,
     ProjectTileComponent,
     ResumeComponent,
     SidebarComponent,
