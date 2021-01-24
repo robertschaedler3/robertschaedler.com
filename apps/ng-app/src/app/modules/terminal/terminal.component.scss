@@ -1,5 +1,5 @@
-$frame-color: #eeeeee;
-$background-color: #333333;
+$frame-color: #e4e4e4;
+$background-color: #202020;
 
 @mixin shadow($offset, $color) {
   -moz-box-shadow: $offset $color;
@@ -21,18 +21,20 @@ $background-color: #333333;
 }
 
 .terminal {
-  @include shadow((0 10px 400px 30px), rgba(40, 150, 233, 0.4));
-
+  @include shadow((0 20px 400px 30px), rgba(7, 74, 126, 0.4));
+  
   height: 24rem;
   background: $background-color;
   border-radius: 5px;
-
+  overflow: hidden;
+  
   .toolbar {
+    @include shadow((0 8px 30px 5px), rgba(0, 0, 0, 0.8));
+    
     height: 2rem;
     background: $frame-color;
     color: #8a8989;
     padding: 0 1rem;
-    border-radius: 5px 5px 0 0;
 
     .icons {
       width: 3.25rem;
