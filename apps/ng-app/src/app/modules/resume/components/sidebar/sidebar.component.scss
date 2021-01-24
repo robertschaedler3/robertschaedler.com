@@ -1,4 +1,4 @@
-$underline-dark-color: #686868;
+$underline-dark-color: #3a6a97;
 $underline-light-color: #eee;
 
 @mixin transition() {
@@ -7,13 +7,12 @@ $underline-light-color: #eee;
   -o-transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   -ms-transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 .content {
   height: 100%;
   padding: 1.25rem;
-  background-color: #0e1d2c;
+  background-color: #012e4e;
 
   .special a {
     color: #eee;
@@ -46,15 +45,13 @@ $underline-light-color: #eee;
       line-height: 2.25rem;
       color: #eee;
 
-      &:hover .border-slider {
-        width: 100%;
-        background-color: $underline-dark-color;
-      }
-
-      &.active .border-slider {
-        width: 100%;
-        background-color: $underline-light-color;
-      }
+      &:hover, 
+      &:active {
+        .border-slider {
+          width: 100%;
+          background-color: $underline-dark-color;
+        }  
+      } 
 
       .border-slider {
         @include transition();

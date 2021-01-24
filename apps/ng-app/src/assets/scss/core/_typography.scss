@@ -17,7 +17,7 @@ h6 {
   font-family: $font-family-headline;
   line-height: 1.5em;
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 h1 {
@@ -50,23 +50,32 @@ h6 {
   font-family: $font-family-monospace;
   font-size: $font-size-h6;
   font-weight: $font-weight-default;
-  color: #1a67b4;
+  color: $brand-accent;
 }
 
 p {
   color: $dark-gray-color;
-  font-family: $font-family-body;
+  font-family: $font-family-monospace;
   font-size: $font-size-paragraph;
   font-weight: $font-weight-default;
   line-height: 24px;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
 }
 
 a {
   @include transition($slow-transition-time, $transition-bezier);
 
-  color: $black;
+  color: $brand-accent;
 
-  &.link:hover {
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+.link,
+.link-text {
+  &:hover {
     color: $hover-color;
   }
 }
@@ -87,12 +96,17 @@ button,
   margin: 0;
 }
 
-.link {
+.link,
+.link-text {
   @include transition($general-transition-time, $transition-bezier);
 
   color: $black;
+}
 
-  &:hover {
-    transform: translateY(-0.3rem);
-  }
+.link:hover {
+  transform: translateY(-0.3rem);
+}
+
+.link-text:hover {
+  transform: translateY(-0.1rem);
 }

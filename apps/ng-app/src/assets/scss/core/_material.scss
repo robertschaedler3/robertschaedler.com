@@ -15,12 +15,10 @@ $light-theme: mat-light-theme($theme-primary, $theme-accent);
   background-color: #07131f;
   color: $white;
 
-  p {
+  p, 
+  .link,
+  .link-text {
     color: $light-gray-color;
-  }
-
-  a {
-    color: $white;
   }
 
 }
