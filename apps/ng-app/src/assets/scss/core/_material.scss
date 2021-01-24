@@ -12,8 +12,17 @@ $light-theme: mat-light-theme($theme-primary, $theme-accent);
   $dark-theme: mat-dark-theme($theme-primary, $theme-accent);
   @include angular-material-theme($dark-theme);
 
-  background-color: #202020;
+  background-color: #07131f;
   color: $white;
+
+  p {
+    color: $light-gray-color;
+  }
+
+  a {
+    color: $white;
+  }
+
 }
 
 body {
