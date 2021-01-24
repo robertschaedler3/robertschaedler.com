@@ -1,0 +1,15 @@
+.primary {
+    background-color: $brand-primary;
+
+    &:hover {
+        background-color: lighten($brand-primary, 5%);
+    }
+}
+
+.accent {
+    background-color: $brand-accent;
+
+    &:hover {
+        background-color: lighten($brand-accent, 5%);
+    }
+}
