@@ -1,8 +1,10 @@
 .special-button {
-  cursor: pointer;
+  @include transition($general-transition-time, $transition-bezier);
+
   background-color: $black;
   margin: 0;
   padding: 0;
+  cursor: pointer;
 
   span {
     padding: 0.5rem 1rem;
@@ -12,16 +14,18 @@
     transition: color 0.3s ease;
     position: relative;
     z-index: 1;
+    border: 2px solid $white;
   }
 
   &:before,
   &:after {
+    @include transition($general-transition-time, $transition-bezier);
+
     content: '';
-    background: $white;
+    background: $brand-primary;
     height: 50%;
     width: 0;
     position: absolute;
-    transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   }
 
   &:before {
@@ -37,7 +41,6 @@
   }
 
   &:hover {
-      
     &:before {
       width: 100%;
       right: 0;
@@ -52,6 +55,7 @@
 
     span {
       color: $black;
+      border-color: $brand-primary;
     }
   }
 }
