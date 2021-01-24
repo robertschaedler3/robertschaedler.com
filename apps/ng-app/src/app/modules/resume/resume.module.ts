@@ -16,7 +16,6 @@ import { ProjectsPageComponent } from './pages/projects-page/projects-page.compo
 import { ProjectSectionComponent } from './components/project-section/project-section.component';
 import { ProjectTileComponent } from './components/project-tile/project-tile.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { SocialLinkComponent } from './components/social-link/social-link.component';
 import { SkillsPageComponent } from './pages/skills-page/skills-page.component';
 
 @NgModule({
@@ -33,7 +32,6 @@ import { SkillsPageComponent } from './pages/skills-page/skills-page.component';
     ResumeComponent,
     SidebarComponent,
     SkillsPageComponent,
-    SocialLinkComponent,
   ],
   imports: [CommonModule, ResumeRoutingModule, SharedModule],
 })
