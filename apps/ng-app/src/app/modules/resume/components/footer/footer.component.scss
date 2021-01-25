@@ -5,5 +5,9 @@
   .link {
     text-align: center;
     line-height: 1.5rem;
+
+    &:not(:hover) {
+      color: #eee;
+    }
   }
 }

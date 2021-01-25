@@ -1,0 +1,19 @@
+.tile {
+  @include transition($general-transition-time, $transition-bezier);
+
+  border-radius: 10px;
+  background-color: #002742;
+
+  &:hover {
+    @include raise(
+      lighten($brand-primary, 20%),
+      lighten($background-color, 10%)
+    );
+
+    transform: translate3d(-0.2rem, -0.4rem, 0) scale3d(1.01, 1.01, 1.01);
+  }
+
+  .tile-header {
+    margin-bottom: 1rem;
+  }
+}

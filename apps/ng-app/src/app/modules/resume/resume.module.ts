@@ -8,12 +8,13 @@ import { SharedModule } from '../../shared/shared.module';
 // Components
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ArchivePageComponent } from './pages/archive-page/archive-page.component';
+import { ExperienceComponent } from './components/experience/experience.component';
 import { ExperiencePageComponent } from './pages/experience-page/experience-page.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
-import { ProjectSectionComponent } from './components/project-section/project-section.component';
 import { ProjectTileComponent } from './components/project-tile/project-tile.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SkillsPageComponent } from './pages/skills-page/skills-page.component';
@@ -22,12 +23,13 @@ import { SkillsPageComponent } from './pages/skills-page/skills-page.component';
   declarations: [
     AboutPageComponent,
     ArchivePageComponent,
+    ExperienceComponent,
     ExperiencePageComponent,
     FooterComponent,
     HeaderComponent,
     LandingPageComponent,
+    ProjectsComponent,
     ProjectsPageComponent,
-    ProjectSectionComponent,
     ProjectTileComponent,
     ResumeComponent,
     SidebarComponent,
