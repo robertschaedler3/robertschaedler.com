@@ -1,3 +1,13 @@
+@mixin raise($box-color, $shadow-color) {
+  box-shadow: 1px 2px $box-color,
+		 2px 3px $box-color,
+		 3px 4px $box-color,
+		 4px 5px $box-color,
+     0 16px 38px -12px rgba($shadow-color, $shadow-penumbra-opacity * 4),
+     0 4px 25px 0px rgba($shadow-color, $shadow-ambient-opacity),
+     0 8px 10px -5px rgba($shadow-color, $shadow-umbra-opacity);
+}
+
 @mixin shadow-big($color) {
   box-shadow: 0 16px 38px -12px rgba($color, $shadow-penumbra-opacity * 4),
     0 4px 25px 0px rgba($color, $shadow-ambient-opacity),
