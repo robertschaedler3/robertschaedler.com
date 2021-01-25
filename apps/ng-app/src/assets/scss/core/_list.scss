@@ -1,0 +1,23 @@
+.list {
+  border-radius: 5px;
+  overflow: hidden;
+  width: max-content;
+
+  .list-item {
+    @include transition($general-transition-time, $transition-bezier);
+
+    border-left: $border-width solid $line-color;
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+
+    &.selected,
+    &:hover {
+      background: lighten($background-color, 10%);
+      color: $brand-primary;
+    }
+
+    &.selected {
+      border-color: $brand-primary;
+    }
+  }
+}
