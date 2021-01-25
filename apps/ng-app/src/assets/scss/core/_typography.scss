@@ -67,8 +67,9 @@ p {
 
 a {
   @include transition($slow-transition-time, $transition-bezier);
-
+  
   color: $brand-primary;
+  font-family: $font-family-monospace;
   text-decoration: none;
 
   &:hover,
@@ -100,9 +101,7 @@ button,
 .link {
   @include transition($general-transition-time, $transition-bezier);
 
-  color: $white;
-
   &:hover {
-    transform: translateY(-0.3rem);
+    transform: translateY(-0.2rem);
   }
 }
