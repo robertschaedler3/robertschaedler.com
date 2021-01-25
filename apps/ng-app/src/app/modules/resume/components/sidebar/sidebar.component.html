@@ -1,11 +1,11 @@
 <div class="content" fxLayout="column" fxLayoutAlign="end left">
     <h1 class="special">
-        <a class="headline" [routerLink]="['']">Robert Schaedler III</a>
+        <a class="headline" [routerLink]="['']">{{name}}</a>
     </h1>
     <div class="info">
-        <p class="mono"><i class="fas fa-briefcase fa-fw"></i> Software Engineer @Microsoft</p>
-        <p class="mono"><i class="fas fa-graduation-cap fa-fw"></i> Stevens Institute of Technology</p>
-        <p class="mono"><i class="fas fa-map-marker fa-fw"></i> Hoboken, NJ</p>
+        <p class="mono"><i class="fas fa-briefcase fa-fw"></i> {{job}}</p>
+        <p class="mono"><i class="fas fa-graduation-cap fa-fw"></i> {{university}}</p>
+        <p class="mono"><i class="fas fa-map-marker fa-fw"></i> {{location}}</p>
     </div>
     <div class="nav-container">
         <a *ngFor="let routeItem of routeItems" class="{{routeItem.class}} nav-item" [routerLink]="[routeItem.path]">
@@ -16,9 +16,19 @@
         </a>
     </div>
     <div class="social-links" fxLayout="row" fxLayoutAlign="start center">
-        <div class="link" *ngFor="let social of socialLinks">
-            <a [href]="social.link">
-                <i class="fab fa-{{social.icon}}"></i>
+        <div class="link">
+            <a [href]="social.github">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <div class="link">
+            <a [href]="social.linkedin">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+        <div class="link">
+            <a [href]="social.medium">
+                <i class="fab fa-medium-m"></i>
             </a>
         </div>
     </div>
