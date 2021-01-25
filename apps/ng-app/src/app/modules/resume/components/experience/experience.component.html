@@ -1,1 +1,30 @@
-<p>experience works!</p>
+<div class="content" fxLayout="row" fxLayoutAlign="start start">
+    <div class="list mono">
+        <div 
+            class="list-item" 
+            *ngFor="let experience of experiences" 
+            [ngClass]="{'selected': selection.company === experience.company}"
+            (click)="selection = experience">
+            {{experience.company}}
+        </div>
+    </div>
+    <div class="selected-content" fxFlex="75">
+        <h4>
+            {{selection.position}} 
+            <a class="link" *ngIf="selection.companyLink"[href]="selection.companyLink">
+                @{{selection.company}}
+            </a>
+        </h4>
+        <p>{{selection.duration.start}} - {{selection.duration.end}}</p>
+        <div class="description">
+            <div 
+                class="bullet-point" 
+                *ngFor="let descripton of selection.description"
+                fxLayout="row" 
+                fxLayoutAlign="start start" >
+                <i class="far fa-dot-circle"></i>
+                <p>{{descripton}}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+.content {
+  margin-left: 2rem;
+}
+
+.selected-content {
+  margin-left: 2rem;
+
+  h4{
+    margin-bottom: 0.3rem;
+  }
+
+  .description {
+    .bullet-point {
+      i {
+        font-size: 10px;
+        margin-top: 0.4rem;
+        margin-right: 1.5rem;
+      }
+    }
+  }
+}
