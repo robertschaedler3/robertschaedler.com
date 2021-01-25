@@ -27,17 +27,7 @@
         <div class="line" fxFlex="30"></div>
     </div>
     <div class="section-inner">
-        <input type="hidden" #selection>
-
-        <div class="button outline rounded" (click)="selection.value = 'default'">Default</div>
-        <div class="button" (click)="selection.value = 'other'">Other</div>
-        <button class="primary" (click)="selection.value = 'other'">Other</button>
-
-        <div [ngSwitch]="selection.value">
-            <div *ngSwitchDefault>Default</div>
-            <div *ngSwitchCase="'other'">Other</div>
-        </div>
-
+        <app-experience></app-experience>
     </div>
 </div>
 
@@ -48,6 +38,9 @@
         <div class="line" fxFlex="30"></div>
     </div>
 
+    <div class="section-inner">
+        <app-projects></app-projects>
+    </div>
 </div>
 
 <div class="section">
