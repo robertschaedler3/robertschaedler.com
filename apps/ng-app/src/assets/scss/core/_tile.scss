@@ -1,7 +1,6 @@
 .tile {
   @include transition($general-transition-time, $transition-bezier);
 
-  padding: 2rem;
   border-radius: 10px;
   background-color: #002742;
 
@@ -11,7 +10,7 @@
       lighten($background-color, 10%)
     );
 
-    transform: translateY(-0.4rem) scale3d(1.01, 1.01, 1.01);
+    transform: translate3d(-0.2rem, -0.4rem, 0) scale3d(1.01, 1.01, 1.01);
   }
 
   .tile-header {

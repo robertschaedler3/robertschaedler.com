@@ -1,0 +1,26 @@
+.text {
+  padding-right: 2rem;
+}
+
+.image {
+  position: relative;
+
+  .portrait {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+  }
+
+  .icon-overlay {
+    position: absolute;
+    bottom: -0.4rem;
+    left: -0.6rem;
+    padding: 0.5rem;
+    background-color: #1966b3;
+    border-radius: 10px;
+    color: #eee;
+    font-size: 1.5rem;
+    line-height: 0;
+    z-index: 10;
+  }
+}
