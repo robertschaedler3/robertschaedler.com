@@ -23,14 +23,14 @@
 .content {
   height: 100%;
 
-  .topic {
-    font-size: 12px;
-    font-weight: 400;
-    margin: 0 1rem 0 0;
-  }
-}
+  .topics {
+    position: absolute;
+    bottom: 2.5rem;
 
-.topics {
-  position: absolute ;
-  bottom: 2.5rem;
+    .topic {
+      font-size: 12px;
+      font-weight: 400;
+      margin: 0 1rem 0 0;
+    }
+  }
 }
