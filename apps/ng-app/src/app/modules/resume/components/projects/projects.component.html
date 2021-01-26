@@ -6,5 +6,9 @@
     <a class="link" [routerLink]="['archive']">View the archive <i class="fas fa-archive"></i></a>
 </div>
 <div class="tiles" fxLayout="row wrap" fxLayoutGap="1.5rem grid">
-    <!-- TODO -->
+    <app-project-tile 
+        fxFlex="33" 
+        *ngFor="let project of $projects | async" 
+        [project]="project">
+    </app-project-tile>
 </div>
