@@ -1,6 +1,36 @@
-<div class="featured">
     <!-- TODO -->
-</div>
+<div class="featured-project" fxLayout="row" fxLayoutAlign="center center">
+    <div class="thumbnail">
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <img src="assets/img/bkg-3.jpg" fxFlex="45" fxFlexOffset="5">
+        </div>
+    </div>
+    <div class="featured-content" fxLayout="row" fxLayoutAlign="end center">
+        <div fxLayout="column" fxLayoutAlign="center end" fxFlex="50" fxFlexOffset="45">
+            <p>May 2020</p>
+            <h3>Trendease</h3>
+            <div class="line"></div>
+            <div class="tile">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat.
+                </p>
+            </div>
+            <div class="topics" fxLayout="row">
+                <p class="topic">Typescript</p>
+                <p class="topic">C/C++</p>
+                <p class="topic">Azure IoT</p>
+            </div>
+            <div class="links" fxLayout="row" fxLayoutAlign="space-between center">
+                <a [href]="''"><i class="fab fa-github fa-fw"></i></a>
+                <a [href]="''"><i class="fas fa-link fa-fw"></i></a>
+            </div>
+        </div>
+        <div fxFlex></div>
+    </div>
+    </div>
+
 <div class="other-projects" fxLayout="column" fxLayoutAlign="center center">
     <h4>Other Noteworthy Projects</h4>
     <a class="link" [routerLink]="['archive']">View the archive <i class="fas fa-archive"></i></a>
