@@ -1,7 +1,75 @@
-.other-projects {
-    margin-bottom: 2rem;
+.featured-project {
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  position: relative;
+  min-height: 20rem;
 
-    h4 {
-        margin-bottom: 0.4rem;
+  .thumbnail {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    img {
+      max-height: 20rem;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
     }
+  }
+
+  .featured-content {
+    z-index: 10;
+
+    h3,
+    p {
+      margin: 0 0.5rem;
+    }
+
+    .line {
+      height: 1px;
+      width: 65%;
+      background-color: #3a6a97;
+      border-radius: 1px;
+      margin: 0.5rem 0 1rem 0;
+    }
+
+    .tile {
+      padding: 1rem 2rem;
+
+      p {
+        text-align: justify;
+        margin: 0;
+      }
+    }
+
+    .topics {
+      margin-top: 1rem;
+
+      .topic {
+        font-size: 14px;
+        font-weight: 400;
+        margin-left: 1rem;
+      }
+    }
+
+    .links {
+      margin: 1.25rem 0.5rem 0 0;
+      width: 4.5rem;
+
+      a {
+        font-size: 1.5rem;
+        &:not(:hover) {
+          color: #b1bcc7;
+        }
+      }
+    }
+  }
+}
+
+.other-projects {
+  margin-bottom: 2rem;
+
+  h4 {
+    margin-bottom: 0.4rem;
+  }
 }

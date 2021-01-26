@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Project } from '../../models/project.model';
 
 @Component({
   selector: 'app-project-tile',
   templateUrl: './project-tile.component.html',
-  styleUrls: ['./project-tile.component.scss']
+  styleUrls: ['./project-tile.component.scss'],
 })
 export class ProjectTileComponent implements OnInit {
 
-  constructor() { }
+  @Input() project: Project;
 
-  ngOnInit(): void {
-  }
+  constructor() {}
 
+  ngOnInit(): void {}
 }

@@ -1,5 +1,6 @@
 .tile {
-  padding: 2rem;
+  position: relative;
+  height: 20rem;
 }
 
 .folder {
@@ -20,9 +21,16 @@
 }
 
 .content {
-  .tag {
-    font-size: 12px;
-    font-weight: 400;
-    margin-right: 1rem;
+  height: 100%;
+
+  .topics {
+    position: absolute;
+    bottom: 2.5rem;
+
+    .topic {
+      font-size: 12px;
+      font-weight: 400;
+      margin: 0 1rem 0 0;
+    }
   }
 }

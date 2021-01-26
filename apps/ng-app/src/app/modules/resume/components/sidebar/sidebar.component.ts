@@ -1,13 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
+import { environment } from '../../../../../environments/environment';
 export interface RouteInfo {
   path: string;
   title: string;
   class: string;
-}
-export interface SocialLink {
-  link: string;
-  icon: string;
 }
 
 export const ROUTES: RouteInfo[] = [
@@ -17,34 +13,30 @@ export const ROUTES: RouteInfo[] = [
   { path: '/archive', title: 'Archive', class: '' },
 ];
 
-export const SOCIAL_LINKS: SocialLink[] = [
-  {
-    link: 'https://github.com/robertschaedler3',
-    icon: 'github',
-  },
-  {
-    link: 'https://linkedin.com/in/robert-schaedler-iii/',
-    icon: 'linkedin-in',
-  },
-  {
-    link: 'https://medium.com/@robertschaedler3',
-    icon: 'medium-m',
-  },
-];
-
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
+
   routeItems: RouteInfo[];
-  socialLinks: SocialLink[];
+  name: string;
+  job: string;
+  university: string;
+  location: string;
+  social;
 
   constructor() {}
 
   ngOnInit(): void {
     this.routeItems = ROUTES.filter((menuItem) => menuItem);
-    this.socialLinks = SOCIAL_LINKS.filter((socialLink) => socialLink);
+
+    const profile = environment.profile;
+    this.name = profile.name.full;
+    this.job = `${profile.currentPosition.jobTitle} @${profile.currentPosition.company}`;
+    this.university = profile.education.university;
+    this.location = profile.location;
+    this.social = profile.socialLinks;
   }
 }

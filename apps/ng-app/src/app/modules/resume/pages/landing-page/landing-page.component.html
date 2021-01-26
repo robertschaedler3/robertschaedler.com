@@ -4,28 +4,30 @@
         <h3>About Me</h3>
         <div class="line" fxFlex="30"></div>
     </div>
-    <div class="section-inner" fxLayout="row" fxLayoutAlign="space-between start">
+    <div class="section-inner" fxLayout="row" fxLayoutAlign="space-between center">
         <div class="text">
-            <p>Hi there! I'm Robert, a software engineer based out of Hoboken, NJ.</p>
+            <p>Hi there! I'm Robert, a {{job}} based out of {{location}}.</p>
             <p>
-                I enjoy building things that involve the cloud. I have various experience with network security and IoT through many
+                I enjoy building things that involve the cloud. I have experience with network security and IoT through many
                 different personal, academic, and professional projects. I also have a taste for pixel-perfect, performant design.
             </p>
             <p>
                 After graduating from
                 <a href="https://www.stevens.edu/">Stevens Institute of Technology</a>
                 in the spring, I will be joining the
-                <a href="https://azure.microsoft.com/en-us/resources/videos/intelligent-edge-overview-video/">Intelligent Edge</a>
-                Management (ItEM) Team at Microsoft as a Software Engineer.
+                <a href="https://azure.microsoft.com/en-us/resources/videos/intelligent-edge-overview-video/">
+                    {{team}}
+                </a>
+                team at {{company}} as a {{job}}.
             </p>
         </div>
-            <div class="image" fxFlex="30">
-                <img class="portrait tile" src="assets/img/bkg-1.jpg">
-                <a class="tile icon-overlay" href="https://instagram.com/robertschaedleriii" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
+        <div class="image" fxFlex="30">
+            <img class="portrait tile" src="assets/img/bkg-1.jpg">
+            <a class="tile icon-overlay" href="{{instagram}}" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
         </div>
+    </div>
 </div>
 
 <div class="section">
