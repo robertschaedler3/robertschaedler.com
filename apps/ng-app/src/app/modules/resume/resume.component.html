@@ -2,13 +2,15 @@
     <div class="sidebar">
         <app-sidebar></app-sidebar>
     </div>
-    <perfect-scrollbar class="main-panel">
+    <!-- <div class="main-panel"> -->
+    <perfect-scrollbar (psScrollY)="onScroll($event)" class="main-panel">
         <app-header></app-header>
         <div class="main-content">
             <router-outlet></router-outlet>
         </div>
         <app-footer></app-footer>
     </perfect-scrollbar>
+    <!-- </div> -->
 </div>
 <div class="resume-button">
     <a class="button special-button" href="https://drive.google.com/file/d/1gPX_28rEpFXoHsIUR83QADNJUTk5HcRD/view" target="_blank">
