@@ -1,6 +1,6 @@
 <div class="content" fxLayout="column" fxLayoutAlign="end left">
     <h1 class="special">
-        <a class="headline" [routerLink]="['']">{{name}}</a>
+        <a class="headline" [ngClass]="{'active': activeAnchor === ''}" (click)="scroll.scrollToAnchor('')">{{name}}</a>
     </h1>
     <div class="info">
         <p class="mono"><i class="fas fa-briefcase fa-fw"></i> {{job}}</p>
@@ -8,8 +8,9 @@
         <p class="mono"><i class="fas fa-map-marker fa-fw"></i> {{location}}</p>
     </div>
     <div class="nav-container">
-        <a *ngFor="let routeItem of routeItems" class="{{routeItem.class}} nav-item" [routerLink]="[routeItem.path]">
-            <h5 class="nav-link" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">
+        <a *ngFor="let routeItem of routeItems" class="{{routeItem.class}} nav-item"
+            (click)="scroll.scrollToAnchor(routeItem.anchor)">
+            <h5 class="nav-link" [ngClass]="{'active': routeItem.anchor === activeAnchor}">
                 <span>{{routeItem.title}}</span>
                 <span class="border-slider"></span>
             </h5>
