@@ -2,7 +2,7 @@
 
 [![Build Status](https://dev.azure.com/robertschaedler/robertschaedler.com/_apis/build/status/repo-mirror?branchName=master)](https://dev.azure.com/robertschaedler/robertschaedler.com/_build/latest?definitionId=1&branchName=master)
 
-My personal website built using `Angular` & `Nrwl Nx`. Feel free to fork this repository to build your own personal website <!-- or checkout some of the tools I created to build it: -->
+My personal website built using `Angular` & `Nrwl Nx`. Feel free to fork this repository to build your own personal website. <!-- or checkout some of the tools I created to build it: -->
 
 <!-- Check out [Neon](https://github.com/robertschaedler3/neon), my custom Angular UI kit.
 
