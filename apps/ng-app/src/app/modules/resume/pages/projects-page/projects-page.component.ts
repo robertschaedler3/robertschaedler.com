@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FeaturedProject, Project } from '../../models/resume.model';
-import { FEATURED_PROJECTS, OTHER_PROJECTS } from '../../data';
 
 @Component({
   selector: 'app-projects-page',
@@ -9,11 +7,7 @@ import { FEATURED_PROJECTS, OTHER_PROJECTS } from '../../data';
 })
 export class ProjectsPageComponent implements OnInit {
 
-  featProjects: FeaturedProject[] = FEATURED_PROJECTS.sort((a, b) => a.year - b.year);
-  otherProjects: Project[] = OTHER_PROJECTS.sort((a, b) => a.year - b.year);
-
   constructor() {}
 
-  ngOnInit(): void { }
-
+  ngOnInit(): void {}
 }

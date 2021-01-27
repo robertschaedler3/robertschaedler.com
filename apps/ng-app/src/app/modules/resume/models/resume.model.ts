@@ -15,16 +15,13 @@ export interface WorkExperience {
   duration: Duration;
 }
 
-export interface Project {
+export interface FeaturedProject {
   name: string;
   year: number;
+  thumbnail: string;
   description: string;
   tools: string[];
   github?: string;
   link?: string;
   company?: string;
-}
-
-export interface FeaturedProject extends Project {
-  thumbnail: string;
 }
