@@ -5,61 +5,27 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 
 // Components
+import { ScrollAnchorDirective } from './directives/scroll-anchor.directive';
 import { SectionComponent } from './components/section/section.component';
-
-// Material
-// TODO: remove unused imports
-import { MatButtonModule } from '@angular/material/button';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatIconModule } from '@angular/material/';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatChipsModule } from '@angular/material/chips';
-import { MatListModule } from '@angular/material/list';
-import { MatCardModule } from '@angular/material/card';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 // Scrollbar
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 
 @NgModule({
-  declarations: [SectionComponent],
+  declarations: [SectionComponent, ScrollAnchorDirective],
   imports: [
     CommonModule,
     RouterModule,
     HttpClientModule,
     FlexLayoutModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MatIconModule,
-    MatExpansionModule,
-    MatChipsModule,
-    MatCardModule,
-    MatListModule,
-    MatDialogModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatProgressBarModule,
     PerfectScrollbarModule,
   ],
   exports: [
     RouterModule,
     FlexLayoutModule,
     HttpClientModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MatIconModule,
-    MatExpansionModule,
-    MatChipsModule,
-    MatCardModule,
-    MatListModule,
-    MatDialogModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatProgressBarModule,
     PerfectScrollbarModule,
+    ScrollAnchorDirective,
     SectionComponent,
   ],
 })
