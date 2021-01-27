@@ -1,19 +1,4 @@
-import {
-  FeaturedProject,
-  Project,
-  WorkExperience,
-} from './models/resume.model';
-
-// {
-//     name: '',
-//     year: 0,
-//     description: '',
-//     tools: [''],
-//     github: '',
-//     link: '',
-//     company: '',
-//     thumbnail: '',
-//   },
+import { FeaturedProject, WorkExperience } from './models/resume.model';
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
@@ -21,8 +6,8 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     companyLink: 'https://azure.microsoft.com/en-us/overview/future-of-cloud/',
     position: 'Software Engineering Intern',
     description: [
-      'Worked in Enterprise and Security (EnS) under COSINE on the Intelligent Edge Management team.',
-      'Developed a prototype for managing Linux IoT devices via desired configuration documents. Created a device agent for consuming and applying configurations.',
+      'Worked in Enterprise and Security (EnS) under COSINE on the Intelligent Edge Management team to develop a prototype for managing Linux IoT devices via desired configuration documents.',
+      'Created a device agent for consuming and applying configurations.',
       'Developed a UX for authoring, storing, and applying documents to IoT devices via Azure.',
     ],
     duration: { start: 'May', end: 'July 2020' },
@@ -72,19 +57,7 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
   },
 ];
 
-export const OTHER_PROJECTS: Project[] = [
-  {
-    name: '',
-    year: 0,
-    description: '',
-    tools: [''],
-    github: '',
-    link: '',
-    company: '',
-  },
-];
-
-export const PROJECT_ARCHIVE: Project[] = [
-  ...FEATURED_PROJECTS,
-  ...OTHER_PROJECTS,
-];
+// export const PROJECT_ARCHIVE: Project[] = [
+//   ...FEATURED_PROJECTS,
+//   ...OTHER_PROJECTS,
+// ];
