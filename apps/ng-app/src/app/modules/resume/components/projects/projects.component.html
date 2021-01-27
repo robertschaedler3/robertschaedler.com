@@ -31,7 +31,7 @@
     </div>
     </div>
 
-<div class="other-projects" fxLayout="column" fxLayoutAlign="center center">
+<div class="other-projects" fxLayout="column" fxLayoutAlign="center center" [appScrollAnchor]="'archive'" [offset]="-40">
     <h4>Other Noteworthy Projects</h4>
     <a class="link" [routerLink]="['archive']">View the archive <i class="fas fa-archive"></i></a>
 </div>
@@ -41,4 +41,8 @@
         *ngFor="let project of $projects | async" 
         [project]="project">
     </app-project-tile>
+    <!-- TODO: View More -->
+</div>
+<div class="view-more" fxLayout="row" fxLayoutAlign="center center">
+    <button class="outline">View More</button>
 </div>

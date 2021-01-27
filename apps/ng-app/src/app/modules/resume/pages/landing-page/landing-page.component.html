@@ -1,4 +1,4 @@
-<div class="section">
+<div class="section" [appScrollAnchor] [offset]="-40">
     <div class="section-header">
         <h6>00.</h6>
         <h3>About Me</h3>
@@ -30,7 +30,7 @@
     </div>
 </div>
 
-<div class="section">
+<div class="section" [appScrollAnchor]="'experience'" [offset]="-40">
     <div class="section-header">
         <h6>01.</h6>
         <h3>Experience</h3>
@@ -41,7 +41,7 @@
     </div>
 </div>
 
-<div class="section">
+<div class="section" [appScrollAnchor]="'projects'" [offset]="-40">
     <div class="section-header">
         <h6>10.</h6>
         <h3>Projects</h3>
@@ -53,10 +53,36 @@
     </div>
 </div>
 
-<div class="section">
+<div class="section" [appScrollAnchor]="'contact'" [offset]="-40">
     <div class="section-header">
         <h6>11.</h6>
-        <h3>Skills</h3>
+        <h3>Contact</h3>
         <div class="line" fxFlex="30"></div>
+    </div>
+    <div class="section-inner">
+        <div class="contact" fxLayout="column" fxLayoutAlign="center center" fxFlex="60" fxFlexOffset="20">
+            <h3>Say Hello</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.
+            </p>
+            <div class="social-links" fxLayout="row" fxLayoutAlign="space-between center">
+                <div class="link">
+                    <a [href]="''">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="link">
+                    <a [href]="''">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <div class="link">
+                    <a [href]="''">
+                        <i class="fab fa-medium-m"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
