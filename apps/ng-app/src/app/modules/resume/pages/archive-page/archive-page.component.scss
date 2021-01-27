@@ -1,0 +1,79 @@
+.content {
+  margin: 4rem 5rem;
+
+  .header {
+    margin-bottom: 10%;
+  }
+  
+  .table-container {
+    margin-bottom: 5rem;
+  }
+}
+
+.gutter {
+  width: 6rem;
+  height: 35vh;
+
+  &.left {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+
+  &.right {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+  }
+
+  a {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: #c2c6c9;
+    letter-spacing: 2px;
+    i {
+      font-size: 1.5rem;
+    }
+  }
+
+  .line {
+    height: 10vh;
+    width: 1px;
+    background-color: #eee;
+  }
+}
+
+table {
+  margin: 0 3rem;
+  width: 100%;
+  box-sizing: border-box;
+  border-collapse: collapse;
+
+  tr {
+    text-align: left;
+  }
+
+  td {
+    color: #7f9bb6;
+  }
+
+  td,
+  th {
+    border: none;
+    padding: 1rem;
+  }
+
+  thead {
+    margin-bottom: 1rem;
+  }
+
+  tbody {
+    tr {
+      height: 4rem;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}

@@ -24,3 +24,22 @@
     z-index: 10;
   }
 }
+
+.contact {
+  margin: 2rem 0 2rem 0;
+
+  p {
+    text-align: center;
+  }
+
+  .social-links {
+    width: 5.25rem;
+    
+    i {
+      font-size: 1.5rem;
+      &:not(:hover) {
+        color: #eee;
+      }
+    }
+  }
+}

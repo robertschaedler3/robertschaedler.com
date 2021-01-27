@@ -30,7 +30,9 @@ $underline-light-color: #eee;
       text-decoration-thickness: 1px;
       text-underline-offset: 1rem;
 
-      &:hover {
+      &:hover,
+      &.active {
+        cursor: pointer;
         text-decoration-color: $underline-light-color;
       }
     }
@@ -54,6 +56,10 @@ $underline-light-color: #eee;
   .nav-item {
     margin-bottom: 0.25rem;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     .nav-link {
       position: relative;
       margin: 0;
@@ -62,10 +68,10 @@ $underline-light-color: #eee;
       color: #eee;
 
       &:hover,
-      &:active {
+      &.active {
         .border-slider {
-          width: 100%;
           background-color: $underline-dark-color;
+          width: 100%;
         }
       }
 
