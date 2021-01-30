@@ -1,5 +1,5 @@
-<div class="content" fxLayout="row" fxLayoutAlign="start start">
-    <div class="list mono">
+<div class="content" fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="start start" fxLayoutAlign.lt-sm="center center">
+    <div class="list mono" fxLayout="column" fxLayout.lt-sm="row" fxFlexOffset="5">
         <div 
             class="list-item" 
             *ngFor="let experience of experiences" 
@@ -8,7 +8,7 @@
             {{experience.company}}
         </div>
     </div>
-    <div class="selected-content" fxFlex="75">
+    <div class="selected-content" fxFlex="75" fxFlexOffset="5" fxFlex.lt-sm="100" fxFlexOffset.lt-sm="0">
         <h4>
             {{selection.position}} 
             <a class="link" *ngIf="selection.companyLink"[href]="selection.companyLink">

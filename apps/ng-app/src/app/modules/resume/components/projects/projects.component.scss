@@ -5,11 +5,12 @@
   min-height: 20rem;
 
   .thumbnail {
-    position: absolute;
-    left: 0;
-    top: 0;
-
+    height: 20rem;
+    
     img {
+      position: absolute;
+      left: 0;
+      top: 1rem;
       max-height: 20rem;
       width: 100%;
       object-fit: cover;

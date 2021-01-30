@@ -1,6 +1,6 @@
 .tile {
   position: relative;
-  height: 20rem;
+  min-height: 20rem;
 }
 
 .folder {
@@ -22,6 +22,10 @@
 
 .content {
   height: 100%;
+
+  .project-description {
+    margin-bottom: 3rem;
+  }
 
   .topics {
     position: absolute;
