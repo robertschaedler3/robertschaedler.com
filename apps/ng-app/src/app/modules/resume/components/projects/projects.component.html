@@ -1,13 +1,12 @@
-    <!-- TODO -->
-<div class="featured-project" fxLayout="row" fxLayoutAlign="center center">
-    <div class="thumbnail">
+<div class="featured-project" fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="center center">
+    <div class="thumbnail" fxFlex="45" fxHide.lt-sm>
         <div fxLayout="row" fxLayoutAlign="start center">
             <img src="assets/img/bkg-3.jpg" fxFlex="45" fxFlexOffset="5">
         </div>
     </div>
-    <div class="featured-content" fxLayout="row" fxLayoutAlign="end center">
-        <div fxLayout="column" fxLayoutAlign="center end" fxFlex="50" fxFlexOffset="45">
-            <p>May 2020</p>
+    <div class="featured-content" fxLayout="row" fxLayoutAlign="end center" fxFlex="50">
+        <div fxLayout="column" fxLayoutAlign="center end">
+            <p>May 2019 - Present</p>
             <h3>Trendease</h3>
             <div class="line"></div>
             <div class="tile">
@@ -27,17 +26,20 @@
                 <a [href]="''"><i class="fas fa-link fa-fw"></i></a>
             </div>
         </div>
-        <div fxFlex></div>
     </div>
-    </div>
+    <div fxFlex></div>
+</div>
 
 <div class="other-projects" fxLayout="column" fxLayoutAlign="center center" [appScrollAnchor]="'archive'" [offset]="-40">
     <h4>Other Noteworthy Projects</h4>
     <a class="link" [routerLink]="['archive']">View the archive <i class="fas fa-archive"></i></a>
 </div>
-<div class="tiles" fxLayout="row wrap" fxLayoutGap="1.5rem grid">
+<div class="tiles" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="1.5rem grid">
     <app-project-tile 
-        fxFlex="33" 
+        fxFlex="33"
+        fxFlex.md="50"
+        fxFlex.sm="90"
+        fxFlex.xs="100"
         *ngFor="let project of $projects | async" 
         [project]="project">
     </app-project-tile>

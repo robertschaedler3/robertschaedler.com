@@ -2,9 +2,9 @@
     <div class="section-header">
         <h6>00.</h6>
         <h3>About Me</h3>
-        <div class="line" fxFlex="30"></div>
+        <div class="line" fxFlex="30" fxHide.xs></div>
     </div>
-    <div class="section-inner" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="section-inner" fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="space-between center">
         <div class="text">
             <p>Hi there! I'm Robert, a {{job}} based out of {{location}}.</p>
             <p>
@@ -21,7 +21,7 @@
                 team at {{company}} as a {{job}}.
             </p>
         </div>
-        <div class="image" fxFlex="30">
+        <div class="image" fxFlex="30" fxFlex.lt-sm="100">
             <img class="portrait tile" src="assets/img/bkg-1.jpg">
             <a class="tile icon-overlay" href="{{instagram}}" target="_blank">
                 <i class="fab fa-instagram"></i>
@@ -34,7 +34,7 @@
     <div class="section-header">
         <h6>01.</h6>
         <h3>Experience</h3>
-        <div class="line" fxFlex="30"></div>
+        <div class="line" fxFlex="30" fxHide.xs></div>
     </div>
     <div class="section-inner">
         <app-experience></app-experience>
@@ -45,7 +45,7 @@
     <div class="section-header">
         <h6>10.</h6>
         <h3>Projects</h3>
-        <div class="line" fxFlex="30"></div>
+        <div class="line" fxFlex="30" fxHide.xs></div>
     </div>
 
     <div class="section-inner">
@@ -57,10 +57,18 @@
     <div class="section-header">
         <h6>11.</h6>
         <h3>Contact</h3>
-        <div class="line" fxFlex="30"></div>
+        <div class="line" fxFlex="30" fxHide.xs></div>
     </div>
     <div class="section-inner">
-        <div class="contact" fxLayout="column" fxLayoutAlign="center center" fxFlex="60" fxFlexOffset="20">
+        <div 
+            class="contact" 
+            fxLayout="column" 
+            fxLayoutAlign="center center" 
+            fxFlex="60" 
+            fxFlex.md="90" 
+            fxFlexOffset.md="10" 
+            fxFlex.lt-md="100" 
+            fxFlexOffset.gt-md="20">
             <h3>Say Hello</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
