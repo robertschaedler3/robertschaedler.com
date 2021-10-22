@@ -1,14 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 
+import { AboutComponent } from './about/about.component';
+import { NavComponent } from './nav/nav.component';
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NavComponent, AboutComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),
+    RouterModule.forRoot(
+      [{ path: '', component: AboutComponent, pathMatch: 'full' }],
+      { initialNavigation: 'enabledBlocking' }
+    ),
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
