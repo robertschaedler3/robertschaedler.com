@@ -1,0 +1,32 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-headline;
+  margin-top: 0;
+}
+
+.headline {
+  font-size: 6rem;
+  line-height: 0.9;
+}
+
+p,
+a,
+i {
+  font-family: $font-family-body;
+  font-size: 1.25rem;
+}
+
+a {
+  @include transition($slow-transition-time, $transition-bezier);
+
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
