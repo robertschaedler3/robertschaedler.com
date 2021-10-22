@@ -21,7 +21,10 @@
               "apps/portfolio/src/favicon.ico",
               "apps/portfolio/src/assets"
             ],
-            "styles": ["apps/portfolio/src/styles.scss"],
+            "styles": [
+              "apps/portfolio/src/styles.scss",
+              "apps/portfolio/src/assets/scss/core.scss"
+            ],
             "scripts": []
           },
           "configurations": {
