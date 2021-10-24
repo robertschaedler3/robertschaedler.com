@@ -147,7 +147,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "portfolio-e2e": {
       "root": "apps/portfolio-e2e",
@@ -173,7 +174,9 @@
             "lintFilePatterns": ["apps/portfolio-e2e/**/*.{js,ts}"]
           }
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": ["portfolio"]
     }
   }
 }

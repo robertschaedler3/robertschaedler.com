@@ -27,15 +27,6 @@
       }
     ]
   },
-  "projects": {
-    "portfolio": {
-      "tags": []
-    },
-    "portfolio-e2e": {
-      "tags": [],
-      "implicitDependencies": ["portfolio"]
-    }
-  },
   "cli": {
     "defaultCollection": "@nrwl/angular"
   },
