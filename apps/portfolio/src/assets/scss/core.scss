@@ -1,4 +1,5 @@
 @use '~@angular/material' as mat;
+@use 'sass:map';
 
 @import "core/mixins";
 @import "core/variables";
@@ -24,4 +25,9 @@ $app-theme: (
 );
 
 @include mat.core-theme($app-theme);
-// @include mat.all-component-themes($app-theme);
+
+body {
+  margin: 0;
+  background-color: darken(map.get($primary-palette, 900), 35%);
+  color: $color-white;
+}
