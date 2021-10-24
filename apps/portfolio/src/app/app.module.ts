@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 
 import { AboutComponent } from './about/about.component';
 import { NavComponent } from './nav/nav.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent, NavComponent, AboutComponent],
@@ -17,6 +18,7 @@ import { NavComponent } from './nav/nav.component';
       { initialNavigation: 'enabledBlocking' }
     ),
     FlexLayoutModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
