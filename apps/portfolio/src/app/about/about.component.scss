@@ -3,18 +3,20 @@
 }
 
 .headline {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+.sub-text {
+  margin-bottom: 3rem;
 }
 
 .social-links {
-  margin-top: 4rem;
+  margin-top: 3rem;
 
   .link > a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    text-decoration: none;
-    color: #111;
     margin-right: 1.5rem;
 
     i {
@@ -23,12 +25,7 @@
 
     .link-label {
       margin-left: 0.7rem;
-      color: #2e2e2e;
       font-size: 1rem;
     }
   }
-}
-
-.button-container {
-  width: 10rem;
 }
