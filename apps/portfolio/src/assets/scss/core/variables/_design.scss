@@ -17,3 +17,13 @@ $margin-base: 1rem !default;
 $margin-small: 0.75rem !default;
 $margin-large: 2rem !default;
 $margin-huge: 4rem !default;
+
+// Fancy Styles
+.html {
+    font-size: 1rem;
+    color: #797979;
+}
+
+.tag {
+  color: $color-highlight;
+}
