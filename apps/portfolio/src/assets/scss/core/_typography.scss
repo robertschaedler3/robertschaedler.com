@@ -1,32 +1,81 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $font-family-headline;
-  margin-top: 0;
-}
+@use '~@angular/material' as mat;
 
-.headline {
-  font-size: 6rem;
-  line-height: 0.9;
-}
+$display-4-level: mat.define-typography-level(
+  $font-family: $font-primary,
+  $font-weight: $font-weight-heavy,
+  $font-size:   $font-size-display-4,
+);
 
-p,
-a,
-i {
-  font-family: $font-family-body;
-  font-size: 1.25rem;
-}
+$display-3-level: mat.define-typography-level(
+  $font-family: $font-primary,
+  $font-weight: $font-weight-heavy,
+  $font-size:   $font-size-display-3,
+);
 
-a {
-  @include transition($slow-transition-time, $transition-bezier);
+$display-2-level: mat.define-typography-level(
+  $font-family: $font-primary,
+  $font-weight: $font-weight-heavy,
+  $font-size:   $font-size-display-2,
+);
 
-  text-decoration: none;
+$display-1-level: mat.define-typography-level(
+  $font-family: $font-primary,
+  $font-weight: $font-weight-heavy,
+  $font-size:   $font-size-display-1,
+);
 
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
-}
+$headline-level: mat.define-typography-level(
+  $font-family: $font-primary,
+  $font-weight: $font-weight-bold,
+  $font-size:   $font-size-headline,
+);
+
+$title-level: mat.define-typography-level(
+  $font-family: $font-primary,
+  $font-weight: $font-weight-bold,
+  $font-size:   $font-size-title,
+);
+
+$subheading-2-level: mat.define-typography-level(
+  $font-family: $font-primary,
+  $font-weight: $font-weight-semi-bold,
+  $font-size:   $font-size-subheading-2,
+);
+
+$subheading-1-level: mat.define-typography-level(
+  $font-family: $font-primary,
+  $font-weight: $font-weight-medium,
+  $font-size:   $font-size-subheading-1,
+);
+
+$body-1-level: mat.define-typography-level(
+  $font-family: $font-secondary,
+  $font-weight: $font-weight-default,
+  $font-size:   $font-size-body-1,
+);
+
+$body-2-level: mat.define-typography-level(
+  $font-family: $font-secondary,
+  $font-weight: $font-weight-default,
+  $font-size:   $font-size-body-2,
+);
+
+$caption-level: mat.define-typography-level(
+  $font-family: $font-secondary,
+  $font-weight: $font-weight-light,
+  $font-size:   $font-size-caption,
+);
+
+$typography: mat.define-typography-config(
+  $display-4:     $display-4-level,
+  $display-3:     $display-3-level,
+  $display-2:     $display-2-level,
+  $display-1:     $display-1-level,
+  $headline:      $headline-level,
+  $title:         $title-level,
+  $subheading-2:  $subheading-2-level,
+  $subheading-1:  $subheading-1-level,
+  $body-1:        $body-1-level,
+  $body-2:        $body-2-level,
+  $caption:       $caption-level,
+);

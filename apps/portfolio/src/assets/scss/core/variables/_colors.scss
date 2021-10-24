@@ -1,5 +1,18 @@
-$black: #111111;
-$white: #eeeeee;
+$color-black: #111111;
+$color-white: #eeeeee;
+$color-grey: #a1a1a1;
 
 $primary-color: #111111;
 $accent-color: #4aa0f7;
+
+.blk {
+  color: $color-black;
+}
+
+.wht {
+  color: $color-white;
+}
+
+.gry {
+  color: $color-grey;
+}

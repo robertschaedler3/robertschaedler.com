@@ -5,7 +5,7 @@ button,
   background: $accent-color;
   border: none;
   border-radius: 2px;
-  color: $black;
+  color: $color-black;
   cursor: pointer;
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
@@ -17,7 +17,7 @@ button,
   }
   
   &.outline {
-    border: $border-width solid $black;
+    border: $border-width solid $color-black;
   }
 
   &:hover {
@@ -40,13 +40,13 @@ button.special{
 
   span {
     padding: 0.5rem 1rem;
-    color: $black;
+    color: $color-black;
     display: block;
     font-weight: 200;
     transition: color 0.3s ease;
     position: relative;
     z-index: 1;
-    border: 2px solid $black;
+    border: 2px solid $color-black;
   }
 
   &:before,
@@ -86,7 +86,7 @@ button.special{
     }
 
     span {
-      color: $white;
+      color: $color-white;
       border-color: $accent-color;
     }
   }
