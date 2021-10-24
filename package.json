@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "^12.2.0",
     "@angular/router": "^12.2.0",
     "@nrwl/angular": "^12.10.0",
+    "@nrwl/nest": "^13.0.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
