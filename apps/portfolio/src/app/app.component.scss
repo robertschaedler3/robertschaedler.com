@@ -1,10 +1,17 @@
-.wrapper, 
+.wrapper,
 .main-content {
-    height: 100%;
-    width: 100%;        
+  height: 100%;
+  width: 100%;
 }
 
 .main-content {
-    padding: 2rem;
-    max-width: 1200px;
+  padding: 0 2rem;
+  max-width: 1400px;
+}
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
