@@ -53,6 +53,29 @@
       },
       "tags": []
     },
+    "github": {
+      "root": "libs/github",
+      "sourceRoot": "libs/github/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/github/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/github"],
+          "options": {
+            "jestConfig": "libs/github/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
     "portfolio": {
       "projectType": "application",
       "root": "apps/portfolio",
