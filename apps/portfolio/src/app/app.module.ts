@@ -8,9 +8,10 @@ import { RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { NavComponent } from './nav/nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TagComponent } from './tag/tag.component';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, AboutComponent],
+  declarations: [AppComponent, NavComponent, AboutComponent, TagComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(
