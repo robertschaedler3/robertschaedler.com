@@ -1,15 +1,21 @@
 <div class="content" fxFlexLayout="row" fxLayoutAlign="space-between center">
     <div class="about" fxFlexLayout="column" fxFlex="45">
-        <h1 class="headline">
-            robert <br>
-            schaedler
-        </h1>
-        <p class="gry">
-            // About
+        <div class="headline">
+            <app-tag [tag]="'h1'">
+                <h1>
+                    robert <br>
+                    schaedler
+                </h1>
+            </app-tag>
+        </div>
+        <p class="grey">
+            <span class="html">&lt;!-- About --&gt;</span>
         </p>
         <p class="sub-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s,
+            I'm a software engineer specializing in Linux IoT edge and device management. Currently, I'm working on a
+            modular device management platform called
+            <a href="https://github.com/Azure/azure-osconfig">OSConfig <i class="fas fa-external-link-alt fa-xs"></i></a>
+            for Linux IoT Edge at <a href=""><i class="fab fa-microsoft fa-xs"></i> Microsoft</a>.
         </p>
         <div class="social-links" fxFlexLayout="row" fxLayoutAlign="start center">
             <div class="link">
@@ -32,6 +38,7 @@
             </div>
         </div>
     </div>
-    <div class="scroll" fxFlexLayout="column">
+    <div class="feed-container" fxFlexLayout="column">
+        <!-- TODO -->
     </div>
 </div>
