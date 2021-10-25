@@ -1,1 +1,23 @@
-<p>feed works!</p>
+<div class="contents" fxFlexLayou="column">
+    <ng-container *ngFor="let event of $events | async">
+
+        <ng-container *ngIf="event | guardType: isPullRequestEvent as pullRequestEvent">
+
+            <div class="card">
+                <h2>{{pullRequestEvent.payload.pull_request.title}}</h2>
+                <p>{{pullRequestEvent.payload.action}}</p>
+            </div>
+
+        </ng-container>
+
+        <ng-container *ngIf="event | guardType: isPushEvent as pushEvent">
+
+            <div class="card">
+                <p>{{pushEvent.payload.ref}}</p>
+                <p>{{pushEvent.payload.head}}</p>
+            </div>
+
+        </ng-container>
+
+    </ng-container>
+    </div>
