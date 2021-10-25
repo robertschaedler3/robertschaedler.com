@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@github/stats": ["libs/github/src/index.ts"]
+      "@github/events": ["libs/github/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
