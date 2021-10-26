@@ -1,36 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
-import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
+import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
-import { NavComponent } from './nav/nav.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TagComponent } from './tag/tag.component';
-import { FeedComponent } from './feed/feed.component';
-import { GuardTypePipe } from './shared/pipes/guard-type.pipe';
+
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavComponent,
-    AboutComponent,
-    TagComponent,
-    FeedComponent,
-    GuardTypePipe,
-  ],
+  declarations: [AppComponent, AboutComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    FlexLayoutModule,
     RouterModule.forRoot(
       [{ path: '', component: AboutComponent, pathMatch: 'full' }],
       { initialNavigation: 'enabledBlocking' }
     ),
-    HttpClientModule,
-    FlexLayoutModule,
-    BrowserAnimationsModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

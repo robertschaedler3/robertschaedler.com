@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { GithubEvent, PullRequestEvent, PushEvent } from '@github/events';
 import { PULL_REQUEST_EVENT, PUSH_EVENT } from '@github/events';
 
-import { TypeGuard } from '../shared/pipes/guard-type.pipe';
+import { TypeGuard } from '../../pipes/guard-type.pipe';
 
 @Component({
   selector: 'app-feed',
