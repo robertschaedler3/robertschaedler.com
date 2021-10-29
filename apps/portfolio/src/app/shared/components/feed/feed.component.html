@@ -2,21 +2,11 @@
     <ng-container *ngFor="let event of $events | async">
 
         <ng-container *ngIf="event | guardType: isPullRequestEvent as pullRequestEvent">
-
-            <div class="card">
-                <h2>{{pullRequestEvent.payload.pull_request.title}}</h2>
-                <p>{{pullRequestEvent.payload.action}}</p>
-            </div>
-
+            <app-pull-request-event [event]="pullRequestEvent"></app-pull-request-event>
         </ng-container>
 
         <ng-container *ngIf="event | guardType: isPushEvent as pushEvent">
-
-            <div class="card">
-                <p>{{pushEvent.payload.ref}}</p>
-                <p>{{pushEvent.payload.head}}</p>
-            </div>
-
+            <app-push-event [event]="pushEvent"></app-push-event>
         </ng-container>
 
     </ng-container>
