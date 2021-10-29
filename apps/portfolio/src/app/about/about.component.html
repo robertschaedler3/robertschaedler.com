@@ -58,8 +58,19 @@
         fxLayout="column" 
         fxLayoutAlign="start end" 
         fxLayoutAlign.lt-md="start start"
-        fxFlex.gt-sm="45">
-        <app-feed></app-feed>
+        fxFlex.gt-sm="45"
+        fxLayoutGap="1rem">
+        <div *ngFor="let event of $events | async" class="feed-item">
+        
+            <ng-container *ngIf="event | guardType: isPullRequestEvent as pullRequestEvent">
+                <app-pull-request-event [event]="pullRequestEvent"></app-pull-request-event>
+            </ng-container>
+        
+            <ng-container *ngIf="event | guardType: isPushEvent as pushEvent">
+                <app-push-event [event]="pushEvent"></app-push-event>
+            </ng-container>
+                
+        </div>
     </div>
 
 </div>
