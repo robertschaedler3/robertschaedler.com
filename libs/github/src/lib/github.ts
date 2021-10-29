@@ -38,6 +38,18 @@ export interface PullRequest {
   url: string;
   title: string;
   number: number;
+  created_at: string;
+  updated_at: string;
+  closed_at: string;
+  merged_at: string;
+  head: {
+    ref: string;
+    repo: Repo;
+  };
+  base: {
+    ref: string;
+    repo: Repo;
+  };
   // Other fields are not used
 }
 
@@ -102,4 +114,5 @@ export interface PushEvent extends GithubEvent {
       distinct: boolean;
     }>;
   };
+  created_at: string;
 }
