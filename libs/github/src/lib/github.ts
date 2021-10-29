@@ -33,6 +33,17 @@ export type EventType =
   | 'SponsorshipEvent'
   | 'WatchEvent';
 
+export type PullRequestAction =
+  | 'opened'
+  | 'closed'
+  | 'reopened'
+  | 'assigned'
+  | 'unassigned'
+  | 'review_requested'
+  | 'review_request_removed'
+  | 'labeled'
+  | 'unlabeled'
+  | 'synchronize';
 export interface PullRequest {
   id: number;
   url: string;
@@ -40,8 +51,8 @@ export interface PullRequest {
   number: number;
   created_at: string;
   updated_at: string;
-  closed_at: string;
-  merged_at: string;
+  closed_at: string | null;
+  merged_at: string | null;
   head: {
     ref: string;
     repo: Repo;
@@ -65,6 +76,7 @@ export interface Actor {
 export interface Repo {
   id: number;
   name: string;
+  full_name: string;
   url: string;
 }
 
@@ -75,21 +87,10 @@ export interface GithubEvent {
   repo: Repo;
   payload: Record<string, unknown>;
 }
-
 export interface PullRequestEvent extends GithubEvent {
   type: 'PullRequestEvent';
   payload: {
-    action:
-      | 'opened'
-      | 'closed'
-      | 'reopened'
-      | 'assigned'
-      | 'unassigned'
-      | 'review_requested'
-      | 'review_request_removed'
-      | 'labeled'
-      | 'unlabeled'
-      | 'synchronize';
+    action: PullRequestAction;
     number: number;
     pull_request: PullRequest;
   };

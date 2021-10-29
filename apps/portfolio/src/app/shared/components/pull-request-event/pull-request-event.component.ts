@@ -1,5 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { PullRequestEvent } from '@github/events';
+import {
+  PullRequest,
+  PullRequestAction,
+  PullRequestEvent,
+} from '@github/events';
 
 @Component({
   selector: 'app-pull-request-event',
@@ -8,4 +12,26 @@ import { PullRequestEvent } from '@github/events';
 })
 export class PullRequestEventComponent {
   @Input() event: PullRequestEvent | undefined;
+
+  getPullRequestAction(
+    pullRequestAction: PullRequestAction,
+    pullRequest: PullRequest
+  ): string {
+    if (pullRequestAction === 'closed' && pullRequest.merged_at) {
+      return 'merged';
+    }
+    const action = pullRequestAction.replace('_', ' ');
+    return action;
+    // return action[0].toUpperCase() + action.slice(1);
+  }
+
+  getTimestamp(
+    pullRequestAction: PullRequestAction,
+    pullRequest: PullRequest
+  ): string {
+    if (pullRequestAction === 'closed' && pullRequest.merged_at) {
+      return pullRequest.merged_at;
+    }
+    return pullRequest.created_at;
+  }
 }
