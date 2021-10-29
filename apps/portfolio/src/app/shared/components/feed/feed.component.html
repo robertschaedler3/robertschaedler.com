@@ -1,5 +1,5 @@
-<div class="contents" fxFlexLayou="column">
-    <ng-container *ngFor="let event of $events | async">
+<div class="feed" fxLayout="row">
+    <div *ngFor="let event of $events | async" fxLayout="column" fxLayoutAlign="start center">
 
         <ng-container *ngIf="event | guardType: isPullRequestEvent as pullRequestEvent">
             <app-pull-request-event [event]="pullRequestEvent"></app-pull-request-event>
@@ -9,5 +9,5 @@
             <app-push-event [event]="pushEvent"></app-push-event>
         </ng-container>
 
-    </ng-container>
     </div>
+</div>
