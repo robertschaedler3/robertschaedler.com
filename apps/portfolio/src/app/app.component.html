@@ -1,8 +1,18 @@
-<div class="wrapper" fxFlexLayout="row" fxLayoutAlign="center center">
+<div class="wrapper" 
+    fxFlexLayout="row" 
+    fxLayoutAlign="center center"
+    [ngClass.gt-lg]="['bkg-img-gt-lg']"
+    [ngClass.lg]="['bkg-img-lg']"
+    [ngClass.md]="['bkg-img-md']"
+    [ngClass.sm]="['bkg-img-sm']"
+    [ngClass.xs]="['bkg-img-xs']">
     <!-- <div class="nav-container">
             <app-nav></app-nav>
         </div> -->
-    <div class="main-content" fxFlexLayout="column" fxFlex.lg="90" fxFlex.lt-lg="100">
+    <div class="main-content" 
+        fxFlexLayout="column" 
+        fxFlex.gt-md="90" 
+        fxFlex.lt-lg="95">
         <router-outlet></router-outlet>
     </div>
 </div>
