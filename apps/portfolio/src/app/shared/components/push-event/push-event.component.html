@@ -1,7 +1,7 @@
 <div *ngIf="event" class="card">
     <div class="card-content">
-        <p>pushed {{event.payload.commits.length}} commits</p>
-        <p>{{event.repo.name}}</p>
+        <p class="mono mb-0">pushed {{event.payload.commits.length}} commits</p>
+        <h4>{{event.repo.name}}</h4>
         <p>{{event.created_at | dateAgo}}</p>
     </div>
 </div>
