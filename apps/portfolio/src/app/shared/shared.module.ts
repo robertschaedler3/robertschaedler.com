@@ -11,8 +11,22 @@ import { PullRequestEventComponent } from './components/pull-request-event/pull-
 import { DateAgoPipe } from './pipes/date-ago.pipe';
 
 @NgModule({
-  declarations: [NavComponent, TagComponent, FeedComponent, GuardTypePipe, PushEventComponent, PullRequestEventComponent, DateAgoPipe],
+  declarations: [
+    DateAgoPipe,
+    GuardTypePipe,
+    NavComponent,
+    TagComponent,
+    FeedComponent,
+    PushEventComponent,
+    PullRequestEventComponent,
+  ],
   imports: [CommonModule],
-  exports: [NavComponent, TagComponent, FeedComponent, GuardTypePipe],
+  exports: [
+    DateAgoPipe,
+    GuardTypePipe,
+    NavComponent,
+    TagComponent,
+    FeedComponent,
+  ],
 })
 export class SharedModule {}
