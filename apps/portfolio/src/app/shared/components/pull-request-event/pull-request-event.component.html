@@ -1,1 +1,8 @@
-<p>pull-request-event works!</p>
+<ng-container *ngIf="event">
+    <div class="card">
+        <p>{{event.payload.action}} pull-request {{event.payload.pull_request.title}}</p>
+        <p>{{event.payload.pull_request.head.repo.name}}</p>
+        <p>{{event.payload.pull_request.head.ref}} into {{event.payload.pull_request.base.ref}}</p>
+        <p>{{event.payload.pull_request.created_at | dateAgo}}</p>
+    </div>
+</ng-container>

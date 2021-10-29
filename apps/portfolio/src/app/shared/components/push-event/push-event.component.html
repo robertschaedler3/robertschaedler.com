@@ -1,1 +1,6 @@
-<p>push-event works!</p>
+<ng-container *ngIf="event">
+    <div class="card">
+        <p>pushed {{event.payload.commits.length}} commits to {{event.repo.name}}</p>
+        <p>{{event.created_at | dateAgo}}</p>
+    </div>
+</ng-container>
