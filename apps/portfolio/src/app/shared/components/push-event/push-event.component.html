@@ -1,6 +1,6 @@
-<ng-container *ngIf="event">
-    <div class="card">
+<div *ngIf="event" class="card">
+    <div class="card-content">
         <p>pushed {{event.payload.commits.length}} commits to {{event.repo.name}}</p>
         <p>{{event.created_at | dateAgo}}</p>
     </div>
-</ng-container>
+</div>

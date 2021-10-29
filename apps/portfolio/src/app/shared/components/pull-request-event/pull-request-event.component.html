@@ -1,8 +1,8 @@
-<ng-container *ngIf="event">
-    <div class="card">
+<div *ngIf="event" class="card">
+    <div class="card-content">
         <p>{{event.payload.action}} pull-request {{event.payload.pull_request.title}}</p>
         <p>{{event.payload.pull_request.head.repo.name}}</p>
         <p>{{event.payload.pull_request.head.ref}} into {{event.payload.pull_request.base.ref}}</p>
         <p>{{event.payload.pull_request.created_at | dateAgo}}</p>
     </div>
-</ng-container>
+</div>
