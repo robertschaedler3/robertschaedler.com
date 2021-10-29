@@ -28,7 +28,7 @@ export class AboutComponent {
           },
           params: {
             sort: 'pushed',
-            per_page: '6',
+            per_page: '20',
           },
         }
       )

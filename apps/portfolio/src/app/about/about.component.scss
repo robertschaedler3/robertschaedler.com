@@ -1,6 +1,5 @@
 .content {
   height: 100%;
-  padding: 4rem 0;
 }
 
 .headline {
@@ -19,7 +18,7 @@
 }
 
 .about {
-  margin-bottom: 3rem;
+  margin: 3rem 0;
 }
 
 .social-links {
@@ -42,6 +41,16 @@
 .feed-container {
   width: 100%;
   height: 100%;
+  padding: 0 1rem;
+  overflow: scroll;
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  /* Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   .feed-item {
     width: 100%;
