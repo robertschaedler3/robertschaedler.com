@@ -20,10 +20,19 @@ $margin-huge: 4rem !default;
 
 // Fancy Styles
 .html {
-    font-size: 1rem;
-    color: #797979;
+  font-size: 1rem;
+  color: #797979;
+}
+
+.mono {
+  font-size: 1rem;
+  color: $color-grey;
 }
 
 .tag {
   color: $color-highlight;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
 }

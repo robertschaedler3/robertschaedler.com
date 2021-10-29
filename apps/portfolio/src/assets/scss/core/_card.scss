@@ -7,13 +7,13 @@
   border-radius: 1rem;
   background-color: #ffffff3f;
   width: 100%;
-  
+
   &:hover {
     @include mat.elevation(12);
-    
+
     transform: translate3d(-0.1rem, -0.2rem, 0) scale3d(1.01, 1.01, 1.01);
   }
-  
+
   .card-content {
     padding: 1rem;
   }
