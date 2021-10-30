@@ -22,7 +22,6 @@ export class PullRequestEventComponent {
     }
     const action = pullRequestAction.replace('_', ' ');
     return action;
-    // return action[0].toUpperCase() + action.slice(1);
   }
 
   getTimestamp(
