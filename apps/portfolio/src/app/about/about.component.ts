@@ -3,8 +3,19 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { GithubEvent, PullRequestEvent, PushEvent } from '@github/events';
-import { PULL_REQUEST_EVENT, PUSH_EVENT } from '@github/events';
+import {
+  ForkEvent,
+  GithubEvent,
+  IssuesEvent,
+  PullRequestEvent,
+  PushEvent,
+} from '@github/events';
+import {
+  FORK_EVENT,
+  ISSUES_EVENT,
+  PULL_REQUEST_EVENT,
+  PUSH_EVENT,
+} from '@github/events';
 
 import { TypeGuard } from '../shared/pipes/guard-type.pipe';
 
@@ -16,7 +27,12 @@ import { TypeGuard } from '../shared/pipes/guard-type.pipe';
 export class AboutComponent {
   $events: Observable<GithubEvent[]>;
 
-  private supportedEvents = [PULL_REQUEST_EVENT, PUSH_EVENT];
+  private supportedEvents = [
+    FORK_EVENT,
+    ISSUES_EVENT,
+    PULL_REQUEST_EVENT,
+    PUSH_EVENT,
+  ];
 
   constructor(private http: HttpClient) {
     this.$events = this.http
@@ -38,6 +54,14 @@ export class AboutComponent {
         )
       );
   }
+
+  isForkEvent: TypeGuard<GithubEvent, ForkEvent> = (
+    event: GithubEvent
+  ): event is ForkEvent => event.type === FORK_EVENT;
+
+  isIssuesEvent: TypeGuard<GithubEvent, IssuesEvent> = (
+    event: GithubEvent
+  ): event is IssuesEvent => event.type === ISSUES_EVENT;
 
   isPullRequestEvent: TypeGuard<GithubEvent, PullRequestEvent> = (
     event: GithubEvent

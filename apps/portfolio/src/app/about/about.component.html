@@ -62,6 +62,14 @@
         fxLayoutGap="1rem">
         <div *ngFor="let event of $events | async" class="feed-item">
         
+            <ng-container *ngIf="event | guardType: isIssuesEvent as issuesEvent">
+                <app-issues-event [event]="issuesEvent"></app-issues-event>
+            </ng-container>
+
+            <ng-container *ngIf="event | guardType: isForkEvent as forkEvent">
+                <app-fork-event [event]="forkEvent"></app-fork-event>
+            </ng-container>
+            
             <ng-container *ngIf="event | guardType: isPullRequestEvent as pullRequestEvent">
                 <app-pull-request-event [event]="pullRequestEvent"></app-pull-request-event>
             </ng-container>
