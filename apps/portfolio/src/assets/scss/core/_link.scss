@@ -1,6 +1,7 @@
 a {
   @include transition($transition-bezier, $general-transition-time);
 
+  color: $color-highlight;
   text-decoration: none;
 
   &:visited {
