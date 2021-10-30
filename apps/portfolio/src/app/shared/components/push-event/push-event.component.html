@@ -1,7 +1,12 @@
 <div *ngIf="event" class="card">
     <div class="card-content">
-        <p class="mono mb-0">pushed {{event.payload.commits.length}} commits</p>
-        <h4>{{event.repo.name}}</h4>
-        <p>{{event.created_at | dateAgo}}</p>
+        <p class="mono">pushed {{event.payload.commits.length}} commits</p>
+        <p class="top-right">{{event.created_at | dateAgo}}</p>
+        <h5 class="mb-0">
+            <i class="fab fa-github-alt"></i>
+            <a [href]="event.repo.url">
+                {{event.repo.name}}
+            </a>
+        </h5>
     </div>
 </div>
