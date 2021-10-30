@@ -2,7 +2,7 @@
     <div class="card-content">
         <p class="mono">
             forked
-            <a [href]="event.repo.url">{{event.repo.name.slice(0, 19)}}{{event.repo.name.length > 18 ? '...' : ''}}</a>
+            <a [href]="event.repo.url">{{event.repo.name}}</a>
         </p>
         <p class="top-right">{{event.created_at | dateAgo}}</p>
         <h5 class="mb-0">
