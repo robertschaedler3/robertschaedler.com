@@ -13,24 +13,33 @@ import {
 export class PullRequestEventComponent {
   @Input() event: PullRequestEvent | undefined;
 
-  getPullRequestAction(
-    pullRequestAction: PullRequestAction,
-    pullRequest: PullRequest
-  ): string {
+  getPullRequestAction(): string {
+    if (!this.event) {
+      return '';
+    }
+
+    const pullRequestAction: PullRequestAction = this.event.payload.action;
+    const pullRequest: PullRequest = this.event.payload.pull_request;
+
     if (pullRequestAction === 'closed' && pullRequest.merged_at) {
       return 'merged';
     }
-    const action = pullRequestAction.replace('_', ' ');
-    return action;
+
+    return pullRequestAction.replace('_', ' ');
   }
 
-  getTimestamp(
-    pullRequestAction: PullRequestAction,
-    pullRequest: PullRequest
-  ): string {
+  getTimestamp(): string {
+    if (!this.event) {
+      return '';
+    }
+
+    const pullRequestAction: PullRequestAction = this.event.payload.action;
+    const pullRequest: PullRequest = this.event.payload.pull_request;
+
     if (pullRequestAction === 'closed' && pullRequest.merged_at) {
       return pullRequest.merged_at;
     }
+
     return pullRequest.created_at;
   }
 }
