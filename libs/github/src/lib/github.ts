@@ -33,6 +33,27 @@ export type EventType =
   | 'SponsorshipEvent'
   | 'WatchEvent';
 
+export type IssueAction =
+  | 'opened'
+  | 'closed'
+  | 'reopened'
+  | 'assigned'
+  | 'unassigned'
+  | 'labeled'
+  | 'unlabeled';
+
+export interface Issue {
+  id: number;
+  number: number;
+  url: string;
+  title: string;
+  body: string;
+  created_at: string;
+  updated_at: string;
+  // Other fields are not used
+  // https://docs.github.com/en/rest/reference/issues
+}
+
 export type PullRequestAction =
   | 'opened'
   | 'closed'
@@ -44,6 +65,7 @@ export type PullRequestAction =
   | 'labeled'
   | 'unlabeled'
   | 'synchronize';
+
 export interface PullRequest {
   id: number;
   url: string;
@@ -55,11 +77,11 @@ export interface PullRequest {
   merged_at: string | null;
   head: {
     ref: string;
-    repo: Repo;
+    repo: Repository;
   };
   base: {
     ref: string;
-    repo: Repo;
+    repo: Repository;
   };
   // Other fields are not used
 }
@@ -73,7 +95,7 @@ export interface Actor {
   avatar_url: string;
 }
 
-export interface Repo {
+export interface Repository {
   id: number;
   name: string;
   full_name: string;
@@ -84,9 +106,26 @@ export interface GithubEvent {
   id: string;
   type: EventType;
   actor: Actor;
-  repo: Repo;
+  repo: Repository;
   payload: Record<string, unknown>;
 }
+
+export interface ForkEvent extends GithubEvent {
+  type: 'ForkEvent';
+  payload: {
+    forkee: Repository;
+  };
+  created_at: string;
+}
+
+export interface IssuesEvent extends GithubEvent {
+  type: 'IssuesEvent';
+  payload: {
+    action: IssueAction;
+    issue: Issue;
+  };
+}
+  
 export interface PullRequestEvent extends GithubEvent {
   type: 'PullRequestEvent';
   payload: {
