@@ -4,13 +4,15 @@ import { CommonModule } from '@angular/common';
 import { DateAgoPipe } from './pipes/date-ago.pipe';
 import { GuardTypePipe } from './pipes/guard-type.pipe';
 
+import { ScrollContainerDirective } from './directives/scroll-container.directive';
+import { ScrollDirective } from './directives/scroll.directive';
+
 import { ForkEventComponent } from './components/fork-event/fork-event.component';
 import { IssuesEventComponent } from './components/issues-event/issues-event.component';
 import { NavComponent } from './components/nav/nav.component';
 import { TagComponent } from './components/tag/tag.component';
 import { PushEventComponent } from './components/push-event/push-event.component';
 import { PullRequestEventComponent } from './components/pull-request-event/pull-request-event.component';
-import { ScrollDirective } from './directives/scroll.directive';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { ScrollDirective } from './directives/scroll.directive';
     ForkEventComponent,
     IssuesEventComponent,
     NavComponent,
+    ScrollContainerDirective,
     ScrollDirective,
     PullRequestEventComponent,
     PushEventComponent,
@@ -31,6 +34,7 @@ import { ScrollDirective } from './directives/scroll.directive';
     ForkEventComponent,
     IssuesEventComponent,
     NavComponent,
+    ScrollContainerDirective,
     ScrollDirective,
     PullRequestEventComponent,
     PushEventComponent,
