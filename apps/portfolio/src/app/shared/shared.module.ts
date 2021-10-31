@@ -10,6 +10,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { TagComponent } from './components/tag/tag.component';
 import { PushEventComponent } from './components/push-event/push-event.component';
 import { PullRequestEventComponent } from './components/pull-request-event/pull-request-event.component';
+import { ScrollDirective } from './directives/scroll.directive';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { PullRequestEventComponent } from './components/pull-request-event/pull-
     ForkEventComponent,
     IssuesEventComponent,
     NavComponent,
+    ScrollDirective,
     PullRequestEventComponent,
     PushEventComponent,
     TagComponent,
@@ -29,6 +31,7 @@ import { PullRequestEventComponent } from './components/pull-request-event/pull-
     ForkEventComponent,
     IssuesEventComponent,
     NavComponent,
+    ScrollDirective,
     PullRequestEventComponent,
     PushEventComponent,
     TagComponent,
