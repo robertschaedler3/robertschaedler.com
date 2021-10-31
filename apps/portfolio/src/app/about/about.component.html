@@ -55,30 +55,32 @@
     </div>
 
     <div class="feed-container" 
-        fxLayout="column" 
-        fxLayoutAlign="start end" 
-        fxLayoutAlign.lt-md="start start"
-        fxFlex.gt-sm="45"
-        fxLayoutGap="1rem">
-        <div *ngFor="let event of $events | async" class="feed-item">
-        
-            <ng-container *ngIf="event | guardType: isIssuesEvent as issuesEvent">
-                <app-issues-event [event]="issuesEvent"></app-issues-event>
-            </ng-container>
+        fxLayout="column"
+        fxLayoutAlign="end" 
+        fxLayoutAlign.lt-md="start start"   
+        fxFlex.gt-sm="45">
+        <div class="feed-container-inner" fxLayout="row" fxFlex="65">
+            <div class="feed-column" fxLayout="column" fxLayoutGap="1rem">
+                <div *ngFor="let event of $events | async" class="feed-item">
 
-            <ng-container *ngIf="event | guardType: isForkEvent as forkEvent">
-                <app-fork-event [event]="forkEvent"></app-fork-event>
-            </ng-container>
-            
-            <ng-container *ngIf="event | guardType: isPullRequestEvent as pullRequestEvent">
-                <app-pull-request-event [event]="pullRequestEvent"></app-pull-request-event>
-            </ng-container>
-        
-            <ng-container *ngIf="event | guardType: isPushEvent as pushEvent">
-                <app-push-event [event]="pushEvent"></app-push-event>
-            </ng-container>
-                
+                    <ng-container *ngIf="event | guardType: isIssuesEvent as issuesEvent">
+                        <app-issues-event [event]="issuesEvent"></app-issues-event>
+                    </ng-container>
+    
+                    <ng-container *ngIf="event | guardType: isForkEvent as forkEvent">
+                        <app-fork-event [event]="forkEvent"></app-fork-event>
+                    </ng-container>
+    
+                    <ng-container *ngIf="event | guardType: isPullRequestEvent as pullRequestEvent">
+                        <app-pull-request-event [event]="pullRequestEvent"></app-pull-request-event>
+                    </ng-container>
+    
+                    <ng-container *ngIf="event | guardType: isPushEvent as pushEvent">
+                        <app-push-event [event]="pushEvent"></app-push-event>
+                    </ng-container>
+
+                </div>
+            </div>
         </div>
     </div>
-
 </div>
