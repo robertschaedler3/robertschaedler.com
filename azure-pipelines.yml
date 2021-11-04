@@ -20,5 +20,5 @@ steps:
   displayName: 'npm install'
 
 - script: |
-    nx affected --target=test all
+    nx affected --target=test --base=main
   displayName: 'nx test affected'
