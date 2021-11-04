@@ -1,4 +1,5 @@
 <div class="content" 
+    [ngClass.lt-md]="['mobile']"
     fxLayout="row" 
     fxLayoutAlign="space-between center"
     fxLayout.lt-md="column" 
@@ -8,7 +9,7 @@
         fxLayout="column" 
         fxFlex.gt-sm="45">
 
-        <div class="headline">
+        <div class="headline" [@fadeIn]="{value: ':enter', params: {delay: 150}}">
             <app-tag [tag]="'h1'">
                 <h1 [ngClass.lt-sm]="['headline-xs']">
                     robert <br>
@@ -17,34 +18,38 @@
             </app-tag>
         </div>
 
-        <p class="grey html">
+        <p class="grey html" [@fadeIn]="{value: ':enter', params: {delay: 300}}">
             &lt;!-- About --&gt;
         </p>
 
-        <p class="sub-text">
+        <p class="sub-text" [@fadeIn]="{value: ':enter', params: {delay: 450}}">
             I'm a software engineer specializing in Linux IoT edge and device management. Currently, I'm working on a
             modular device management platform called
-            <a href="https://github.com/Azure/azure-osconfig">OSConfig <i class="fas fa-external-link-alt fa-xs"></i></a>
-            for Linux IoT Edge at <a href=""><i class="fab fa-microsoft fa-xs"></i> Microsoft</a>.
+            <a href="https://github.com/Azure/azure-osconfig">
+                OSConfig
+                <i class="fas fa-external-link-alt fa-xs"></i>
+            </a>
+            for Linux IoT Edge at
+            <a href="https://azure.microsoft.com/en-us/overview/future-of-cloud/">
+                <i class="fab fa-microsoft fa-xs"></i>
+                Microsoft
+            </a>.
         </p>
 
-        <div class="social-links" 
-            fxLayout="row" 
-            fxLayoutAlign="start center" 
-            fxLayoutGap="1.5rem">
-            <div class="link">
+        <div class="social-links" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="1.5rem">
+            <div class="link" [@slideIn]="{value: 'left', params: {delay: 525}}">
                 <a href="https://github.com/robertschaedler3">
                     <i class="fab fa-github"></i>
                     <span class="link-label" fxHide.lt-sm>GitHub</span>
                 </a>
             </div>
-            <div class="link">
+            <div class="link" [@slideIn]="{value: 'left', params: {delay: 550}}">
                 <a href="">
                     <i class="fab fa-linkedin-in"></i>
                     <span class="link-label" fxHide.lt-sm>Linkedin</span>
                 </a>
             </div>
-            <div class="link">
+            <div class="link" [@slideIn]="{value: 'left', params: {delay: 575}}">
                 <a href="">
                     <i class="fab fa-medium-m"></i>
                     <span class="link-label" fxHide.lt-sm>Medium</span>
@@ -54,14 +59,11 @@
 
     </div>
 
-    <div class="feed-container" 
-        fxLayout="column"
-        fxLayoutAlign="end" 
-        fxLayoutAlign.lt-md="start start"   
-        fxFlex.gt-sm="45">
-        <div class="feed-container-inner" fxLayout="row" fxFlex="65">
-            <div class="feed-column" fxLayout="column" fxLayoutGap="1rem">
-                <div *ngFor="let event of $events | async" class="feed-item">
+    <div class="feed-wrapper" fxLayout="column" fxLayoutAlign="start center" fxFlex.gt-sm="45">
+        <div class="feed-container" fxLayout="row">
+            <div *ngIf="$events | async as events; else loading" class="feed-content" fxLayout="column" fxLayoutGap="1rem"
+                [@listFadeIn]="{value: ':enter', params: {delay: 600}}">
+                <div *ngFor="let event of events; let index = index" class="feed-item list-item">
 
                     <ng-container *ngIf="event | guardType: isIssuesEvent as issuesEvent">
                         <app-issues-event [event]="issuesEvent"></app-issues-event>
@@ -80,7 +82,18 @@
                     </ng-container>
 
                 </div>
+                
+                <div class="more" fxLayout="row" fxLayoutAlign="center center">
+                    <a class="button special">
+                        <span>
+                            See more on <i class="fab fa-github-alt"></i> GitHub
+                        </span>
+                    </a>
+                </div>
             </div>
+            <ng-template #loading>
+                <!-- TODO: skeleton loader -->
+            </ng-template>
         </div>
     </div>
 </div>

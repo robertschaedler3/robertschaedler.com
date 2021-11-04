@@ -1,66 +1,82 @@
+@mixin scrollable() {
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  /* Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .content {
   height: 100%;
-}
 
-.headline {
-  margin-bottom: 3rem;
-}
-
-.headline-xs {
-  font-size: 4.75rem !important;
-  line-height: 4.35rem;
-}
-
-.sub-text {
-  margin-bottom: 3rem;
-  line-height: 1.55rem;
-  color: #ccc;
-}
-
-.about {
-  margin: 3rem 0;
-}
-
-.social-links {
-  .link > a {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    i {
-      font-size: 2rem;
-    }
-
-    .link-label {
-      margin-left: 0.7rem;
-      font-size: 1rem;
-    }
+  .headline {
+    margin-bottom: 3rem;
   }
-}
 
-.feed-container {
-  width: 100%;
-  height: 100%;
-  padding: 0 1rem;
+  .headline-xs {
+    font-size: 4.75rem !important;
+    line-height: 4.35rem;
+  }
 
-  .feed-container-inner {
-    width: 100%;
-    overflow: scroll;
+  .sub-text {
+    margin-bottom: 3rem;
+    line-height: 1.55rem;
+    color: #ccc;
+  }
 
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+  .about {
+    margin: 3rem 0;
+  }
 
-    /* Chrome, Safari and Opera */
-    &::-webkit-scrollbar {
-      display: none;
+  .social-links {
+    .link > a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      i {
+        font-size: 2rem;
+      }
+
+      .link-label {
+        margin-left: 0.7rem;
+        font-size: 1rem;
+      }
     }
   }
 
-  .feed-column {
+  .feed-wrapper, .feed-container, .feed-content, .feed-item {
     width: 100%;
+  }
 
-    .feed-item {
-      width: 100%;
+  .feed-wrapper {
+    height: 100%;
+
+    .feed-content {
+      padding: 1rem;
+    }
+  }
+
+  .more {
+    padding: 1rem 0 3rem;
+  }
+
+  &.mobile {
+    @include scrollable();
+  }
+
+  &:not(.mobile) {
+    .feed-wrapper {
+      .feed-container {
+        @include scrollable();
+      }
+
+      .feed-content:first-child {
+        margin-top: 35vh;
+      }
     }
   }
 }

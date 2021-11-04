@@ -19,10 +19,13 @@ import {
 
 import { TypeGuard } from '../shared/pipes/guard-type.pipe';
 
+import { fadeIn, slideIn, listFadeIn } from '../animations/motion.animation';
+
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
+  animations: [fadeIn, slideIn, listFadeIn],
 })
 export class AboutComponent {
   $events: Observable<GithubEvent[]>;
@@ -44,7 +47,7 @@ export class AboutComponent {
           },
           params: {
             sort: 'pushed',
-            per_page: '20',
+            per_page: '100',
           },
         }
       )
@@ -53,6 +56,7 @@ export class AboutComponent {
           events.filter((event) => this.supportedEvents.includes(event.type))
         )
       );
+    // TODO: sort events by date
   }
 
   isForkEvent: TypeGuard<GithubEvent, ForkEvent> = (
