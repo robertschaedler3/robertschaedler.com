@@ -1,0 +1,11 @@
+// Transition times
+$general-transition-time: 300ms !default;
+$slow-transition-time: 370ms !default;
+$fast-transition-time: 150ms !default;
+
+// Transition types
+$transition-ease: ease 0s;
+$transition-ease-in: ease-in !default;
+$transition-ease-out: ease-out !default;
+$transition-linear: linear !default;
+$transition-bezier: cubic-bezier(0.785, 0.135, 0.15, 0.86) !default;

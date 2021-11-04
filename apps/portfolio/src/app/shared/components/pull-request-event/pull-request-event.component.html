@@ -1,0 +1,23 @@
+<div *ngIf="event" class="card">
+    <div class="card-content">
+        <p class="mono title">
+            {{getPullRequestAction()}} pull request
+            <a href="{{event.payload.pull_request.url}}">
+                #{{event.payload.pull_request.number}}
+            </a>
+        </p>
+        <p class="mono ref">
+            {{event.payload.pull_request.head.ref}}
+            <i class="fas fa-code-branch fa-xs"></i>
+            {{event.payload.pull_request.base.ref}}
+        </p>
+        <p class="top-right">{{getTimestamp() | dateAgo}}</p>
+        <h4>{{event.payload.pull_request.title}}</h4>
+        <h5 class="mb-0">
+            <i class="fab fa-github-alt"></i>
+            <a [href]="event.repo.url">
+                {{event.repo.name}}
+            </a>
+        </h5>
+    </div>
+</div>

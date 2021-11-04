@@ -1,0 +1,27 @@
+a {
+  @include transition($transition-bezier, $general-transition-time);
+
+  color: $color-highlight;
+  text-decoration: none;
+
+  &:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &:hover {
+    color: lighten($color-highlight, 15%) !important;
+    transform: translateY(-0.25rem) scale3d(1.01, 1.01, 1.01);
+  }
+}
+
+p > a {
+  color: inherit;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding-bottom: 2px;
+
+  &:hover {
+    color: lighten($color-highlight, 15%) !important;
+  }
+}
