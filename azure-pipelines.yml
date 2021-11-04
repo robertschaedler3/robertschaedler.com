@@ -12,9 +12,8 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
-    checkLatest: true
-  displayName: 'Install Node.js'
+    versionSpec: '>=12.x'
+    force32bit: true
 
 - script: |
     npm install -g @nrwl/cli
@@ -23,3 +22,4 @@ steps:
 
 - script: |
     nx affected --target=test all
+  displayName: 'nx test affected'
