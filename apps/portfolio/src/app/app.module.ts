@@ -9,9 +9,10 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 
 import { SharedModule } from './shared/shared.module';
+import { FeedComponent } from './feed/feed.component';
 
 @NgModule({
-  declarations: [AppComponent, AboutComponent],
+  declarations: [AppComponent, AboutComponent, FeedComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
