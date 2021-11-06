@@ -10,6 +10,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { TagComponent } from './components/tag/tag.component';
 import { PushEventComponent } from './components/push-event/push-event.component';
 import { PullRequestEventComponent } from './components/pull-request-event/pull-request-event.component';
+import { ScrollContainerComponent } from './components/scroll-container/scroll-container.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { PullRequestEventComponent } from './components/pull-request-event/pull-
     PullRequestEventComponent,
     PushEventComponent,
     TagComponent,
+    ScrollContainerComponent,
   ],
   imports: [CommonModule],
   exports: [
@@ -32,6 +34,7 @@ import { PullRequestEventComponent } from './components/pull-request-event/pull-
     PullRequestEventComponent,
     PushEventComponent,
     TagComponent,
+    ScrollContainerComponent,
   ],
 })
 export class SharedModule {}
