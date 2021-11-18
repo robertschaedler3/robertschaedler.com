@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Nrwl Nx
+      - uses: MansaGroup/nrwl-nx-action@v2
+        with:
+          targets: test
+          affected: true
