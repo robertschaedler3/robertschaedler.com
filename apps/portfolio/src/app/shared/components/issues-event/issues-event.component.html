@@ -2,7 +2,7 @@
     <div class="card-content">
         <p class="mono">
             {{getIssueAction()}} issue
-            <a [href]="event.payload.issue.url">
+            <a [href]="'https://github.com/' + event.repo.name + '/issues/' + event.payload.issue.number">
                 #{{event.payload.issue.number}}
             </a>
         </p>
@@ -10,7 +10,7 @@
         <h4>{{event.payload.issue.title}}</h4>
         <h5 class="mb-0">
             <i class="fas fa-exclamation-circle fa-xs"></i>
-            <a [href]="event.repo.url">
+            <a [href]="'https://github.com/' + event.repo.name">
                 {{event.repo.name}}
             </a>
         </h5>

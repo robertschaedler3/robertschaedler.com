@@ -2,9 +2,14 @@
     <div class="card-content">
         <p class="mono">pushed {{event.payload.commits.length}} commits</p>
         <p class="top-right">{{event.created_at | dateAgo}}</p>
+        <ul>
+            <li *ngFor="let commit of event.payload.commits" class="mono mat-small single-line">
+                {{commit.message}}
+            </li>
+        </ul>
         <h5 class="mb-0">
             <i class="fab fa-github-alt"></i>
-            <a [href]="event.repo.url">
+            <a [href]="'https://github.com/' + event.repo.name">
                 {{event.repo.name}}
             </a>
         </h5>
