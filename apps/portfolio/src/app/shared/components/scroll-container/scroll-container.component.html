@@ -1,1 +1,10 @@
-<p>scroll-container works!</p>
+<div #scroll class="scroll-container" [ngClass]="{'scrollable': scrollable}">
+    <ng-content></ng-content>
+    <div class="arrow" *ngIf="scrollable && hasArrow && ($showArrow | async)">
+        <div fxLayout="row" fxLayoutAlign="center center" [@spin]="{value: ':enter', params: {delay: 1000}}">
+            <div fxLayout="column">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </div>
+</div>
