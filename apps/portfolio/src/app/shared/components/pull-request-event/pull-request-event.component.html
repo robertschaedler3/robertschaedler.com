@@ -2,7 +2,7 @@
     <div class="card-content">
         <p class="mono title">
             {{getPullRequestAction()}} pull request
-            <a href="{{event.payload.pull_request.url}}">
+            <a [href]="'https://github.com/' + event.repo.name + '/pulls/' + event.payload.pull_request.number">
                 #{{event.payload.pull_request.number}}
             </a>
         </p>
@@ -12,10 +12,10 @@
             {{event.payload.pull_request.base.ref}}
         </p>
         <p class="top-right">{{getTimestamp() | dateAgo}}</p>
-        <p>{{event.payload.pull_request.title}}</p>
+        <p class="single-line">{{event.payload.pull_request.title}}</p>
         <h5 class="mb-0">
             <i class="fab fa-github-alt"></i>
-            <a [href]="event.repo.url">
+            <a [href]="'https://github.com/' + event.repo.name">
                 {{event.repo.name}}
             </a>
         </h5>

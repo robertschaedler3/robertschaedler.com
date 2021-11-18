@@ -1,0 +1,13 @@
+ul {
+  list-style-type: none;
+  padding-left: 1rem;
+
+  li {
+    overflow: hidden;
+  }
+
+  li:before {
+    content: '-';
+    text-indent: -5px;
+  }
+}

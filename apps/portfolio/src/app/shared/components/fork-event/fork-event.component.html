@@ -2,12 +2,12 @@
     <div class="card-content">
         <p class="mono">
             forked
-            <a [href]="event.repo.url">{{event.repo.name}}</a>
+            <a [href]="'https://github.com/' + event.repo.name">{{event.repo.name}}</a>
         </p>
         <p class="top-right">{{event.created_at | dateAgo}}</p>
         <h5 class="mb-0">
             <i class="fas fa-code-branch"></i>
-            <a [href]="event.payload.forkee.url">
+            <a [href]="'https://github.com/' + event.payload.forkee.full_name">
                 {{event.payload.forkee.full_name}}
             </a>
         </h5>
