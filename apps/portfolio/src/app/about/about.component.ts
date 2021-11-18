@@ -19,13 +19,18 @@ import {
 
 import { TypeGuard } from '../shared/pipes/guard-type.pipe';
 
-import { fadeIn, slideIn, listFadeIn } from '../animations/motion.animation';
+import {
+  fadeIn,
+  slideIn,
+  listFadeIn,
+  spin,
+} from '../animations/motion.animation';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
-  animations: [fadeIn, slideIn, listFadeIn],
+  animations: [fadeIn, slideIn, listFadeIn, spin],
 })
 export class AboutComponent {
   $events: Observable<GithubEvent[]>;
