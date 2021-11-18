@@ -12,7 +12,7 @@
             {{event.payload.pull_request.base.ref}}
         </p>
         <p class="top-right">{{getTimestamp() | dateAgo}}</p>
-        <h4>{{event.payload.pull_request.title}}</h4>
+        <p>{{event.payload.pull_request.title}}</p>
         <h5 class="mb-0">
             <i class="fab fa-github-alt"></i>
             <a [href]="event.repo.url">
