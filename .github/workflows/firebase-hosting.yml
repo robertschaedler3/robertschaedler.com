@@ -1,14 +1,21 @@
-name: Deploy to Firebase Hosting on merge
-'on':
+name: Deploy to Firebase Hosting
+
+on:
   push:
     branches:
       - main
 jobs:
   build_and_deploy:
+    name: Build & Deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npm install -g @nrwl/nx && npm install && nx build portfolio
+      - uses: actions/setup-node@v2
+        with: 
+          node-version: '12.x'
+      - run: npm install -g @nrwl/nx
+      - run: npm install
+      - run: nx build portfolio
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
