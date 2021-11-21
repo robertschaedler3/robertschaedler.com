@@ -13,10 +13,14 @@ jobs:
       - uses: actions/setup-node@v2
         with: 
           node-version: '12.x'
-      - run: npm install -g @nrwl/nx
       - run: npm install
-      - run: nx build portfolio
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: Nrwl Nx Build 
+        uses: MansaGroup/nrwl-nx-action@v2
+        with:
+          targets: build 
+          projects: portfolio
+      - name: Deploy to Firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ROBERTSCHAEDLER_28E55 }}'
