@@ -12,7 +12,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Nrwl Nx
       - uses: MansaGroup/nrwl-nx-action@v2
         with:
           targets: test
