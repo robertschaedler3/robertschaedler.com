@@ -32,11 +32,14 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3.4.1
         
-      - name: Install nx
-        run: |
-          npm i nx
-          npm i
-          nx build portfolio
+      - name: npm install
+        run: npm i
+
+      - name: Nrwl Nx
+        uses: MansaGroup/nrwl-nx-action@v2
+        with:
+          targets: build
+          projects: portfolio
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
