@@ -1,0 +1,26 @@
+{
+    "name": "Node.js",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "VARIANT": "16-bullseye"
+        }
+    },
+    "postStartCommand": "npm install",
+    "settings": {},
+    "extensions": [
+        "Angular.ng-template",
+        "dbaeumer.vscode-eslint",
+        "eamodio.gitlens",
+        "GitHub.copilot",
+        "GitHub.vscode-pull-request-github",
+        "mhutchie.git-graph",
+        "me-dutour-mathieu.vscode-github-actions",
+        "nrwl.angular-console",
+        "esbenp.prettier-vscode"
+    ],
+    "remoteUser": "node",
+    "features": {
+        "github-cli": "latest"
+    }
+}

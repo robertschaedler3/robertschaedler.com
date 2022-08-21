@@ -1,4 +1,4 @@
-@use '~@angular/material' as mat;
+@use '@angular/material' as mat;
 
 $display-4-level: mat.define-typography-level(
   $font-family: $font-primary,
