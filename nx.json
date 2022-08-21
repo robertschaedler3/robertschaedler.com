@@ -15,20 +15,10 @@
       "runner": "@nrwl/nx-cloud",
       "options": {
         "cacheableOperations": ["build", "lint", "test", "e2e"],
-        "accessToken": "OWZiYmJhOTUtZDY0ZS00OWI3LWIzM2ItOTEzMzY5ZWEyMmVlfHJlYWQtd3JpdGU="
+        "accessToken": "OWZiYmJhOTUtZDY0ZS00OWI3LWIzM2ItOTEzMzY5ZWEyMmVlfHJlYWQtd3JpdGU=",
+        "parallel": 1
       }
     }
-  },
-  "targetDependencies": {
-    "build": [
-      {
-        "target": "build",
-        "projects": "dependencies"
-      }
-    ]
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/angular"
   },
   "generators": {
     "@nrwl/angular:application": {
@@ -38,7 +28,6 @@
       "e2eTestRunner": "cypress"
     },
     "@nrwl/angular:library": {
-      "style": "scss",
       "linter": "eslint",
       "unitTestRunner": "jest"
     },
@@ -46,5 +35,11 @@
       "style": "scss"
     }
   },
-  "defaultProject": "portfolio"
+  "defaultProject": "portfolio",
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"]
+    }
+  }
 }

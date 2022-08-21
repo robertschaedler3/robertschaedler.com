@@ -2,12 +2,13 @@
   "version": 2,
   "projects": {
     "api": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "apps/api",
       "sourceRoot": "apps/api/src",
       "projectType": "application",
       "targets": {
         "build": {
-          "executor": "@nrwl/node:build",
+          "executor": "@nrwl/node:webpack",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/api",
@@ -30,7 +31,7 @@
           }
         },
         "serve": {
-          "executor": "@nrwl/node:execute",
+          "executor": "@nrwl/node:node",
           "options": {
             "buildTarget": "api:build"
           }
@@ -46,7 +47,7 @@
           "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/api"],
           "options": {
-            "jestConfig": "apps/api/jest.config.js",
+            "jestConfig": "apps/api/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -54,6 +55,7 @@
       "tags": []
     },
     "github": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "libs/github",
       "sourceRoot": "libs/github/src",
       "projectType": "library",
@@ -69,7 +71,7 @@
           "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/github"],
           "options": {
-            "jestConfig": "libs/github/jest.config.js",
+            "jestConfig": "libs/github/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -77,6 +79,7 @@
       "tags": []
     },
     "portfolio": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "projectType": "application",
       "root": "apps/portfolio",
       "sourceRoot": "apps/portfolio/src",
@@ -166,7 +169,7 @@
           "executor": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/portfolio"],
           "options": {
-            "jestConfig": "apps/portfolio/jest.config.js",
+            "jestConfig": "apps/portfolio/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -174,6 +177,7 @@
       "tags": []
     },
     "portfolio-e2e": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "apps/portfolio-e2e",
       "sourceRoot": "apps/portfolio-e2e/src",
       "projectType": "application",
@@ -201,5 +205,6 @@
       "tags": [],
       "implicitDependencies": ["portfolio"]
     }
-  }
+  },
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }
