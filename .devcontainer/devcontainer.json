@@ -3,20 +3,18 @@
     "build": {
         "dockerfile": "Dockerfile",
         "args": {
-            "VARIANT": "16-bullseye"
+			"VARIANT": "18-bullseye"
         }
     },
     "postStartCommand": "npm install",
     "settings": {},
-    "extensions": [
-        "Angular.ng-template",
+	"extensions": [
         "dbaeumer.vscode-eslint",
         "eamodio.gitlens",
         "GitHub.copilot",
         "GitHub.vscode-pull-request-github",
         "mhutchie.git-graph",
-        "me-dutour-mathieu.vscode-github-actions",
-        "nrwl.angular-console",
+		"me-dutour-mathieu.vscode-github-actions",
         "esbenp.prettier-vscode"
     ],
     "remoteUser": "node",
