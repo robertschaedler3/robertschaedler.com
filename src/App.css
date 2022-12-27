@@ -6,3 +6,7 @@
   font-weight: 200 900;
   font-stretch: 75% 125%;
 }
+
+.vertical {
+  writing-mode: vertical-rl;
+}
