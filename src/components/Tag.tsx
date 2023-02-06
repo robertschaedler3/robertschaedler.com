@@ -7,11 +7,11 @@ export default function Tag(props: {
 }) {
   return (
     <div className={props.className}>
-      <p className="font-mono text-neutral-700 dark:text-neutral-500">
+      <p className="font-mono text-neutral-700 dark:text-neutral-300">
         {"<" + props.type + ">"}
       </p>
       {props.children}
-      <p className="font-mono text-neutral-700 dark:text-neutral-500">
+      <p className="font-mono text-neutral-700 dark:text-neutral-300">
         {"</" + props.type + ">"}
       </p>
     </div>
