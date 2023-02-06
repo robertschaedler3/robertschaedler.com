@@ -1,5 +1,7 @@
-# robertschaedler.com
+# `robertschaedler.com` - v5
 
-[![Build Status](https://dev.azure.com/robertschaedler/robertschaedler.com/_apis/build/status/Continuous%20Integration?branchName=main)](https://dev.azure.com/robertschaedler/robertschaedler.com/_build/latest?definitionId=7&branchName=main)
+The fifth iteration of [`robertschaedler.com`](https://robertschaedler.com) built with React and tailwind. Feel free to fork this repository to build your own personal website.
 
-My personal website built using `Angular` & `Nrwl Nx`. Feel free to fork this repository to build your own personal website.
+---
+
+Previous versions: [`v2`](https://github.com/robertschaedler3/robertschaedler.com/tree/v2), [`v3`](https://github.com/robertschaedler3/robertschaedler.com/tree/v3), [`v4`](https://github.com/robertschaedler3/robertschaedler.com/tree/v4)
