@@ -10,3 +10,7 @@
 .vertical {
   writing-mode: vertical-rl;
 }
+
+.horizontal {
+  writing-mode: horizontal-tb;
+}
